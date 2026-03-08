@@ -757,4 +757,230 @@ body.cyber-dark {
   border-radius: 10px;
 }
 
+/* ===== PORTFOLIO CLEANUP / EQUAL HEIGHT / ICONS8 ===== */
+
+.hero-actions .btn {
+  margin-bottom: 10px;
+}
+
+.page-service .row {
+  align-items: stretch;
+}
+
+.service-card-col {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.card-service {
+  width: 100%;
+  min-height: 370px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 32px 24px;
+  border-radius: 22px;
+  background: rgba(12, 15, 36, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card-service:hover,
+.contact-card:hover,
+.academic-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.28);
+  border-color: rgba(160, 110, 255, 0.28);
+}
+
+.card-service .icon,
+.contact-card .icon {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+
+.card-service .icon img,
+.contact-card .icon img {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+  display: block;
+}
+
+.card-service .caption {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-service .caption h4 {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.card-service .caption p {
+  margin-bottom: 0;
+}
+
+/* ===== PORTFOLIO GRID IMAGE CONSISTENCY ===== */
+
+.gridder .grid-item {
+  margin-bottom: 24px;
+}
+
+.gridder .img-place {
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(11, 14, 32, 0.92);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.gridder .img-place img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.gridder .img-caption {
+  min-height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===== WRITEUP CARD IMAGE FIX ===== */
+
+.page-blog .card {
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.page-blog .card .img-place {
+  overflow: hidden;
+}
+
+.page-blog .card .img-place img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.page-blog .card .caption {
+  min-height: 210px;
+}
+
+/* ===== ACADEMIC SECTION ===== */
+
+.academic-card {
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(12, 15, 36, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.academic-card .img-place {
+  overflow: hidden;
+}
+
+.academic-card .img-place img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.academic-card .caption {
+  padding: 22px;
+  min-height: 250px;
+}
+
+.academic-card .post-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 10px 0 12px;
+}
+
+.academic-links {
+  margin-top: 16px;
+}
+
+.academic-links a {
+  display: inline-block;
+  margin-right: 14px;
+  margin-bottom: 10px;
+  color: #b78cff;
+  font-weight: 500;
+}
+
+.academic-links a:hover {
+  color: #d9c1ff;
+  text-decoration: none;
+}
+
+/* ===== CONTACT ===== */
+
+.contact-card {
+  border-radius: 22px;
+  background: rgba(12, 15, 36, 0.88);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 32px 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 991px) {
+  .card-service {
+    min-height: 340px;
+  }
+
+  .gridder .img-place img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-service {
+    min-height: unset;
+  }
+
+  .card-service .icon,
+  .contact-card .icon {
+    width: 130px;
+    height: 130px;
+  }
+
+  .card-service .icon img,
+  .contact-card .icon img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .gridder .img-place img,
+  .academic-card .img-place img,
+  .page-blog .card .img-place img {
+    height: 220px;
+  }
+}
+
 
