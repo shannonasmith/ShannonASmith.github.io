@@ -85,7 +85,7 @@
   width: 100%;
   padding-top: 6px;
   padding-bottom: 6px;
-  background-color: rgba(20, 22, 30, 0.42);
+  background-color: rgba(20, 22, 30, 0.52);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 99;
@@ -93,7 +93,7 @@
 
 .page-home .navbar.floating {
   top: 0;
-  background-color: rgba(10, 12, 18, 0.58);
+  background-color: rgba(10, 12, 18, 0.68);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -744,3 +744,4 @@ body.cyber-dark {
 .section-counter .number {
   color: #fff;
 }
+
