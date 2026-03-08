@@ -1463,17 +1463,7 @@ a:hover, a:active {
   margin-bottom: 20px;
 }
 
-/* ===== Writeup modal image/layout fix ===== */
-
-.writeup-image {
-  display: block;
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
-  margin-bottom: 20px;
-}
+/* ===== Fancybox modal + writeup image fix ===== */
 
 .fancybox-content {
   background: #ffffff;
@@ -1495,6 +1485,16 @@ a:hover, a:active {
   color: #3366ff;
 }
 
+.writeup-image {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
 /* ============================= */
 /* Floating cards on wave background */
 /* ============================= */
@@ -1514,7 +1514,6 @@ a:hover, a:active {
   box-shadow: 0 15px 40px rgba(0,0,0,.35);
 }
 
-/* icon styling */
 .icon-build {
   width: 70px;
   margin-bottom: 20px;
