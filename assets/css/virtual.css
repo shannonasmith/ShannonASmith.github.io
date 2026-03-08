@@ -1494,3 +1494,28 @@ a:hover, a:active {
 .fancybox-content a {
   color: #3366ff;
 }
+
+/* ============================= */
+/* Floating cards on wave background */
+/* ============================= */
+
+.floating-card {
+  background: rgba(10,15,35,0.65);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 40px 30px;
+  height: 100%;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all .35s ease;
+}
+
+.floating-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,.35);
+}
+
+/* icon styling */
+.icon-build {
+  width: 70px;
+  margin-bottom: 20px;
+}
