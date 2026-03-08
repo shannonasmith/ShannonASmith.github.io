@@ -257,168 +257,213 @@
   <!-- End Animated Focus Band -->
 
   <!-- Projects Section -->
-  <div class="vg-page page-portfolio" id="portfolio">
-    <div class="container">
-      <div class="text-center wow fadeInUp">
-        <div class="badge badge-subhead">Projects</div>
-      </div>
-      <h1 class="text-center fw-normal wow fadeInUp">Featured Work</h1>
+<div class="vg-page page-portfolio" id="portfolio">
+  <div class="container">
 
-      <!-- Project Filters -->
-      <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
-        <button class="btn btn-theme-outline selected" data-filter="*">All</button>
-        <button class="btn btn-theme-outline" data-filter=".ctf">CTF</button>
-        <button class="btn btn-theme-outline" data-filter=".dfir">DFIR</button>
-        <button class="btn btn-theme-outline" data-filter=".labs">Labs</button>
-        <button class="btn btn-theme-outline" data-filter=".research">Research</button>
-      </div>
-      <!-- End Project Filters -->
-
-      <!-- Project Grid -->
-      <div class="gridder my-3">
-        <div class="grid-item ctf wow zoomIn">
-          <div class="img-place"
-               data-src="assets/img/wicys-ctf.png"
-               data-fancybox="portfolio"
-               data-caption="<h5 class='fg-theme'>WiCyS / SANS CTF</h5><p>CTF investigations and writeups</p>">
-            <img src="assets/img/wicys-ctf.png" alt="WiCyS CTF investigation">
-            <div class="img-caption">
-              <h5 class="fg-theme">WiCyS / SANS CTF</h5>
-              <p>CTF investigations and writeups</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-item ctf dfir wow zoomIn">
-          <div class="img-place"
-               data-src="assets/img/artifact-analysis.png"
-               data-fancybox="portfolio"
-               data-caption="<h5 class='fg-theme'>Encoding, Not Encryption</h5><p>Artifact analysis and decoding</p>">
-            <img src="assets/img/artifact-analysis.png" alt="Artifact decoding workflow">
-            <div class="img-caption">
-              <h5 class="fg-theme">Encoding, Not Encryption</h5>
-              <p>Artifact analysis and decoding</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-item dfir wow zoomIn">
-          <div class="img-place"
-               data-src="assets/img/elk-investigation.png"
-               data-fancybox="portfolio"
-               data-caption="<h5 class='fg-theme'>Authentication Log Investigation</h5><p>Log correlation and timeline analysis</p>">
-            <img src="assets/img/elk-investigation.png" alt="Authentication log investigation">
-            <div class="img-caption">
-              <h5 class="fg-theme">Authentication Log Investigation</h5>
-              <p>Log correlation and timeline analysis</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-item labs wow zoomIn">
-          <div class="img-place"
-               data-src="assets/img/homelab-icon.jpg"
-               data-fancybox="portfolio"
-               data-caption="<h5 class='fg-theme'>Cybersecurity Home Lab</h5><p>pfSense, Linux, network visibility</p>">
-            <img src="assets/img/homelab-icon.jpg" alt="Cybersecurity home lab">
-            <div class="img-caption">
-              <h5 class="fg-theme">Cybersecurity Home Lab</h5>
-              <p>pfSense, Linux, network visibility</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-item labs dfir wow zoomIn">
-          <div class="img-place"
-               data-src="assets/img/system-investigation.png"
-               data-fancybox="portfolio"
-               data-caption="<h5 class='fg-theme'>Threat Hunting Practice</h5><p>System-level triage and suspicious process review</p>">
-            <img src="assets/img/system-investigation.png" alt="Threat hunting practice">
-            <div class="img-caption">
-              <h5 class="fg-theme">Threat Hunting Practice</h5>
-              <p>System-level triage and suspicious process review</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-item research wow zoomIn">
-          <div class="img-place"
-               data-src="assets/img/project-wizardspider.jpg"
-               data-fancybox="portfolio"
-               data-caption="<h5 class='fg-theme'>Wizard Spider Threat Research</h5><p>Threat actor profiling and adversary analysis</p>">
-            <img src="assets/img/project-wizardspider.jpg" alt="Wizard Spider threat research">
-            <div class="img-caption">
-              <h5 class="fg-theme">Wizard Spider Research</h5>
-              <p>Threat actor profiling and analysis</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Project Grid -->
-
-      <div class="text-center wow fadeInUp">
-        <a href="#writeups" class="btn btn-theme">Read Writeups</a>
-      </div>
+    <div class="text-center wow fadeInUp">
+      <div class="badge badge-subhead">Projects</div>
     </div>
+
+    <h1 class="text-center fw-normal wow fadeInUp">Featured Work</h1>
+
+    <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
+      <button class="btn btn-theme-outline selected" data-filter="*">All</button>
+      <button class="btn btn-theme-outline" data-filter=".ctf">CTF</button>
+      <button class="btn btn-theme-outline" data-filter=".dfir">DFIR</button>
+      <button class="btn btn-theme-outline" data-filter=".labs">Labs</button>
+      <button class="btn btn-theme-outline" data-filter=".research">Research</button>
+    </div>
+
+    <div class="gridder my-3">
+
+      <!-- TryHackMe -->
+      <div class="grid-item ctf wow zoomIn">
+        <div class="img-place"
+          data-src="assets/img/elk-investigation.png"
+          data-fancybox="portfolio"
+          data-caption="<h5 class='fg-theme'>TryHackMe CTF Investigation</h5><p>Hands-on security challenge analysis</p>">
+
+          <img src="assets/img/elk-investigation.png" alt="TryHackMe CTF">
+
+          <div class="img-caption">
+            <h5 class="fg-theme">TryHackMe Investigation</h5>
+            <p>CTF challenge analysis</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Log Investigation -->
+      <div class="grid-item dfir wow zoomIn">
+        <div class="img-place"
+          data-src="assets/img/elk-investigation.png"
+          data-fancybox="portfolio"
+          data-caption="<h5 class='fg-theme'>Authentication Log Investigation</h5><p>Log correlation and timeline analysis</p>">
+
+          <img src="assets/img/elk-investigation.png" alt="Authentication logs">
+
+          <div class="img-caption">
+            <h5 class="fg-theme">Authentication Log Investigation</h5>
+            <p>Log correlation analysis</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Threat Hunting -->
+      <div class="grid-item dfir labs wow zoomIn">
+        <div class="img-place"
+          data-src="assets/img/system-investigation.png"
+          data-fancybox="portfolio"
+          data-caption="<h5 class='fg-theme'>Threat Hunting Practice</h5><p>System activity investigation</p>">
+
+          <img src="assets/img/system-investigation.png" alt="Threat hunting">
+
+          <div class="img-caption">
+            <h5 class="fg-theme">Threat Hunting Practice</h5>
+            <p>System activity analysis</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Home Lab -->
+      <div class="grid-item labs wow zoomIn">
+        <div class="img-place"
+          data-src="assets/img/homelab-icon.jpg"
+          data-fancybox="portfolio"
+          data-caption="<h5 class='fg-theme'>Cybersecurity Home Lab</h5><p>Network monitoring and security testing</p>">
+
+          <img src="assets/img/homelab-icon.jpg" alt="Cybersecurity lab">
+
+          <div class="img-caption">
+            <h5 class="fg-theme">Cybersecurity Home Lab</h5>
+            <p>Security experimentation environment</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Wizard Spider Research -->
+      <div class="grid-item research wow zoomIn">
+        <div class="img-place"
+          data-src="assets/img/project-wizardspider.jpg"
+          data-fancybox="portfolio"
+          data-caption="<h5 class='fg-theme'>Wizard Spider Research</h5><p>Threat actor analysis</p>">
+
+          <img src="assets/img/project-wizardspider.jpg" alt="Threat actor research">
+
+          <div class="img-caption">
+            <h5 class="fg-theme">Wizard Spider Research</h5>
+            <p>Threat actor profiling</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="grid-item labs wow zoomIn">
+        <div class="img-place"
+          data-src="assets/img/project-webdev.jpg"
+          data-fancybox="portfolio"
+          data-caption="<h5 class='fg-theme'>Security Portfolio Website</h5><p>Custom cybersecurity portfolio development</p>">
+
+          <img src="assets/img/project-webdev.jpg" alt="Web portfolio">
+
+          <div class="img-caption">
+            <h5 class="fg-theme">Cyber Portfolio Site</h5>
+            <p>Web development project</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center wow fadeInUp">
+      <a href="#writeups" class="btn btn-theme">Read Writeups</a>
+    </div>
+
   </div>
-  <!-- End Projects Section -->
+</div>
+<!-- END Projects Section -->
+
 
   <!-- Writeups Section -->
   <div class="vg-page page-blog" id="writeups">
-    <div class="container">
-      <div class="text-center">
-        <div class="badge badge-subhead wow fadeInUp">Writeups</div>
+  <div class="container">
+
+    <div class="text-center">
+      <div class="badge badge-subhead wow fadeInUp">Writeups</div>
+    </div>
+
+    <h1 class="text-center fw-normal wow fadeInUp">Security Investigations</h1>
+
+    <div class="row post-grid">
+
+      <!-- TryHackMe -->
+      <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp">
+        <a href="javascript:;" data-fancybox data-src="#writeup-thm">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/elk-investigation.png">
+            </div>
+
+            <div class="caption">
+              <span class="post-category">CTF Investigation</span>
+              <div class="post-title">TryHackMe Challenge Investigation</div>
+              <span class="post-date">
+                An investigation into authentication activity and system events using analyst-style reasoning.
+              </span>
+            </div>
+
+          </div>
+        </a>
       </div>
-      <h1 class="text-center fw-normal wow fadeInUp">Featured Investigations</h1>
 
-      <div class="row post-grid">
-        <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp">
-          <a href="javascript:;" data-fancybox data-src="#writeup-wicys" class="text-decoration-none">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/wicys-ctf.png" alt="WiCyS / SANS Beginner CTF">
-              </div>
-              <div class="caption">
-                <span class="post-category">CTF Writeup</span>
-                <div class="post-title">WiCyS / SANS Beginner CTF</div>
-                <span class="post-date">Live competition challenges solved through structured analysis and documentation.</span>
-              </div>
+      <!-- Log Analysis -->
+      <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp">
+        <a href="javascript:;" data-fancybox data-src="#writeup-log">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/elk-investigation.png">
             </div>
-          </a>
-        </div>
 
-        <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp">
-          <a href="javascript:;" data-fancybox data-src="#writeup-thm" class="text-decoration-none">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/elk-investigation.png" alt="TryHackMe CTF">
-              </div>
-              <div class="caption">
-                <span class="post-category">CTF Writeup</span>
-                <div class="post-title">TryHackMe CTF</div>
-                <span class="post-date">System activity and authentication-focused investigation with analyst-style reasoning.</span>
-              </div>
+            <div class="caption">
+              <span class="post-category">DFIR</span>
+              <div class="post-title">Authentication Log Investigation</div>
+              <span class="post-date">
+                Investigating authentication events and identifying suspicious activity through log analysis.
+              </span>
             </div>
-          </a>
-        </div>
 
-        <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp">
-          <a href="javascript:;" data-fancybox data-src="#writeup-skillsquest" class="text-decoration-none">
-            <div class="card">
-              <div class="img-place">
-                <img src="assets/img/artifact-analysis.png" alt="SANS SkillsQuest Security Challenge (SSQN)">
-              </div>
-              <div class="caption">
-                <span class="post-category">CTF Writeup</span>
-                <div class="post-title">SANS SkillsQuest Security Challenge (SSQN)</div>
-                <span class="post-date">Artifact-focused challenge set centered on encoded data and analysis workflow.</span>
-              </div>
-            </div>
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
+
+      <!-- Threat Hunting -->
+      <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp">
+        <a href="javascript:;" data-fancybox data-src="#writeup-threat">
+          <div class="card">
+            <div class="img-place">
+              <img src="assets/img/system-investigation.png">
+            </div>
+
+            <div class="caption">
+              <span class="post-category">Threat Hunting</span>
+              <div class="post-title">System Activity Investigation</div>
+              <span class="post-date">
+                Examining system processes and activity to identify potential indicators of compromise.
+              </span>
+            </div>
+
+          </div>
+        </a>
+      </div>
+
     </div>
   </div>
+</div>
   <!-- End Writeups Section -->
 
   <!-- Hidden Fancybox Writeup Content -->
