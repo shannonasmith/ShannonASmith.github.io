@@ -745,5 +745,16 @@ body.cyber-dark {
   color: #fff;
 }
 
+.grid-item {
+  margin-bottom: 28px !important;
+}
+
+.grid-item .img-place {
+  border-radius: 10px;
+}
+
+.grid-item .img-place img {
+  border-radius: 10px;
+}
 
 
