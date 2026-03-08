@@ -403,6 +403,19 @@
   display: block;
 }
 
+.page-about .img-place::before,
+.page-about .img-place::after {
+  display: none !important;
+  content: none !important;
+}
+
+.page-about .img-place {
+  background: transparent !important;
+  padding: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 /* Desktop */
 @media (min-width: 600px) {
   .page-about .img-place {
@@ -806,4 +819,5 @@
     color: #6f42c1;
 
 }
+
 
