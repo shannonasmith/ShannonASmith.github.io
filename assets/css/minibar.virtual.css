@@ -388,10 +388,11 @@
 
 /* About */
 .page-about .img-place {
-    margin: 16px auto;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 @media (min-width: 600px) {
@@ -794,4 +795,5 @@
 
 .theme-purple .post-grid .post-category {
     color: #6f42c1;
+
 }
