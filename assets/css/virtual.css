@@ -1452,3 +1452,13 @@ a:hover, a:active {
 .fancybox-content a {
   color: #3366ff;
 }
+
+/* Modal image formatting */
+
+.writeup-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
