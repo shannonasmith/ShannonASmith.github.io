@@ -1425,3 +1425,25 @@ a:hover, a:active {
     border-color: #6f42c1;
 }
 
+/* ===== Fancybox modal readability fix ===== */
+
+.fancybox-content {
+  background: #ffffff;
+  color: #222;
+}
+
+.fancybox-content h2 {
+  color: #7b5cff;
+}
+
+.fancybox-content p {
+  color: #333;
+}
+
+.fancybox-content li {
+  color: #333;
+}
+
+.fancybox-content a {
+  color: #3366ff;
+}
