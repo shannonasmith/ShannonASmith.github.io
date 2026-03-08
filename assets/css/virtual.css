@@ -1462,3 +1462,35 @@ a:hover, a:active {
   border-radius: 12px;
   margin-bottom: 20px;
 }
+
+/* ===== Writeup modal image/layout fix ===== */
+
+.writeup-image {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.fancybox-content {
+  background: #ffffff;
+  color: #222;
+}
+
+.fancybox-content h2 {
+  color: #b794ff;
+}
+
+.fancybox-content p,
+.fancybox-content li,
+.fancybox-content ul,
+.fancybox-content ol {
+  color: #333;
+}
+
+.fancybox-content a {
+  color: #3366ff;
+}
