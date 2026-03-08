@@ -3,6 +3,12 @@
 🌐 **Live Site:**
 https://shannonasmith.github.io/
 
+<p align="center">
+  <a href="https://shannonasmith.github.io/">
+    <img src="assets/img/portfolio-preview.png" width="800">
+  </a>
+</p>
+
 ---
 
 ## Overview
