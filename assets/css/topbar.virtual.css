@@ -745,26 +745,5 @@ body.cyber-dark {
   color: #fff;
 }
 
-gridder {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  align-items: stretch;
-}
 
-.grid-item {
-  width: 100% !important;
-  margin: 0 !important;
-}
-
-.grid-item .img-place {
-  height: 300px;
-  border-radius: 10px;
-}
-
-@media (max-width: 991px) {
-  .gridder {
-    grid-template-columns: 1fr;
-  }
-}
 
