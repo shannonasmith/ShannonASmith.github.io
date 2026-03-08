@@ -1444,6 +1444,11 @@ a:hover, a:active {
   color: #333;
 }
 
+.fancybox-content ul,
+.fancybox-content ol {
+  color: #333;
+}
+
 .fancybox-content a {
   color: #3366ff;
 }
