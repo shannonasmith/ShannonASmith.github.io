@@ -1531,6 +1531,7 @@ a:hover, a:active {
   object-position: top;
   display: block;
   margin-bottom: 20px;
-  max-height: 600px;
+  max-height: 400px;
 }
+
 
