@@ -1523,3 +1523,12 @@ a:hover, a:active {
   margin-bottom: 20px;
   filter: drop-shadow(0 0 6px rgba(123,92,255,0.35));
 }
+
+.writeup-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top;
+  display: block;
+  margin-bottom: 20px;
+}
