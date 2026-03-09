@@ -129,7 +129,7 @@ Additional certifications and training are currently in progress.
 
 ## Education & Certifications Timeline
 
-### 2025
+### 2024-2026
 
 **Cybersecurity Certifications**  
 GFACT • CEH • Security+ • Linux+ • Splunk CCPU  
