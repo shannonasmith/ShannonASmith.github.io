@@ -1240,19 +1240,21 @@ p,
 
 
 
-/* Standardize timeline/date colors */
-.timeline li .title,
-.timeline li .details small,
-.timeline li .details .fg-theme {
-  color: #a855f7 !important;
-}
-
-/* Optional: keep a consistent weight */
+/* Force all timeline date pills to use the purple theme */
 .timeline li .title {
+  background-color: #6f42c1 !important;
+  color: #fff !important;
   font-weight: 600;
 }
 
-/* Optional: make timeline body text stay muted */
-.timeline li .details p {
-  color: #b8b8c5;
+/* Match the timeline dots too */
+.timeline li::before {
+  background-color: #6f42c1 !important;
+  box-shadow: 0 0 0 2px #6f42c1 !important;
+}
+
+/* Keep the small metadata line consistent too */
+.timeline li .details small,
+.timeline li .details .fg-theme {
+  color: #6f42c1 !important;
 }
