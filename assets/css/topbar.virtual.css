@@ -24,7 +24,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 400px;
+  max-width: 520px;
 }
 
 .filterable-button .btn {
@@ -60,7 +60,7 @@
   overflow: hidden;
 }
 
-.page-home {  
+.page-home {
   padding: 25px 0;
   width: 100%;
   height: 700px;
@@ -663,7 +663,6 @@
 
 .theme-purple .post-grid .post-category {
   color: #6f42c1;
-
 }
 
 /* ChatGPT custom cyber-art overrides */
@@ -672,75 +671,114 @@ body.cyber-dark {
   background-color: #0b0b12;
   color: #d6d9e6;
 }
-.theme-purple .fg-theme, .theme-purple .badge-subhead, .theme-purple .caption-header .badge {
+
+.theme-purple .fg-theme,
+.theme-purple .badge-subhead,
+.theme-purple .caption-header .badge {
   color: #caa8ff !important;
 }
+
 .theme-purple .btn-theme {
   background-color: #7b61ff;
   border-color: #7b61ff;
 }
-.theme-purple .btn-theme:hover, .theme-purple .btn-theme:focus {
+
+.theme-purple .btn-theme:hover,
+.theme-purple .btn-theme:focus {
   background-color: #694df4;
   border-color: #694df4;
 }
+
 .theme-purple .btn-theme-outline {
   border-color: #7b61ff;
   color: #d9cbff;
 }
+
 .page-home {
   position: relative;
 }
+
 .page-home::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(8,8,14,.58), rgba(8,8,14,.76));
 }
+
 .page-home > * {
   position: relative;
   z-index: 1;
 }
+
 .navbar.sticky.fixed {
   background-color: rgba(9, 9, 16, 0.92);
   backdrop-filter: blur(8px);
 }
+
 .caption-header .badge {
   background: rgba(123, 97, 255, 0.14);
   border: 1px solid rgba(202, 168, 255, 0.28);
   color: #efe8ff;
 }
+
 .hero-actions .btn {
   margin-bottom: .5rem;
 }
-.card-service, .card, .details, .vg-footer, .page-about, .page-portfolio, .page-blog, .page-contact {
+
+.card-service,
+.card,
+.details,
+.vg-footer,
+.page-about,
+.page-portfolio,
+.page-blog,
+.page-contact {
   background-color: transparent;
 }
-.page-about, .page-service, .page-portfolio, .page-blog, .page-contact {
+
+.page-about,
+.page-service,
+.page-portfolio,
+.page-blog,
+.page-contact {
   background: #0e0f17;
 }
+
 .img-place img {
   filter: saturate(.92) contrast(1.02);
 }
+
 .grid-item .img-caption {
   background: linear-gradient(180deg, rgba(11,11,18,0.02), rgba(11,11,18,0.92));
 }
-.post-grid .card, .card-service, .details {
+
+.post-grid .card,
+.card-service,
+.details {
   border: 1px solid rgba(255,255,255,.06);
   box-shadow: 0 10px 28px rgba(0,0,0,.28);
   background: #141623;
 }
+
 .contact-card {
   padding: 2rem;
 }
-.theme-list li, .text-muted, p, .post-date {
+
+.theme-list li,
+.text-muted,
+p,
+.post-date {
   color: #aab0c5 !important;
 }
+
 .vg-footer {
   background: #090910;
 }
+
 .timeline li .details {
   background: #141623;
 }
+
 .section-counter .number {
   color: #fff;
 }
@@ -947,46 +985,6 @@ body.cyber-dark {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 991px) {
-  .card-service {
-    min-height: 340px;
-  }
-
-  .gridder .img-place img {
-    height: 250px;
-  }
-}
-
-@media (max-width: 767px) {
-  .card-service {
-    min-height: unset;
-  }
-
-  .card-service .icon,
-  .contact-card .icon {
-    width: 130px;
-    height: 130px;
-  }
-
-  .card-service .icon img,
-  .contact-card .icon img {
-    width: 72px;
-    height: 72px;
-  }
-
-  .gridder .img-place img,
-  .academic-card .img-place img,
-  .page-blog .card .img-place img {
-    height: 220px;
-  }
-}
-
-
-
-
-
 /* =========================
    WRITEUPS SECTION
    ========================= */
@@ -1008,20 +1006,21 @@ body.cyber-dark {
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(170, 120, 255, 0.14);
   border-radius: 18px;
   overflow: hidden;
   background: #070b17;
+  border: 1px solid rgba(160, 110, 255, 0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 #writeups .grid-item:hover .card {
   transform: translateY(-6px);
-  border-color: rgba(190, 130, 255, 0.55);
+  border-color: rgba(190, 130, 255, 0.65);
   box-shadow:
-    0 0 18px rgba(138, 92, 246, 0.25),
-    0 0 38px rgba(138, 92, 246, 0.18),
-    0 16px 36px rgba(0, 0, 0, 0.35);
+    0 0 22px rgba(160, 110, 255, 0.35),
+    0 0 50px rgba(160, 110, 255, 0.25),
+    0 18px 40px rgba(0, 0, 0, 0.45);
 }
 
 #writeups .grid-item:hover {
@@ -1058,7 +1057,7 @@ body.cyber-dark {
 }
 
 #writeups .grid-item:hover .writeup-thumb {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 #writeups .caption {
@@ -1073,6 +1072,7 @@ body.cyber-dark {
 #writeups .post-category {
   display: inline-block;
   margin-bottom: 10px;
+  color: #b78cff !important;
 }
 
 #writeups .post-title {
@@ -1080,14 +1080,18 @@ body.cyber-dark {
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.2;
+  color: #e6dbff !important;
+}
+
+#writeups .post-title:hover {
+  color: #caa8ff !important;
 }
 
 #writeups .post-date {
   display: block;
   line-height: 1.6;
+  color: #aab0c5 !important;
 }
-
-
 
 /* =========================
    FANCYBOX / MODAL
@@ -1147,7 +1151,6 @@ body.cyber-dark {
   padding: 12px;
 }
 
-/* one unified content style */
 .writeup-modal-content {
   padding: 26px 32px 32px;
   background: #050b16 !important;
@@ -1171,12 +1174,25 @@ body.cyber-dark {
 }
 
 .writeup-modal-content a {
-  color: #6ea8ff;
+  color: #b78cff;
   text-decoration: none;
 }
 
 .writeup-modal-content a:hover {
+  color: #d9c1ff;
   text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 991px) {
+  .card-service {
+    min-height: 340px;
+  }
+
+  .gridder .img-place img {
+    height: 250px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1195,5 +1211,29 @@ body.cyber-dark {
 
   .writeup-modal-content {
     padding: 18px 20px 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-service {
+    min-height: unset;
+  }
+
+  .card-service .icon,
+  .contact-card .icon {
+    width: 130px;
+    height: 130px;
+  }
+
+  .card-service .icon img,
+  .contact-card .icon img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .gridder .img-place img,
+  .academic-card .img-place img,
+  .page-blog .card .img-place img {
+    height: 220px;
   }
 }
