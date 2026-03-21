@@ -60,7 +60,7 @@
     <!-- Hero Caption -->
     <div class="caption-header text-center wow zoomInDown">
       <h1 class="fw-light mb-4"><b class="fg-theme">Shannon Smith</b></h1>
-      <div class="badge">Cybersecurity Professional</div>
+      <div class="badge">Security Operations • DFIR • Detection Engineering</div>
       <div class="mt-4 hero-actions">
         <a href="#writeups" class="btn btn-theme-outline mr-2">Read Writeups</a>
         <a href="https://github.com/ShannonASmith" target="_blank" rel="noopener" class="btn btn-theme-outline mr-2">GitHub</a>
@@ -87,8 +87,7 @@
           <h5 class="fg-theme mb-3">Cybersecurity Analyst</h5>
           <p class="text-muted">
 		  I’m a cybersecurity analyst and U.S. Navy veteran transitioning into security operations through hands-on lab work, CTF investigations, and structured security writeups. My experience includes analyzing network traffic, investigating logs, and identifying suspicious activity across Windows and Linux environments using tools like Splunk, Wireshark, and Zeek.
-
-I focus on understanding attacker behavior and documenting investigations clearly—bridging technical analysis with communication. I’m currently expanding my skills through the WiCyS Security Training Scholarship, SANS coursework, and continued home lab development.
+		  I focus on understanding attacker behavior and documenting investigations clearly—bridging technical analysis with communication. I’m currently expanding my skills through the WiCyS Security Training Scholarship, SANS coursework, and continued home lab development.
           </p>
           <ul class="theme-list">
             <li><b>Focus:</b> Security investigations, DFIR, log analysis, and CTF challenges</li>
@@ -304,7 +303,7 @@ I focus on understanding attacker behavior and documenting investigations clearl
   <div class="container">
 
     <div class="text-center wow fadeInUp">
-      <div class="badge badge-subhead">Writeups</div>
+      <div class="badge badge-subhead">Featured Projects</div>
     </div>
 
     <h1 class="text-center fw-normal wow fadeInUp">Security Investigations</h1>
@@ -314,10 +313,59 @@ I focus on understanding attacker behavior and documenting investigations clearl
       <button class="btn btn-theme-outline" data-filter=".ctf">CTF</button>
       <button class="btn btn-theme-outline" data-filter=".dfir">DFIR</button>
       <button class="btn btn-theme-outline" data-filter=".labs">Labs</button>
+	  <button class="btn btn-theme-outline" data-filter=".portfolio">Portfolio</button>
       <button class="btn btn-theme-outline" data-filter=".research">Research</button>
     </div>
 
     <div class="gridder row my-3">
+
+	  <!-- Home Lab: Splunk Authentication -->
+      <div class="grid-item labs dfir portfolio col-md-6 col-lg-4 mb-4 wow fadeInUp">
+        <a href="javascript:;" data-fancybox data-src="#writeup-splunk-auth" class="text-decoration-none">
+          <div class="card">
+            <div class="img-place writeup-thumb-wrap">
+              <img src="assets/img/writeups/splunk-auth.png" alt="Suspicious Authentication Activity investigation" class="writeup-thumb vt-thumb">
+            </div>
+            <div class="caption">
+              <span class="post-category">SIEM / Log Analysis</span>
+              <div class="post-title">Suspicious Authentication Activity</div>
+              <span class="post-date">Investigating repeated login attempts and suspicious authentication patterns in Linux logs using Splunk.</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Home Lab: DNS Investigation -->
+      <div class="grid-item labs dfir portfolio col-md-6 col-lg-4 mb-4 wow fadeInUp">
+        <a href="javascript:;" data-fancybox data-src="#writeup-dns" class="text-decoration-none">
+          <div class="card">
+            <div class="img-place writeup-thumb-wrap">
+              <img src="assets/img/writeups/dns-investigation.png" alt="Suspicious DNS Activity investigation" class="writeup-thumb vt-thumb">
+            </div>
+            <div class="caption">
+              <span class="post-category">DNS / Threat Detection</span>
+              <div class="post-title">Suspicious DNS Activity</div>
+              <span class="post-date">Analyzing enterprise DNS logs to identify reverse lookup enumeration, zone transfer attempts, and internal naming exposure.</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Home Lab: Network and Web Assessment -->
+      <div class="grid-item labs dfir portfolio col-md-6 col-lg-4 mb-4 wow fadeInUp">
+        <a href="javascript:;" data-fancybox data-src="#writeup-networkweb" class="text-decoration-none">
+          <div class="card">
+            <div class="img-place writeup-thumb-wrap">
+              <img src="assets/img/writeups/network-web-assessment.png" alt="Network and Web Application Security Assessment" class="writeup-thumb vt-thumb">
+            </div>
+            <div class="caption">
+              <span class="post-category">Enumeration & Exploitation</span>
+              <div class="post-title">Network &amp; Web App Security Assessment</div>
+              <span class="post-date">Performing multi-tool enumeration across subdomains, web paths, ports, and exposed services to identify and validate unauthorized access.</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
       <!-- CTF: Notepad Online -->
       <div class="grid-item ctf col-md-6 col-lg-4 mb-4 wow fadeInUp">
@@ -422,6 +470,66 @@ I focus on understanding attacker behavior and documenting investigations clearl
 
 
 <!-- Hidden Fancybox Writeup Content -->
+
+<div style="display:none;" id="writeup-splunk-auth">
+  <div class="writeup-modal-solid">
+    <div class="writeup-modal-image-wrap">
+      <img src="assets/img/writeups/splunk-auth.png" class="writeup-modal-image" alt="Suspicious Authentication Activity investigation">
+    </div>
+    <div class="writeup-modal-content">
+      <h2>Suspicious Authentication Activity</h2>
+      <p>This investigation uses Splunk to analyze Linux authentication logs, identify repeated login attempts, correlate successful and failed authentication activity, and assess potential signs of credential abuse.</p>
+      <ul>
+        <li>Splunk SIEM investigation workflow</li>
+        <li>Authentication log analysis and correlation</li>
+        <li>Detection-oriented thinking and response actions</li>
+      </ul>
+      <a href="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-Authentication-Activity/README.md" target="_blank" rel="noopener">
+        View Full Investigation on GitHub →
+      </a>
+    </div>
+  </div>
+</div>
+
+<div style="display:none;" id="writeup-dns">
+  <div class="writeup-modal-solid">
+    <div class="writeup-modal-image-wrap">
+      <img src="assets/img/writeups/dns-investigation.png" class="writeup-modal-image" alt="Suspicious DNS Activity investigation">
+    </div>
+    <div class="writeup-modal-content">
+      <h2>Suspicious DNS Activity</h2>
+      <p>This project examines enterprise DNS logs to detect suspicious reverse lookups, repeated zone transfer attempts, and internal domain exposure consistent with reconnaissance behavior.</p>
+      <ul>
+        <li>DNS log analysis and threat detection</li>
+        <li>Reconnaissance pattern identification</li>
+        <li>Early-warning detection opportunities</li>
+      </ul>
+      <a href="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-DNS-Activity/README.md" target="_blank" rel="noopener">
+        View Full Investigation on GitHub →
+      </a>
+    </div>
+  </div>
+</div>
+
+<div style="display:none;" id="writeup-networkweb">
+  <div class="writeup-modal-solid">
+    <div class="writeup-modal-image-wrap">
+      <img src="assets/img/writeups/network-web-assessment.png" class="writeup-modal-image" alt="Network and Web Application Security Assessment">
+    </div>
+    <div class="writeup-modal-content">
+      <h2>Network &amp; Web App Security Assessment</h2>
+      <p>This project documents a structured attack workflow using subdomain enumeration, web fuzzing, directory discovery, network scanning, and FTP access to validate exposed services and security weaknesses.</p>
+      <ul>
+        <li>Subdomain and endpoint enumeration</li>
+        <li>Service discovery with Nmap</li>
+        <li>Unauthorized access validation through FTP</li>
+      </ul>
+      <a href="https://github.com/shannonasmith/Home-Lab/blob/main/Network-and-Web-App-Security/README.md" target="_blank" rel="noopener">
+        View Full Investigation on GitHub →
+      </a>
+    </div>
+  </div>
+</div>
 
 <div style="display:none;" id="writeup-notepad">
   <div class="writeup-modal-solid">
