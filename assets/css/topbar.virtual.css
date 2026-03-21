@@ -984,3 +984,216 @@ body.cyber-dark {
 }
 
 
+
+
+
+/* =========================
+   WRITEUPS SECTION
+   ========================= */
+
+#writeups .gridder {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#writeups .grid-item {
+  display: flex;
+  margin-bottom: 30px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#writeups .grid-item .card {
+  width: 100%;
+  min-height: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(170, 120, 255, 0.14);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #070b17;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+#writeups .grid-item:hover .card {
+  transform: translateY(-6px);
+  border-color: rgba(190, 130, 255, 0.55);
+  box-shadow:
+    0 0 18px rgba(138, 92, 246, 0.25),
+    0 0 38px rgba(138, 92, 246, 0.18),
+    0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+#writeups .grid-item:hover {
+  z-index: 2;
+}
+
+#writeups .writeup-thumb-wrap {
+  width: 100%;
+  height: 220px;
+  background: #050b16;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#writeups .writeup-thumb {
+  width: 100%;
+  height: 220px;
+  display: block;
+  background: #050b16;
+  transition: transform 0.35s ease;
+}
+
+#writeups .ctf-thumb {
+  object-fit: cover;
+  object-position: center top;
+}
+
+#writeups .vt-thumb {
+  object-fit: contain;
+  object-position: center center;
+  padding: 10px;
+}
+
+#writeups .grid-item:hover .writeup-thumb {
+  transform: scale(1.02);
+}
+
+#writeups .caption {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 22px;
+  background: #070b17;
+}
+
+#writeups .post-category {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+#writeups .post-title {
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+#writeups .post-date {
+  display: block;
+  line-height: 1.6;
+}
+
+
+
+/* =========================
+   FANCYBOX / MODAL
+   Unified behavior for ALL writeups
+   ========================= */
+
+.fancybox-bg {
+  background: rgba(3, 8, 20, 0.96) !important;
+}
+
+.fancybox-stage {
+  background: transparent !important;
+}
+
+.fancybox-slide--html {
+  padding: 24px !important;
+}
+
+.fancybox-content {
+  padding: 0 !important;
+  background: #050b16 !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45) !important;
+}
+
+.fancybox-slide--html .fancybox-content {
+  margin: 0 !important;
+}
+
+.writeup-modal-solid {
+  width: 100%;
+  max-width: 980px;
+  background: #050b16 !important;
+  border-radius: 18px;
+  overflow: hidden;
+  color: #e8ecf7;
+}
+
+.writeup-modal-image-wrap {
+  width: 100%;
+  height: 300px;
+  background: #050b16 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.writeup-modal-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  background: #050b16 !important;
+  padding: 12px;
+}
+
+/* one unified content style */
+.writeup-modal-content {
+  padding: 26px 32px 32px;
+  background: #050b16 !important;
+}
+
+.writeup-modal-content h2 {
+  margin-bottom: 16px;
+  color: #c4a2ff;
+  font-weight: 600;
+}
+
+.writeup-modal-content p,
+.writeup-modal-content li {
+  color: #d7def0 !important;
+  line-height: 1.7;
+}
+
+.writeup-modal-content ul {
+  margin: 14px 0 18px;
+  padding-left: 22px;
+}
+
+.writeup-modal-content a {
+  color: #6ea8ff;
+  text-decoration: none;
+}
+
+.writeup-modal-content a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #writeups .writeup-thumb-wrap,
+  #writeups .writeup-thumb {
+    height: 180px;
+  }
+
+  #writeups .grid-item .card {
+    min-height: auto;
+  }
+
+  .writeup-modal-image-wrap {
+    height: 190px;
+  }
+
+  .writeup-modal-content {
+    padding: 18px 20px 22px;
+  }
+}
