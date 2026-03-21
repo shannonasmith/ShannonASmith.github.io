@@ -1237,3 +1237,22 @@ p,
     height: 220px;
   }
 }
+
+
+
+/* Standardize timeline/date colors */
+.timeline li .title,
+.timeline li .details small,
+.timeline li .details .fg-theme {
+  color: #a855f7 !important;
+}
+
+/* Optional: keep a consistent weight */
+.timeline li .title {
+  font-weight: 600;
+}
+
+/* Optional: make timeline body text stay muted */
+.timeline li .details p {
+  color: #b8b8c5;
+}
