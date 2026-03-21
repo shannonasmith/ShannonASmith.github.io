@@ -310,16 +310,16 @@
 
     <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
       <button class="btn btn-theme-outline selected" data-filter="*">All</button>
+      <button class="btn btn-theme-outline" data-filter=".portfolio">Portfolio</button>
       <button class="btn btn-theme-outline" data-filter=".ctf">CTF</button>
       <button class="btn btn-theme-outline" data-filter=".dfir">DFIR</button>
       <button class="btn btn-theme-outline" data-filter=".labs">Labs</button>
-	  <button class="btn btn-theme-outline" data-filter=".portfolio">Portfolio</button>
       <button class="btn btn-theme-outline" data-filter=".research">Research</button>
     </div>
 
     <div class="gridder row my-3">
 
-	  <!-- Home Lab: Splunk Authentication -->
+      <!-- Home Lab: Splunk Authentication -->
       <div class="grid-item labs dfir portfolio col-md-6 col-lg-4 mb-4 wow fadeInUp">
         <a href="javascript:;" data-fancybox data-src="#writeup-splunk-auth" class="text-decoration-none">
           <div class="card">
@@ -352,16 +352,48 @@
       </div>
 
       <!-- Home Lab: Network and Web Assessment -->
-      <div class="grid-item labs dfir portfolio col-md-6 col-lg-4 mb-4 wow fadeInUp">
+      <div class="grid-item labs portfolio col-md-6 col-lg-4 mb-4 wow fadeInUp">
         <a href="javascript:;" data-fancybox data-src="#writeup-networkweb" class="text-decoration-none">
           <div class="card">
             <div class="img-place writeup-thumb-wrap">
               <img src="assets/img/writeups/network-web-assessment.png" alt="Network and Web Application Security Assessment" class="writeup-thumb vt-thumb">
             </div>
             <div class="caption">
-              <span class="post-category">Enumeration & Exploitation</span>
+              <span class="post-category">Enumeration &amp; Exploitation</span>
               <div class="post-title">Network &amp; Web App Security Assessment</div>
-              <span class="post-date">Performing multi-tool enumeration across subdomains, web paths, ports, and exposed services to identify and validate unauthorized access.</span>
+              <span class="post-date">Performing multi-tool enumeration across web paths, ports, and exposed services to identify and validate unauthorized access.</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- VT: NotPetya -->
+      <div class="grid-item research dfir portfolio col-md-6 col-lg-4 mb-4 wow fadeInUp">
+        <a href="javascript:;" data-fancybox data-src="#writeup-notpetya" class="text-decoration-none">
+          <div class="card">
+            <div class="img-place writeup-thumb-wrap">
+              <img src="assets/img/writeups/notpetya.png" alt="NotPetya malware analysis" class="writeup-thumb vt-thumb">
+            </div>
+            <div class="caption">
+              <span class="post-category">Malware Analysis</span>
+              <div class="post-title">NotPetya</div>
+              <span class="post-date">Destructive malware investigation covering propagation, operational impact, and response lessons.</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- CTF / DFIR: Stolen Footprints -->
+      <div class="grid-item ctf dfir col-md-6 col-lg-4 mb-4 wow fadeInUp">
+        <a href="javascript:;" data-fancybox data-src="#writeup-stolen" class="text-decoration-none">
+          <div class="card">
+            <div class="img-place writeup-thumb-wrap">
+              <img src="assets/img/writeups/stolen-footprints.png" alt="Network forensics investigation" class="writeup-thumb ctf-thumb">
+            </div>
+            <div class="caption">
+              <span class="post-category">Network Forensics</span>
+              <div class="post-title">Stolen Footprints</div>
+              <span class="post-date">Reconstructing attacker activity from packet captures and tracing file theft through FTP traffic analysis.</span>
             </div>
           </div>
         </a>
@@ -399,22 +431,6 @@
         </a>
       </div>
 
-      <!-- CTF / DFIR: Stolen Footprints -->
-      <div class="grid-item ctf dfir col-md-6 col-lg-4 mb-4 wow fadeInUp">
-        <a href="javascript:;" data-fancybox data-src="#writeup-stolen" class="text-decoration-none">
-          <div class="card">
-            <div class="img-place writeup-thumb-wrap">
-              <img src="assets/img/writeups/stolen-footprints.png" alt="Network forensics investigation" class="writeup-thumb ctf-thumb">
-            </div>
-            <div class="caption">
-              <span class="post-category">Network Forensics</span>
-              <div class="post-title">Stolen Footprints</div>
-              <span class="post-date">Reconstructing attacker activity from packet captures and tracing file theft through FTP traffic analysis.</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
       <!-- VT: Wizard Spider -->
       <div class="grid-item research col-md-6 col-lg-4 mb-4 wow fadeInUp">
         <a href="javascript:;" data-fancybox data-src="#writeup-wizardspider" class="text-decoration-none">
@@ -442,22 +458,6 @@
               <span class="post-category">Threat Research</span>
               <div class="post-title">Uber Breach (Lapsus$)</div>
               <span class="post-date">Analysis of social engineering, MFA fatigue, access escalation, and attacker tradecraft.</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- VT: NotPetya -->
-      <div class="grid-item research dfir col-md-6 col-lg-4 mb-4 wow fadeInUp">
-        <a href="javascript:;" data-fancybox data-src="#writeup-notpetya" class="text-decoration-none">
-          <div class="card">
-            <div class="img-place writeup-thumb-wrap">
-              <img src="assets/img/writeups/notpetya.png" alt="NotPetya malware analysis" class="writeup-thumb vt-thumb">
-            </div>
-            <div class="caption">
-              <span class="post-category">Malware Analysis</span>
-              <div class="post-title">NotPetya</div>
-              <span class="post-date">Destructive malware investigation covering propagation, operational impact, and response lessons.</span>
             </div>
           </div>
         </a>
