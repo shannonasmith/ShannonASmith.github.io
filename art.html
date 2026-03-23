@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art | Shannon Smith</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body id="top" data-page="art">
+
+  <!-- =========================
+       GLOBAL PAGE BACKGROUND
+  ========================= -->
+
+  <div class="page-bg" aria-hidden="true">
+    <div class="stars stars-1"></div>
+    <div class="stars stars-2"></div>
+    <div class="shooting-star shooting-star-1"></div>
+    <div class="shooting-star shooting-star-2"></div>
+    <div class="shooting-star shooting-star-3"></div>
+  </div>
+
+  <!-- =========================
+       GLOBAL NAVIGATION
+  ========================= -->
+
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Shannon Smith Home">
+        <img src="images/nav-logo.png" alt="Shannon Smith logo" />
+      </a>
+
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="cyber.html">Cyber</a>
+        <a href="art.html">Art</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-social" aria-label="Contact links">
+        <a href="mailto:shannon.a.smith1223@gmail.com" class="nav-social-link" aria-label="Email">
+          <img src="images/icons/email.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
+          <img src="images/icons/linkedin.svg" alt="" />
+        </a>
+        <a href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub">
+          <img src="images/icons/github.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================
+       ART HERO
+  ========================= -->
+
+	<div class="page-header art-page-header art-enter-up">
+	  <h2>Creative Works</h2>
+	  <p>
+		A curated collection of illustration, fine art, sculpture, woodworking, and photography
+		exploring detail, contrast, storytelling, and visual experimentation.
+	  </p>
+	</div>
+
+    <!-- =========================
+         ART GALLERY
+    ========================= -->
+
+    <section class="section art-gallery-section" aria-labelledby="art-gallery-heading">
+      <h2 id="art-gallery-heading" class="visually-hidden">Art Gallery</h2>
+	  
+	<div class="filter-pills art-filter-pills art-enter-up">
+      <button class="filter-pill active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-pill" data-filter="drawing" aria-pressed="false">Drawings</button>
+      <button class="filter-pill" data-filter="painting" aria-pressed="false">Paintings</button>
+      <button class="filter-pill" data-filter="woodworking" aria-pressed="false">Woodworking</button>
+      <button class="filter-pill" data-filter="sculpture" aria-pressed="false">Sculpture</button>
+      <button class="filter-pill" data-filter="photography" aria-pressed="false">Photography</button>
+    </div>
+
+    <div class="art-grid art-enter-up" id="artGrid">
+
+      <article class="art-card"
+        data-category="painting"
+        data-title="Profile Study Group"
+        data-desc="A painted profile composition exploring contrast, identity, and skin tone through a multi-figure arrangement."
+        data-img="images/art/art-01.png"
+        data-medium="Painting">
+        <div class="art-card-image">
+          <img src="images/art/art-01.png" alt="Profile Study Group painting" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Painting</p>
+          <h3>Profile Study Group</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="painting"
+        data-title="Band Profile Painting"
+        data-desc="A portrait study focused on side profiles, silhouette, and tonal contrast."
+        data-img="images/art/art-02.jpg"
+        data-medium="Painting">
+        <div class="art-card-image">
+          <img src="images/art/art-02.jpg" alt="Band profile painting" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Painting</p>
+          <h3>Band Profile Painting</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="drawing"
+        data-title="Portrait with Hat"
+        data-desc="A portrait drawing emphasizing expression, shadow, and soft tonal transitions."
+        data-img="images/art/art-03.jpg"
+        data-medium="Drawing">
+        <div class="art-card-image">
+          <img src="images/art/art-03.jpg" alt="Portrait with hat drawing" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Drawing</p>
+          <h3>Portrait with Hat</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="drawing"
+        data-title="Wedding Portrait"
+        data-desc="A formal portrait drawing capturing gesture, intimacy, and composition through grayscale rendering."
+        data-img="images/art/art-04.jpeg"
+        data-medium="Drawing">
+        <div class="art-card-image">
+          <img src="images/art/art-04.jpeg" alt="Wedding portrait drawing" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Drawing</p>
+          <h3>Wedding Portrait</h3>
+        </div>
+      </article>
+
+      <!--<article class="art-card"
+        data-category="sculpture"
+        data-title="Abstract Form Study"
+        data-desc="A sculptural concept sketch exploring organic shape and negative space."
+        data-img="images/art/art-05.jpg"
+        data-medium="Sculpture">
+        <div class="art-card-image">
+          <img src="images/art/art-05.jpg" alt="Abstract form concept sketch" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Sculpture</p>
+          <h3>Abstract Form Study</h3>
+        </div>
+      </article>-->
+
+      <article class="art-card"
+        data-category="drawing"
+        data-title="Robert Smith Portrait"
+        data-desc="Ink-style portrait study inspired by music iconography and expressive line work."
+        data-img="images/art/art-06.jpg"
+        data-medium="Drawing">
+        <div class="art-card-image">
+          <img src="images/art/art-06.jpg" alt="Robert Smith portrait drawing" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Drawing</p>
+          <h3>Robert Smith Portrait</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="woodworking"
+        data-title="Curved Desk"
+        data-desc="A handcrafted furniture build combining functional cabinetry with custom woodwork."
+        data-img="images/art/art-07.jpg"
+        data-medium="Woodworking">
+        <div class="art-card-image">
+          <img src="images/art/art-07.jpg" alt="Curved desk woodworking piece" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Woodworking</p>
+          <h3>Curved Desk</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="woodworking"
+        data-title="Custom Couch Build"
+        data-desc="A furniture design and build project combining sketch-based planning and full-scale construction."
+        data-img="images/art/art-08.jpg"
+        data-medium="Woodworking">
+        <div class="art-card-image">
+          <img src="images/art/art-08.jpg" alt="Custom couch build" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Woodworking</p>
+          <h3>Custom Couch Build</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="woodworking"
+        data-title="Couch Design Sketch"
+        data-desc="A furniture concept sketch focusing on silhouette, proportion, and decorative base detail."
+        data-img="images/art/art-11.jpg"
+        data-medium="Woodworking Design Sketch">
+        <div class="art-card-image">
+          <img src="images/art/art-11.jpg" alt="Couch design sketch" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Woodworking</p>
+          <h3>Couch Design Sketch</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="woodworking"
+        data-title="Rustic Candle Holders"
+        data-desc="Handcrafted candle holders made from natural wood, emphasizing grain, texture, and organic form."
+        data-img="images/art/art-09.jpg"
+        data-medium="Woodworking">
+        <div class="art-card-image">
+          <img src="images/art/art-09.jpg" alt="Rustic wooden candle holders" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Woodworking</p>
+          <h3>Rustic Candle Holders</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="woodworking"
+        data-title="Cabinet Concept Sketch"
+        data-desc="A design sketch for a furniture piece, combining form exploration with practical planning."
+        data-img="images/art/art-10.jpg"
+        data-medium="Woodworking Design Sketch">
+        <div class="art-card-image">
+          <img src="images/art/art-10.jpg" alt="Cabinet concept sketch" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Woodworking</p>
+          <h3>Cabinet Concept Sketch</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="sculpture"
+        data-title="Self Portrait Sculpture"
+        data-desc="A sculptural self-portrait study built around likeness, structure, and surface form."
+        data-img="images/art/art-12.jpg"
+        data-medium="Sculpture">
+        <div class="art-card-image">
+          <img src="images/art/art-12.jpg" alt="Self portrait sculpture" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Sculpture</p>
+          <h3>Self Portrait Sculpture</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="sculpture"
+        data-title="Self Portrait Bust"
+        data-desc="A sculptural bust study focused on facial structure, expression, and three-dimensional portrait form."
+        data-img="images/art/art-13.jpg"
+        data-medium="Sculpture">
+        <div class="art-card-image">
+          <img src="images/art/art-13.jpg" alt="Self portrait bust sculpture" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Sculpture</p>
+          <h3>Self Portrait Bust</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="sculpture"
+        data-title="Glazed Vessel"
+        data-desc="A sculptural ceramic vessel finished with layered glaze effects and strong vertical form."
+        data-img="images/art/art-14.jpg"
+        data-medium="Sculpture">
+        <div class="art-card-image">
+          <img src="images/art/art-14.jpg" alt="Glazed ceramic vessel" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Sculpture</p>
+          <h3>Glazed Vessel</h3>
+        </div>
+      </article>
+
+      <article class="art-card"
+        data-category="sculpture"
+        data-title="Abstract Ceramic Form"
+        data-desc="An abstract sculptural form exploring smooth curves, voids, and organic balance."
+        data-img="images/art/art-15.jpg"
+        data-medium="Sculpture">
+        <div class="art-card-image">
+          <img src="images/art/art-15.jpg" alt="Abstract ceramic sculpture" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Sculpture</p>
+          <h3>Abstract Ceramic Form</h3>
+        </div>
+      </article>
+	  
+	  <article class="art-card"
+        data-category="sculpture"
+        data-title="Abstract Form Study"
+        data-desc="A sculptural concept sketch exploring organic shape and negative space."
+        data-img="images/art/art-16.jpg"
+        data-medium="Sculpture">
+        <div class="art-card-image">
+          <img src="images/art/art-16.jpg" alt="Abstract form concept sketch" class="artwork-image" draggable="false" />
+        </div>
+        <div class="art-card-body">
+          <p class="art-card-kicker">Sculpture</p>
+          <h3>Abstract Form Study</h3>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- =========================
+       ART MODAL
+  ========================= -->
+
+  <div class="art-modal" id="artModal" aria-hidden="true">
+    <div class="art-modal-backdrop"></div>
+
+    <div class="art-modal-content" role="dialog" aria-modal="true" aria-labelledby="artModalTitle" aria-describedby="artModalDesc">
+      <button class="art-modal-close" type="button" aria-label="Close artwork modal">&times;</button>
+
+      <img id="artModalImage" src="" alt="" class="art-modal-image" draggable="false" />
+      <p id="artModalMedium" class="art-modal-medium"></p>
+      <h3 id="artModalTitle"></h3>
+      <p id="artModalDesc"></p>
+    </div>
+  </div>
+  
+  
+  <!-- =========================
+		 BOTTOM NAV BAR
+	========================= -->
+
+	<footer class="bottom-nav">
+	  <div class="bottom-nav-inner">
+
+		<div class="bottom-nav-left">
+		  <span>© 2026 Shannon Smith</span>
+		</div>
+
+		<div class="bottom-nav-center">
+		  <a href="#top" class="bottom-nav-up" aria-label="Back to top">↑</a>
+		</div>
+
+		<div class="bottom-nav-right">
+		  <a href="about.html">About</a>
+		  <a href="cyber.html">Cyber</a>
+		  <a href="art.html">Art</a>
+		  <a href="contact.html">Contact</a>
+		</div>
+
+	  </div>
+	</footer>
+  
+  
+  
+</body>
+</html>
