@@ -89,11 +89,11 @@ body {
 }
 
 .nav-logo {
-  width: 60px;
+  display: block;
   height: 60px;
+  width: auto;
+  max-width: none;
   opacity: 0.95;
-  border-radius: 50%;
-  object-fit: contain;
   image-rendering: auto;
   filter: drop-shadow(0 0 4px rgba(120, 90, 255, 0.25));
   transition: transform 0.25s ease, filter 0.25s ease;
