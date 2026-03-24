@@ -31,7 +31,9 @@ function setActiveNav() {
   const currentPage = body?.dataset?.page;
   if (!currentPage) return;
 
-  const navLinks = document.querySelectorAll(".nav-links a, .mobile-menu a");
+  const navLinks = document.querySelectorAll(
+    ".nav-links a, .mobile-menu a, .bottom-nav-right a"
+  );
 
   navLinks.forEach((link) => {
     const href = link.getAttribute("href") || "";
