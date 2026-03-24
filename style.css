@@ -159,6 +159,7 @@ body.page-leaving .intro-copy {
   left: 0;
   right: 0;
   width: 100%;
+  z-index: 5000;
 
   background: rgba(18, 20, 34, 0.46);
   border-bottom: 1px solid rgba(143, 89, 255, 0.14);
@@ -1257,7 +1258,7 @@ body.page-ready.intro-start .creative-portrait {
     position: absolute;
     top: calc(100% + 6px);
     left: 50%;
-    z-index: 140;
+    z-index: 6000;
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
@@ -1266,22 +1267,27 @@ body.page-ready.intro-start .creative-portrait {
     padding: 0.65rem;
     border-radius: 18px;
     background:
-      linear-gradient(180deg, rgba(8, 10, 22, 0.97) 0%, rgba(10, 10, 20, 0.95) 100%);
+      linear-gradient(180deg, rgba(8, 10, 22, 0.985) 0%, rgba(10, 10, 20, 0.975) 100%);
     border: 1px solid rgba(143, 89, 255, 0.18);
     box-shadow:
-      0 12px 40px rgba(0, 0, 0, 0.35),
-      0 0 22px rgba(143, 89, 255, 0.12);
+      0 12px 40px rgba(0, 0, 0, 0.45),
+      0 0 22px rgba(143, 89, 255, 0.14);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transform: translate(-50%, -8px);
-    transition: opacity 0.22s ease, transform 0.22s ease;
+    transition:
+      opacity 0.22s ease,
+      transform 0.22s ease,
+      visibility 0.22s ease;
   }
 
-  body.menu-open .mobile-menu {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, 0);
-  }
+body.menu-open .mobile-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
 
   .mobile-menu a {
     color: rgba(255, 255, 255, 0.88);
