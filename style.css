@@ -220,12 +220,9 @@ body.page-leaving .nav {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--accent);
-}
-
   text-shadow:
     0 0 6px rgba(143, 89, 255, 0.6),
     0 0 14px rgba(143, 89, 255, 0.35);
-
   transform: translateY(-1px);
 }
 
