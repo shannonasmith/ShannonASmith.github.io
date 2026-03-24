@@ -204,10 +204,9 @@ body.page-leaving .nav {
 }
 
 .nav-links a:hover,
-.nav-links a.active,
-.bottom-nav-right a:hover,
-.bottom-nav-right a.active {
+.nav-links a.active {
   color: var(--accent);
+}
 
   text-shadow:
     0 0 6px rgba(143, 89, 255, 0.6),
@@ -2303,12 +2302,22 @@ body.page-ready .about-enter-right {
 }
 
 .bottom-nav-right a:hover,
-.bottom-nav-right a:focus-visible,
-.bottom-nav-right a.active {
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(143, 89, 255, 0.24);
+.bottom-nav-right a:focus-visible {
+  color: var(--accent);
+  text-shadow:
+    0 0 6px rgba(143, 89, 255, 0.6),
+    0 0 14px rgba(143, 89, 255, 0.35);
   transform: translateY(-1px);
   outline: none;
+}
+
+.bottom-nav-right a.active,
+.bottom-nav-right a[aria-current="page"] {
+  color: var(--accent);
+  text-shadow:
+    0 0 6px rgba(143, 89, 255, 0.6),
+    0 0 14px rgba(143, 89, 255, 0.35);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 900px) {
