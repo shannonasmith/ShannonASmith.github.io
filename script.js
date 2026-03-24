@@ -112,9 +112,14 @@ function initPageState() {
 function initLandingIntro() {
   if (!hero || body.dataset.page !== "home") return;
 
+  root.style.setProperty("--split", "50%");
+
+  requestAnimationFrame(() => {
+    body.classList.add("intro-start");
+  });
+
   const isMobile = window.matchMedia("(max-width: 700px)").matches;
   if (isMobile) {
-    root.style.setProperty("--split", "50%");
     return;
   }
 
@@ -143,15 +148,9 @@ function initLandingIntro() {
     }
   }
 
-  root.style.setProperty("--split", "50%");
-
-  requestAnimationFrame(() => {
-	  body.classList.add("intro-start");
-	});
-
-	setTimeout(() => {
-	  introComplete = true;
-	}, 1100);
+  setTimeout(() => {
+    introComplete = true;
+  }, 1100);
 
   function getInvertedSplit(x, width, min = 18, max = 82) {
     const percent = 100 - (x / width) * 100;
