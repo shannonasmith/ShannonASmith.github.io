@@ -3141,30 +3141,40 @@ body.page-ready.intro-start .creative-portrait {
 ========================= */
 
 body[data-page="contact"] .page-header,
-body[data-page="contact"] .contact-panel {
+body[data-page="contact"] .contact-panel,
+body[data-page="contact"] .bottom-nav {
+  will-change: transform, opacity;
   transition:
-    transform 0.68s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.62s ease,
-    box-shadow 0.3s ease;
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.42s ease,
+    box-shadow 0.25s ease;
 }
 
 body[data-page="contact"] .page-header {
-  transform: translateY(18px);
+  transform: translateY(12px);
+  opacity: 0;
 }
 
 body[data-page="contact"] .contact-panel {
-  transform: translateY(24px);
+  transform: translateY(18px);
+  opacity: 0;
+}
+
+body[data-page="contact"] .bottom-nav {
+  transform: translateY(10px);
   opacity: 0;
 }
 
 body.page-ready[data-page="contact"] .page-header,
-body.page-ready[data-page="contact"] .contact-panel {
+body.page-ready[data-page="contact"] .contact-panel,
+body.page-ready[data-page="contact"] .bottom-nav {
   transform: translateY(0);
   opacity: 1;
 }
 
 body.page-leaving[data-page="contact"] .page-header,
-body.page-leaving[data-page="contact"] .contact-panel {
-  transform: translateY(12px);
+body.page-leaving[data-page="contact"] .contact-panel,
+body.page-leaving[data-page="contact"] .bottom-nav {
+  transform: translateY(8px);
   opacity: 0;
 }
