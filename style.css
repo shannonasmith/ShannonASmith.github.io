@@ -3181,3 +3181,34 @@ body.page-leaving[data-page="contact"] .bottom-nav {
   transform: translateY(8px);
   opacity: 0;
 }
+
+/* =========================
+   MENU LAYER SAFETY PATCH
+========================= */
+.nav {
+  z-index: 5000;
+}
+
+.nav-toggle {
+  position: relative;
+  z-index: 7000;
+}
+
+.mobile-menu {
+  z-index: 6000;
+}
+
+body.menu-open .hero,
+body.menu-open main,
+body.menu-open .page-header,
+body.menu-open .section,
+body.menu-open .bottom-nav {
+  pointer-events: none;
+}
+
+body.menu-open .nav,
+body.menu-open .nav-brand,
+body.menu-open .nav-toggle,
+body.menu-open .mobile-menu {
+  pointer-events: auto;
+}
