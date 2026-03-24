@@ -90,7 +90,8 @@ body {
 
 .nav-logo {
   display: block;
-  height: 60px;
+  height: clamp(40px, 5vw, 60px);
+  /*height: 60px;*/
   width: auto;
   max-width: none;
   opacity: 0.95;
