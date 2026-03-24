@@ -112,6 +112,12 @@ function initPageState() {
 function initLandingIntro() {
   if (!hero || body.dataset.page !== "home") return;
 
+  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+  if (isMobile) {
+    root.style.setProperty("--split", "50%");
+    return;
+  }
+
   let targetSplit = 50;
   let currentSplit = 50;
   let rafId = null;
