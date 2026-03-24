@@ -2644,7 +2644,6 @@ body.page-ready .art-enter-up {
 
 /* =========================
    CLEANUP PATCHES
-   Add these near the END of style.css
 ========================= */
 /* Keep modal open-state behavior consistent */
 .cert-modal.active,
@@ -2737,7 +2736,6 @@ button:focus-visible,
 /* =========================
    CYBER SECTION HEADING TWEAKS
 ========================= */
-
 /* Top Skills */
 .skills-grid-section .section-heading h2 {
   font-size: clamp(2rem, 2.8vw, 3rem);
@@ -2904,7 +2902,7 @@ body.page-ready.intro-start .creative-portrait {
 }
 
 /* =========================
-   ADDITIONAL TOOLS (UPGRADED)
+   ADDITIONAL TOOLS 
 ========================= */
 .tools-pills {
   display: flex;
@@ -3164,7 +3162,6 @@ body.page-ready.intro-start .creative-portrait {
 /* =========================
    CONTACT PAGE TRANSITION TUNING
 ========================= */
-
 body[data-page="contact"] .page-header,
 body[data-page="contact"] .contact-panel,
 body[data-page="contact"] .bottom-nav {
