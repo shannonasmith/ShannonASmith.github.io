@@ -91,18 +91,22 @@ body {
 .nav-logo {
   display: block;
   height: clamp(40px, 5vw, 60px);
-  /*height: 60px;*/
   width: auto;
   max-width: none;
   opacity: 0.95;
   image-rendering: auto;
   filter: drop-shadow(0 0 4px rgba(120, 90, 255, 0.25));
-  transition: transform 0.25s ease, filter 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
 }
 
-.nav-brand:hover .nav-logo {
-  transform: scale(1.06);
-  filter: drop-shadow(0 0 10px rgba(140, 110, 255, 0.6));
+.nav-brand:hover .nav-logo,
+.nav-brand:focus-visible .nav-logo {
+  transform: scale(1.05);
+  filter:
+    drop-shadow(0 0 6px rgba(143, 89, 255, 0.6))
+    drop-shadow(0 0 14px rgba(143, 89, 255, 0.35));
 }
 
 /* =========================
