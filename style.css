@@ -3054,3 +3054,104 @@ body.page-ready.intro-start .creative-portrait {
 .about-section-gap {
   margin-top: 2.75rem;
 }
+
+
+
+@media (max-width: 700px) {
+  .intro-copy {
+    inset: auto 0 2rem 0;
+    padding: 0 0.9rem;
+    gap: 0.75rem;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .intro-left,
+  .intro-right,
+  .intro-side {
+    max-width: 44%;
+  }
+
+  .intro-word {
+    font-size: clamp(1.1rem, 5.2vw, 1.55rem);
+    letter-spacing: 0.05em;
+  }
+
+  .intro-sub {
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .portrait,
+  .cyber-layer .effect-image,
+  .creative-layer .effect-image {
+    width: min(82vw, 340px);
+    max-height: 56vh;
+  }
+}
+
+@media (max-width: 520px) {
+  .intro-copy {
+    bottom: 1.5rem;
+    padding: 0 0.7rem;
+    gap: 0.6rem;
+  }
+
+  .intro-left,
+  .intro-right,
+  .intro-side {
+    max-width: 45%;
+  }
+
+  .intro-word {
+    font-size: clamp(0.95rem, 5vw, 1.25rem);
+    letter-spacing: 0.04em;
+  }
+
+  .intro-sub {
+    font-size: 0.64rem;
+    line-height: 1.28;
+  }
+
+  .portrait,
+  .cyber-layer .effect-image,
+  .creative-layer .effect-image {
+    width: min(84vw, 300px);
+    max-height: 50vh;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  .page-header,
+  .art-page-header,
+  .contact-page-header {
+    padding-top: 182px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-header,
+  .art-page-header,
+  .contact-page-header {
+    padding-top: 196px;
+  }
+}
+
+
+
+@media (max-width: 1050px) {
+  .simple-grid,
+  .art-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .simple-grid,
+  .art-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
