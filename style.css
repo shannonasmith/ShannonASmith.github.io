@@ -545,6 +545,20 @@ body.page-ready.intro-start .intro-right {
 }
 
 /* =========================
+   LANDING HOVER (CYBER / ART)
+========================= */
+
+.intro-side:hover .intro-word {
+  color: var(--accent-2) !important;
+
+  text-shadow:
+    0 0 10px rgba(143, 89, 255, 0.35),
+    0 0 20px rgba(143, 89, 255, 0.15);
+
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+/* =========================
    INTRO PORTRAIT MOTION
 ========================= */
 
