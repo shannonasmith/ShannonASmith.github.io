@@ -33,86 +33,101 @@
   <!-- =========================
        GLOBAL NAVIGATION
   ========================= -->
-
   <nav class="nav" aria-label="Primary navigation">
-    <div class="nav-inner">	  
-      <a href="index.html" class="nav-brand" aria-label="Shannon Smith Home">
-        <img src="images/nav-logo.svg" alt="Shannon Smith logo" class="nav-logo" />
-      </a>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Shannon Smith Home">
+      <img src="images/nav-logo.svg" alt="Shannon Smith logo" class="nav-logo" />
+    </a>
 
-      <div class="nav-links">
-		<a href="about.html">About</a>
-        <a href="cyber.html">Cyber</a>
-        <a href="art.html">Art</a>
-		<a href="contact.html">Contact</a>
-      </div>
-	  
-	  <div class="nav-social" aria-label="Contact links">
-		<a href="mailto:shannon.a.smith1223@gmail.com" class="nav-social-link" aria-label="Email">
-		  <img src="images/icons/email.svg" alt="" />
-		</a>
-		<a href="https://www.linkedin.com/in/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
-		  <img src="images/icons/linkedin.svg" alt="" />
-		</a>
-		<a href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub">
-		  <img src="images/icons/github.svg" alt="" />
-		</a>
-	  </div>
-	  
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="cyber.html">Cyber</a>
+      <a href="art.html">Art</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </nav>
+
+    <div class="nav-social" aria-label="Contact links">
+      <a href="mailto:shannon.a.smith1223@gmail.com" class="nav-social-link" aria-label="Email">
+        <img src="images/icons/email.svg" alt="" />
+      </a>
+      <a href="https://www.linkedin.com/in/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
+        <img src="images/icons/linkedin.svg" alt="" />
+      </a>
+      <a href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub">
+        <img src="images/icons/github.svg" alt="" />
+      </a>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="about.html">About</a>
+    <a href="cyber.html">Cyber</a>
+    <a href="art.html">Art</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
 
-  <main>
-    <section class="page-header contact-page-header">
-      <h2>Contact</h2>
-      <p>
-        Open to cybersecurity opportunities, technical conversations, collaboration, and professional networking.
+<main>
+  <section class="page-header contact-page-header">
+	<h2>Contact</h2>
+	<p>
+	  Open to cybersecurity opportunities, technical conversations, collaboration, and professional networking.
+	</p>
+  </section>
+	
+  <section class="section contact-section">
+	<div class="contact-panel">
+	  <div class="contact-panel-copy">
+		<p class="section-kicker">let’s connect</p>
+		<h3>Get in Touch</h3>
+		<p>
+		  Whether you’re reaching out about a role, a project, or a professional connection,
+		  the best way to reach me is by email or LinkedIn.
+		</p>
+	  </div>
+	
+	  <div class="contact-grid">
+	    <a class="contact-tile" href="mailto:shannon.a.smith1223@gmail.com">
+		  <div class="contact-tile-icon">
+		    <img src="images/icons/email.svg" alt="Email" />
+		  </div>
+		  <span class="contact-tile-label">Email</span>
+	    </a>
+	
+	    <a class="contact-tile" href="https://www.linkedin.com/in/shannonasmith/" target="_blank" rel="noopener noreferrer">
+	      <div class="contact-tile-icon">
+		    <img src="images/icons/linkedin.svg" alt="LinkedIn" />
+		  </div>
+		  <span class="contact-tile-label">LinkedIn</span>
+	    </a>
+	
+	    <a class="contact-tile" href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer">
+		  <div class="contact-tile-icon">
+		    <img src="images/icons/github.svg" alt="GitHub" />
+		  </div>
+		  <span class="contact-tile-label">GitHub</span>
+	    </a>
+	  </div>
+	
+	  <p class="contact-note">
+		Email is the fastest way to reach me for opportunities, recruiter outreach, or project discussions.
       </p>
-    </section>
-
-    <section class="section contact-section">
-      <div class="contact-panel">
-        <div class="contact-panel-copy">
-          <p class="section-kicker">let’s connect</p>
-          <h3>Get in Touch</h3>
-          <p>
-            Whether you’re reaching out about a role, a project, or a professional connection,
-            the best way to reach me is by email or LinkedIn.
-          </p>
-        </div>
-
-	<div class="contact-grid">
-
-	  <a class="contact-tile" href="mailto:shannon.a.smith1223@gmail.com">
-		<div class="contact-tile-icon">
-		  <img src="images/icons/email.svg" alt="Email" />
-		</div>
-		<span class="contact-tile-label">Email</span>
-	  </a>
-
-	  <a class="contact-tile" href="https://www.linkedin.com/in/shannonasmith/" target="_blank" rel="noopener noreferrer">
-		<div class="contact-tile-icon">
-		  <img src="images/icons/linkedin.svg" alt="LinkedIn" />
-		</div>
-		<span class="contact-tile-label">LinkedIn</span>
-	  </a>
-
-	  <a class="contact-tile" href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer">
-		<div class="contact-tile-icon">
-		  <img src="images/icons/github.svg" alt="GitHub" />
-		</div>
-		<span class="contact-tile-label">GitHub</span>
-	  </a>
-
 	</div>
-
-        <p class="contact-note">
-          Email is the fastest way to reach me for opportunities, recruiter outreach, or project discussions.
-        </p>
-      </div>
-    </section>
-  </main>
+  </section>
+</main>
 
   <!-- =========================
        BOTTOM NAV BAR
