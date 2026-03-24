@@ -548,14 +548,23 @@ body.page-ready.intro-start .intro-right {
    LANDING HOVER (CYBER / ART)
 ========================= */
 
-.intro-side:hover .intro-word {
+.intro-word {
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease,
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.intro-copy .intro-side:hover .intro-word {
   color: var(--accent-2) !important;
+  filter: brightness(1.18);
 
   text-shadow:
-    0 0 10px rgba(143, 89, 255, 0.35),
-    0 0 20px rgba(143, 89, 255, 0.15);
-
-  transition: color 0.25s ease, text-shadow 0.25s ease;
+    0 0 8px rgba(255, 255, 255, 0.18),
+    0 0 14px rgba(143, 89, 255, 0.45),
+    0 0 28px rgba(143, 89, 255, 0.3),
+    0 0 44px rgba(143, 89, 255, 0.18);
 }
 
 /* =========================
