@@ -568,12 +568,13 @@ body[data-page="about"] .nav {
   letter-spacing: 0.06em;
   line-height: 0.95;
   opacity: 0.96;
+  cursor: pointer;
   transition:
     transform 0.28s ease,
     color 0.25s ease,
     text-shadow 0.25s ease,
-    opacity 0.25s ease;
-  cursor: pointer;
+    opacity 0.25s ease,
+    filter 0.25s ease;
 }
 
 .intro-sub {
@@ -600,43 +601,23 @@ body.page-ready.intro-start .intro-right {
   transform: translateX(0);
 }
 
-.intro-copy .intro-side:hover .intro-word {
-  color: var(--accent-2);
+.intro-copy .intro-side:hover .intro-word,
+.intro-copy .intro-side:active .intro-word {
+  color: var(--accent);
+  filter: brightness(1.12);
   text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.18),
-    0 0 14px rgba(143, 89, 255, 0.45),
-    0 0 28px rgba(143, 89, 255, 0.3);
+    0 0 6px rgba(143, 89, 255, 0.6),
+    0 0 14px rgba(143, 89, 255, 0.35);
 }
 
-.intro-copy .intro-side:hover .intro-sub {
+.intro-copy .intro-side:hover .intro-sub,
+.intro-copy .intro-side:active .intro-sub {
   color: rgba(246, 244, 251, 0.94);
 }
 
 .intro-copy:hover .intro-side:not(:hover) {
   opacity: 0.42;
   transform: translateY(3px);
-}
-
-/* =========================
-   LANDING HOVER (CYBER / ART)
-========================= */
-.intro-word {
-  transition:
-    color 0.25s ease,
-    text-shadow 0.25s ease,
-    transform 0.25s ease,
-    filter 0.25s ease;
-}
-
-.intro-copy .intro-side:hover .intro-word {
-  color: var(--accent-2) !important;
-  filter: brightness(1.18);
-
-  text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.18),
-    0 0 14px rgba(143, 89, 255, 0.45),
-    0 0 28px rgba(143, 89, 255, 0.3),
-    0 0 44px rgba(143, 89, 255, 0.18);
 }
 
 /* =========================
