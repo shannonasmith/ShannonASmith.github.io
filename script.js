@@ -6,23 +6,45 @@ const body = document.body;
 const hero = document.getElementById("hero");
 
 /* =========================
+   UTILITY HELPERS
+========================= */
+function lockBodyScroll() {
+  body.classList.add("modal-open");
+}
+
+function unlockBodyScroll() {
+  body.classList.remove("modal-open");
+}
+
+function closeOnEscape(isOpen, onClose) {
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen()) {
+      onClose();
+    }
+  });
+}
+
+/* =========================
    ACTIVE NAV STATE
 ========================= */
 function setActiveNav() {
   const currentPage = body?.dataset?.page;
   if (!currentPage) return;
 
-  document.querySelectorAll(".nav-links a").forEach((link) => {
+  const navLinks = document.querySelectorAll(".nav-links a, .mobile-menu a");
+
+  navLinks.forEach((link) => {
     const href = link.getAttribute("href") || "";
 
     const isActive =
       (currentPage === "home" && href === "index.html") ||
+      (currentPage === "about" && href === "about.html") ||
       (currentPage === "cyber" && href === "cyber.html") ||
       (currentPage === "art" && href === "art.html") ||
-      (currentPage === "about" && href === "about.html") ||
       (currentPage === "contact" && href === "contact.html");
 
     link.classList.toggle("active", isActive);
+    link.setAttribute("aria-current", isActive ? "page" : "false");
   });
 }
 
@@ -52,9 +74,7 @@ function initPageState() {
     });
   }
 
-  window.addEventListener("load", () => {
-    enterPage();
-  });
+  window.addEventListener("load", enterPage);
 
   window.addEventListener("pageshow", (e) => {
     body.classList.remove("page-leaving");
@@ -95,14 +115,61 @@ function initPageState() {
         return;
       }
 
-      e.preventDefault();
+      body.classList.remove("menu-open");
       body.classList.remove("page-ready");
       body.classList.add("page-leaving");
+
+      e.preventDefault();
 
       window.setTimeout(() => {
         window.location.href = link.href;
       }, 450);
     });
+  });
+}
+
+/* =========================
+   MOBILE NAV MENU
+========================= */
+function initMobileMenu() {
+  const toggle = document.querySelector(".nav-toggle");
+  const menu = document.querySelector(".mobile-menu");
+
+  if (!toggle || !menu) return;
+
+  function closeMenu() {
+    body.classList.remove("menu-open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  function openMenu() {
+    body.classList.add("menu-open");
+    toggle.setAttribute("aria-expanded", "true");
+  }
+
+  toggle.addEventListener("click", () => {
+    const isOpen = body.classList.contains("menu-open");
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 700) {
+      closeMenu();
+    }
   });
 }
 
@@ -119,9 +186,7 @@ function initLandingIntro() {
   });
 
   const isMobile = window.matchMedia("(max-width: 700px)").matches;
-  if (isMobile) {
-    return;
-  }
+  if (isMobile) return;
 
   let targetSplit = 50;
   let currentSplit = 50;
@@ -148,14 +213,14 @@ function initLandingIntro() {
     }
   }
 
-  setTimeout(() => {
-    introComplete = true;
-  }, 1100);
-
   function getInvertedSplit(x, width, min = 18, max = 82) {
     const percent = 100 - (x / width) * 100;
     return Math.max(min, Math.min(max, percent));
   }
+
+  window.setTimeout(() => {
+    introComplete = true;
+  }, 1100);
 
   hero.addEventListener("mousemove", (e) => {
     if (!introComplete || isTouching) return;
@@ -212,6 +277,8 @@ function initNavScrollBehavior() {
     () => {
       const current = window.scrollY;
 
+      if (body.classList.contains("menu-open")) return;
+
       if (current <= 10) {
         body.classList.remove("nav-hidden");
         body.classList.add("nav-visible");
@@ -244,17 +311,13 @@ function initProjectFilters() {
     const buttons = group.querySelectorAll(".filter-pill");
     if (!buttons.length) return;
 
-    let cards = [];
-
-    if (group.classList.contains("art-filter-pills")) {
-      cards = document.querySelectorAll(".art-card");
-    } else {
-      cards = document.querySelectorAll(".project-card-simple");
-    }
+    const cards = group.classList.contains("art-filter-pills")
+      ? document.querySelectorAll(".art-card")
+      : document.querySelectorAll(".project-card-simple");
 
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
-        const filter = button.dataset.filter || "all";
+        const filter = (button.dataset.filter || "all").toLowerCase();
 
         buttons.forEach((btn) => {
           btn.classList.remove("active");
@@ -270,9 +333,7 @@ function initProjectFilters() {
             .split(/\s+/)
             .filter(Boolean);
 
-          const shouldShow =
-            filter === "all" || categories.includes(filter.toLowerCase());
-
+          const shouldShow = filter === "all" || categories.includes(filter);
           card.style.display = shouldShow ? "block" : "none";
         });
       });
@@ -294,38 +355,37 @@ function initProjectModal() {
   const closeBtn = modal.querySelector(".project-modal-close");
   const backdrop = modal.querySelector(".project-modal-backdrop");
 
-  document.querySelectorAll(".project-card-simple").forEach((card) => {
-    card.addEventListener("click", (e) => {
-      if (e.target.closest(".project-link")) return;
+  function openModal(card) {
+    if (modalImg) {
+      modalImg.src = card.dataset.img || "";
+      modalImg.alt = card.dataset.title || "Project image";
+    }
+    if (modalTitle) modalTitle.textContent = card.dataset.title || "";
+    if (modalDesc) modalDesc.textContent = card.dataset.desc || "";
+    if (modalLink) modalLink.href = card.dataset.link || "#";
 
-      if (modalImg) {
-        modalImg.src = card.dataset.img || "";
-        modalImg.alt = card.dataset.title || "Project image";
-      }
-      if (modalTitle) modalTitle.textContent = card.dataset.title || "";
-      if (modalDesc) modalDesc.textContent = card.dataset.desc || "";
-      if (modalLink) modalLink.href = card.dataset.link || "#";
-
-      modal.classList.add("active");
-      modal.setAttribute("aria-hidden", "false");
-      body.classList.add("modal-open");
-    });
-  });
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    lockBodyScroll();
+  }
 
   function closeModal() {
     modal.classList.remove("active");
     modal.setAttribute("aria-hidden", "true");
-    body.classList.remove("modal-open");
+    unlockBodyScroll();
   }
+
+  document.querySelectorAll(".project-card-simple").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      if (e.target.closest(".project-link")) return;
+      openModal(card);
+    });
+  });
 
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
   if (backdrop) backdrop.addEventListener("click", closeModal);
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("active")) {
-      closeModal();
-    }
-  });
+  closeOnEscape(() => modal.classList.contains("active"), closeModal);
 }
 
 /* =========================
@@ -344,7 +404,6 @@ function initCertModal() {
   const modalPDF = document.getElementById("certModalPDF");
   const closeButton = modal.querySelector(".cert-modal-close");
   const backdrop = modal.querySelector(".cert-modal-backdrop");
-
   const badgeItems = document.querySelectorAll(".badge-logo-item");
 
   function openModal(item) {
@@ -365,17 +424,15 @@ function initCertModal() {
     if (modalBadgeLink) modalBadgeLink.href = badgeHref;
     if (modalPDF) modalPDF.href = pdf;
 
-    modal.classList.add("active");
-    modal.classList.add("is-open");
+    modal.classList.add("active", "is-open");
     modal.setAttribute("aria-hidden", "false");
-    body.classList.add("modal-open");
+    lockBodyScroll();
   }
 
   function closeModal() {
-    modal.classList.remove("active");
-    modal.classList.remove("is-open");
+    modal.classList.remove("active", "is-open");
     modal.setAttribute("aria-hidden", "true");
-    body.classList.remove("modal-open");
+    unlockBodyScroll();
   }
 
   badgeItems.forEach((item) => {
@@ -388,14 +445,10 @@ function initCertModal() {
   if (closeButton) closeButton.addEventListener("click", closeModal);
   if (backdrop) backdrop.addEventListener("click", closeModal);
 
-  document.addEventListener("keydown", (e) => {
-    if (
-      e.key === "Escape" &&
-      (modal.classList.contains("active") || modal.classList.contains("is-open"))
-    ) {
-      closeModal();
-    }
-  });
+  closeOnEscape(
+    () => modal.classList.contains("active") || modal.classList.contains("is-open"),
+    closeModal
+  );
 }
 
 /* =========================
@@ -412,36 +465,36 @@ function initArtModal() {
   const closeBtn = modal.querySelector(".art-modal-close");
   const backdrop = modal.querySelector(".art-modal-backdrop");
 
-  document.querySelectorAll(".art-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      if (modalImg) {
-        modalImg.src = card.dataset.img || "";
-        modalImg.alt = card.dataset.title || "Artwork";
-      }
-      if (modalTitle) modalTitle.textContent = card.dataset.title || "";
-      if (modalDesc) modalDesc.textContent = card.dataset.desc || "";
-      if (modalMedium) modalMedium.textContent = card.dataset.medium || "";
+  function openModal(card) {
+    if (modalImg) {
+      modalImg.src = card.dataset.img || "";
+      modalImg.alt = card.dataset.title || "Artwork";
+    }
+    if (modalTitle) modalTitle.textContent = card.dataset.title || "";
+    if (modalDesc) modalDesc.textContent = card.dataset.desc || "";
+    if (modalMedium) modalMedium.textContent = card.dataset.medium || "";
 
-      modal.classList.add("active");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modal-open");
-    });
-  });
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    lockBodyScroll();
+  }
 
   function closeModal() {
     modal.classList.remove("active");
     modal.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("modal-open");
+    unlockBodyScroll();
   }
+
+  document.querySelectorAll(".art-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      openModal(card);
+    });
+  });
 
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
   if (backdrop) backdrop.addEventListener("click", closeModal);
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("active")) {
-      closeModal();
-    }
-  });
+  closeOnEscape(() => modal.classList.contains("active"), closeModal);
 
   document.addEventListener("contextmenu", (e) => {
     if (e.target.closest(".art-gallery-section, .art-modal")) {
@@ -451,11 +504,13 @@ function initArtModal() {
 }
 
 /* =========================
-   INIT
+   APP INIT
 ========================= */
 document.addEventListener("DOMContentLoaded", () => {
+  hardenExternalLinks();
   setActiveNav();
   initPageState();
+  initMobileMenu();
   initLandingIntro();
   initNavScrollBehavior();
   initProjectFilters();
