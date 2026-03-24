@@ -1,7 +1,6 @@
 /* =========================
    GLOBAL REFERENCES
 ========================= */
-
 const root = document.documentElement;
 const body = document.body;
 const hero = document.getElementById("hero");
@@ -9,7 +8,6 @@ const hero = document.getElementById("hero");
 /* =========================
    ACTIVE NAV STATE
 ========================= */
-
 function setActiveNav() {
   const currentPage = body?.dataset?.page;
   if (!currentPage) return;
@@ -31,7 +29,6 @@ function setActiveNav() {
 /* =========================
    EXTERNAL LINK SECURITY
 ========================= */
-
 function hardenExternalLinks() {
   document.querySelectorAll('a[target="_blank"]').forEach((link) => {
     const rel = link.getAttribute("rel") || "";
@@ -45,12 +42,28 @@ function hardenExternalLinks() {
 /* =========================
    PAGE READY / LEAVING
 ========================= */
-
 function initPageState() {
+  function enterPage() {
+    body.classList.remove("page-leaving");
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        body.classList.add("page-ready");
+      });
+    });
+  }
+
   window.addEventListener("load", () => {
-    setTimeout(() => {
+    enterPage();
+  });
+
+  window.addEventListener("pageshow", (e) => {
+    body.classList.remove("page-leaving");
+
+    if (e.persisted) {
       body.classList.add("page-ready");
-    }, 180);
+    } else {
+      enterPage();
+    }
   });
 
   document.querySelectorAll("a[href]").forEach((link) => {
@@ -67,17 +80,28 @@ function initPageState() {
     }
 
     const url = new URL(link.href, window.location.href);
+
     if (url.origin !== window.location.origin) return;
+    if (url.pathname === window.location.pathname && url.hash === window.location.hash) return;
 
     link.addEventListener("click", (e) => {
-      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      if (
+        e.metaKey ||
+        e.ctrlKey ||
+        e.shiftKey ||
+        e.altKey ||
+        e.defaultPrevented
+      ) {
+        return;
+      }
 
       e.preventDefault();
+      body.classList.remove("page-ready");
       body.classList.add("page-leaving");
 
-      setTimeout(() => {
+      window.setTimeout(() => {
         window.location.href = link.href;
-      }, 900);
+      }, 450);
     });
   });
 }
@@ -85,7 +109,6 @@ function initPageState() {
 /* =========================
    LANDING PAGE INTRO
 ========================= */
-
 function initLandingIntro() {
   if (!hero || body.dataset.page !== "home") return;
 
@@ -172,7 +195,6 @@ function initLandingIntro() {
 /* =========================
    NAV HIDE / SHOW ON SCROLL
 ========================= */
-
 function initNavScrollBehavior() {
   const nav = document.querySelector(".nav");
   if (!nav) return;
@@ -209,7 +231,6 @@ function initNavScrollBehavior() {
 /* =========================
    PROJECT + ART FILTERS
 ========================= */
-
 function initProjectFilters() {
   const filterGroups = document.querySelectorAll(".filter-pills");
   if (!filterGroups.length) return;
@@ -257,7 +278,6 @@ function initProjectFilters() {
 /* =========================
    PROJECT MODAL
 ========================= */
-
 function initProjectModal() {
   const modal = document.getElementById("projectModal");
   if (!modal) return;
@@ -306,7 +326,6 @@ function initProjectModal() {
 /* =========================
    CERT MODAL
 ========================= */
-
 function initCertModal() {
   const modal = document.getElementById("certModal");
   if (!modal) return;
@@ -377,7 +396,6 @@ function initCertModal() {
 /* =========================
    ART MODAL
 ========================= */
-
 function initArtModal() {
   const modal = document.getElementById("artModal");
   if (!modal) return;
@@ -430,7 +448,6 @@ function initArtModal() {
 /* =========================
    INIT
 ========================= */
-
 document.addEventListener("DOMContentLoaded", () => {
   setActiveNav();
   initPageState();
