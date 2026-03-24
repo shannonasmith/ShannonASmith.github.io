@@ -16,12 +16,12 @@
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
+	
 <body id="top" data-page="cyber">
-
+	
   <!-- =========================
        GLOBAL PAGE BACKGROUND
   ========================= -->
-
   <div class="page-bg" aria-hidden="true">
     <div class="stars stars-1"></div>
     <div class="stars stars-2"></div>
@@ -33,248 +33,262 @@
   <!-- =========================
        GLOBAL NAVIGATION
   ========================= -->
-
   <nav class="nav" aria-label="Primary navigation">
-    <div class="nav-inner">	  
-      <a href="index.html" class="nav-brand" aria-label="Shannon Smith Home">
-        <img src="images/nav-logo.svg" alt="Shannon Smith logo" class="nav-logo" />
-      </a>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Shannon Smith Home">
+      <img src="images/nav-logo.svg" alt="Shannon Smith logo" class="nav-logo" />
+    </a>
 
-      <div class="nav-links">
-		<a href="about.html">About</a>
-        <a href="cyber.html">Cyber</a>
-        <a href="art.html">Art</a>
-		<a href="contact.html">Contact</a>
-      </div>
-	  
-	  <div class="nav-social" aria-label="Contact links">
-		<a href="mailto:shannon.a.smith1223@gmail.com" class="nav-social-link" aria-label="Email">
-		  <img src="images/icons/email.svg" alt="" />
-		</a>
-		<a href="https://www.linkedin.com/in/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
-		  <img src="images/icons/linkedin.svg" alt="" />
-		</a>
-		<a href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub">
-		  <img src="images/icons/github.svg" alt="" />
-		</a>
-	  </div>
-	  
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="cyber.html">Cyber</a>
+      <a href="art.html">Art</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </nav>
 
-  <!-- =========================
-       CYBER HERO
-  ========================= -->
+    <div class="nav-social" aria-label="Contact links">
+      <a href="mailto:shannon.a.smith1223@gmail.com" class="nav-social-link" aria-label="Email">
+        <img src="images/icons/email.svg" alt="" />
+      </a>
+      <a href="https://www.linkedin.com/in/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
+        <img src="images/icons/linkedin.svg" alt="" />
+      </a>
+      <a href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub">
+        <img src="images/icons/github.svg" alt="" />
+      </a>
+    </div>
+  </div>
 
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="about.html">About</a>
+    <a href="cyber.html">Cyber</a>
+    <a href="art.html">Art</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- =========================
+   CYBER HERO
+========================= -->
 <header class="page-header compact-hero cyber-enter-up">
-  <h2 class="hero-title">Cybersecurity Portfolio</h2>
-  <p class="section-intro">
-    Explore my cybersecurity projects, certifications, technical skills, and hands-on lab work across detection, investigation, and security operations.
-  </p>
+<h2 class="hero-title">Cybersecurity Portfolio</h2>
+<p class="section-intro">
+Explore my cybersecurity projects, certifications, technical skills, and hands-on lab work across detection, investigation, and security operations.
+</p>
 </header>
 
-  <main>
+<main>
 
-    <!-- =========================
-         PROJECT CARDS GRID + FILTERS
-    ========================= -->
+<!-- =========================
+	 PROJECT CARDS GRID + FILTERS
+========================= -->
+<section class="section project-filter-section" aria-labelledby="project-filter-heading">
+  <div class="section-heading compact-center filter-heading-wrap"></div>
+  <section class="section projects-grid-section" aria-labelledby="projects-heading">
 
-    <section class="section project-filter-section" aria-labelledby="project-filter-heading">
-      <div class="section-heading compact-center filter-heading-wrap"></div>
-	  <section class="section projects-grid-section" aria-labelledby="projects-heading">
+  <div class="filter-pills cyber-enter-up" role="toolbar" aria-label="Project filters">
+	<button class="filter-pill active" type="button" data-filter="all" aria-pressed="true">All</button>
+	<button class="filter-pill" type="button" data-filter="ctf" aria-pressed="false">CTF</button>
+	<button class="filter-pill" type="button" data-filter="investigations" aria-pressed="false">Investigations</button>
+	<button class="filter-pill" type="button" data-filter="labs" aria-pressed="false">Labs</button>
+	<button class="filter-pill" type="button" data-filter="research" aria-pressed="false">Threat Research</button>
+  </div>
+</section>
 
-      <div class="filter-pills cyber-enter-up" role="toolbar" aria-label="Project filters">
-        <button class="filter-pill active" type="button" data-filter="all" aria-pressed="true">All</button>
-        <button class="filter-pill" type="button" data-filter="ctf" aria-pressed="false">CTF</button>
-        <button class="filter-pill" type="button" data-filter="investigations" aria-pressed="false">Investigations</button>
-        <button class="filter-pill" type="button" data-filter="labs" aria-pressed="false">Labs</button>
-        <button class="filter-pill" type="button" data-filter="research" aria-pressed="false">Threat Research</button>
-      </div>
-    </section>
-	
-    <div class="projects-grid simple-grid cyber-enter-up" id="projectsGrid">
+<div class="projects-grid simple-grid cyber-enter-up" id="projectsGrid">
 
-	  <article class="project-card-simple"
-		data-category="investigations"
-		data-title="Suspicious Authentication Activity"
-		data-desc="Investigating repeated login attempts and suspicious authentication patterns in Linux logs using Splunk."
-		data-img="images/projects/splunk-auth.png"
-		data-link="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-Authentication-Activity/README.md">
-		<div class="project-card-simple-image">
-		  <img src="images/projects/splunk-auth.png" alt="Suspicious Authentication Activity screenshot" />
-		</div>
-		<div class="project-card-simple-body">
-		  <p class="project-card-simple-kicker">Log Analysis • SIEM</p>
-		  <h3>Suspicious Authentication Activity</h3>
-		  <p>Investigating repeated login attempts and suspicious authentication patterns in Linux logs using Splunk.</p>
-		  <a class="project-link" href="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-Authentication-Activity/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
-		</div>
-	  </article>
-
-	  <article class="project-card-simple"
-		data-category="investigations"
-		data-title="Suspicious DNS Activity"
-		data-desc="Analyzing enterprise DNS logs to identify reverse lookups, zone transfer attempts, and internal naming exposure."
-		data-img="images/projects/dns-investigation.png"
-		data-link="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-DNS-Activity/README.md">
-		<div class="project-card-simple-image">
-		  <img src="images/projects/dns-investigation.png" alt="Suspicious DNS Activity screenshot" />
-		</div>
-		<div class="project-card-simple-body">
-		  <p class="project-card-simple-kicker">DNS Analysis • Threat Detection</p>
-		  <h3>Suspicious DNS Activity</h3>
-		  <p>Analyzing enterprise DNS logs to identify reverse lookups, zone transfer attempts, and internal naming exposure.</p>
-		  <a class="project-link" href="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-DNS-Activity/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
-		</div>
-	  </article>
-
-	  <article class="project-card-simple"
-		data-category="labs"
-		data-title="Network &amp; Web App Security Assessment"
-		data-desc="Performing multi-tool enumeration across web paths, ports, and exposed services to identify and validate unauthorized access."
-		data-img="images/projects/network-web-assessment.png"
-		data-link="https://github.com/shannonasmith/Home-Lab/blob/main/Network-and-Web-App-Security/README.md">
-		<div class="project-card-simple-image">
-		  <img src="images/projects/network-web-assessment.png" alt="Network and Web App Security Assessment screenshot" />
-		</div>
-		<div class="project-card-simple-body">
-		  <p class="project-card-simple-kicker">Enumeration • Exploitation</p>
-		  <h3>Network &amp; Web App Security Assessment</h3>
-		  <p>Performing multi-tool enumeration across web paths, ports, and exposed services to identify and validate unauthorized access.</p>
-		  <a class="project-link" href="https://github.com/shannonasmith/Home-Lab/blob/main/Network-and-Web-App-Security/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
-		</div>
-	  </article>
-
-	  <article class="project-card-simple"
-		data-category="research"
-		data-title="NotPetya"
-		data-desc="Destructive malware investigation covering propagation, operational impact, and response lessons."
-		data-img="images/projects/notpetya.png"
-		data-link="https://github.com/shannonasmith/Cyber-Writups-VT/blob/main/Not-Petya-Writeup/README.md">
-		<div class="project-card-simple-image">
-		  <img src="images/projects/notpetya.png" alt="NotPetya project screenshot" />
-		</div>
-		<div class="project-card-simple-body">
-		  <p class="project-card-simple-kicker">Threat Research</p>
-		  <h3>NotPetya</h3>
-		  <p>Destructive malware investigation covering propagation, operational impact, and response lessons.</p>
-		  <a class="project-link" href="https://github.com/shannonasmith/Cyber-Writups-VT/blob/main/Not-Petya-Writeup/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
-		</div>
-	  </article>
-
-	  <article class="project-card-simple"
-		data-category="ctf investigations"
-		data-title="Stolen Footprints"
-		data-desc="Reconstructing attacker activity from packet captures and tracing file theft through FTP traffic analysis."
-		data-img="images/projects/stolen-footprints.png"
-		data-link="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/stolen-footprints/README.md">
-		<div class="project-card-simple-image">
-		  <img src="images/projects/stolen-footprints.png" alt="Stolen Footprints project screenshot" />
-		</div>
-		<div class="project-card-simple-body">
-		  <p class="project-card-simple-kicker">Network Forensics</p>
-		  <h3>Stolen Footprints</h3>
-		  <p>Reconstructing attacker activity from packet captures and tracing file theft through FTP traffic analysis.</p>
-		  <a class="project-link" href="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/stolen-footprints/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
-		</div>
-	  </article>
-
-	  <article class="project-card-simple"
-		data-category="ctf labs"
-		data-title="Notepad Online"
-		data-desc="Testing authorization controls and request manipulation in a web-based note storage application."
-		data-img="images/projects/notepad-online.png"
-		data-link="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/notepad-online/README.md">
-		<div class="project-card-simple-image">
-		  <img src="images/projects/notepad-online.png" alt="Notepad Online project screenshot" />
-		</div>
-		<div class="project-card-simple-body">
-		  <p class="project-card-simple-kicker">Web Security</p>
-		  <h3>Notepad Online</h3>
-		  <p>Testing authorization controls and request manipulation in a web-based note storage application.</p>
-		  <a class="project-link" href="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/notepad-online/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
-		</div>
-	  </article>
-
-	  <article class="project-card-simple"
-		data-category="ctf labs"
-		data-title="What Does the Cow Say?"
-		data-desc="Investigating unsanitized input handling and demonstrating command injection behavior in a web application."
-		data-img="images/projects/what-does-the-cow-say.png"
-		data-link="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/what-does-the-cow-say/README.md">
-		<div class="project-card-simple-image">
-		  <img src="images/projects/what-does-the-cow-say.png" alt="What Does the Cow Say project screenshot" />
-		</div>
-		<div class="project-card-simple-body">
-		  <p class="project-card-simple-kicker">Web Exploitation</p>
-		  <h3>What Does the Cow Say?</h3>
-		  <p>Investigating unsanitized input handling and demonstrating command injection behavior in a web application.</p>
-		  <a class="project-link" href="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/what-does-the-cow-say/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
-		</div>
-	  </article>
-
-	  <article class="project-card-simple"
-		data-category="research"
-		data-title="Wizard Spider"
-		data-desc="Threat actor profiling and ransomware attack-chain analysis focused on TrickBot-linked operations."
-		data-img="images/projects/wizard-spider.png"
-		data-link="https://github.com/shannonasmith/Cyber-Writups-VT/blob/main/Wizard-Spider-Writeup/README.md">
-		<div class="project-card-simple-image">
-		  <img src="images/projects/wizard-spider.png" alt="Wizard Spider project screenshot" />
-		</div>
-		<div class="project-card-simple-body">
-		  <p class="project-card-simple-kicker">Threat Research</p>
-		  <h3>Wizard Spider</h3>
-		  <p>Threat actor profiling and ransomware attack-chain analysis focused on TrickBot-linked operations.</p>
-		  <a class="project-link" href="https://github.com/shannonasmith/Cyber-Writups-VT/blob/main/Wizard-Spider-Writeup/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
-		</div>
-	  </article>
-
-	  <article class="project-card-simple"
-		data-category="research"
-		data-title="Uber Breach (Lapsus$)"
-		data-desc="Analysis of social engineering, MFA fatigue, access escalation, and attacker tradecraft."
-		data-img="images/projects/uber-lapsus.png"
-		data-link="https://github.com/shannonasmith/Cyber-Writups-VT/tree/main/Uber-Lapsus-Writeup#readme">
-		<div class="project-card-simple-image">
-		  <img src="images/projects/uber-lapsus.png" alt="Uber Breach project screenshot" />
-		</div>
-		<div class="project-card-simple-body">
-		  <p class="project-card-simple-kicker">Threat Research</p>
-		  <h3>Uber Breach (Lapsus$)</h3>
-		  <p>Analysis of social engineering, MFA fatigue, access escalation, and attacker tradecraft.</p>
-		  <a class="project-link" href="https://github.com/shannonasmith/Cyber-Writups-VT/tree/main/Uber-Lapsus-Writeup#readme" target="_blank" rel="noopener noreferrer">View Project</a>
-		</div>
-	  </article>
-
+  <article class="project-card-simple"
+	data-category="investigations"
+	data-title="Suspicious Authentication Activity"
+	data-desc="Investigating repeated login attempts and suspicious authentication patterns in Linux logs using Splunk."
+	data-img="images/projects/splunk-auth.png"
+	data-link="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-Authentication-Activity/README.md">
+	<div class="project-card-simple-image">
+	  <img src="images/projects/splunk-auth.png" alt="Suspicious Authentication Activity screenshot" />
 	</div>
-	  
-    </section>
-	
-	<!-- =========================
-		 PROJECT MODAL
-	========================= -->
-	
-	<div class="project-modal" id="projectModal" aria-hidden="true">
-	  <div class="project-modal-backdrop"></div>
-
-	  <div class="project-modal-content" role="dialog" aria-modal="true">
-		<button class="project-modal-close" type="button">&times;</button>
-
-		<img id="projectModalImage" src="" alt="" />
-
-		<h3 id="projectModalTitle"></h3>
-		<p id="projectModalDesc"></p>
-
-		<div class="project-modal-actions">
-		  <a id="projectModalLink" target="_blank" class="btn-theme">View Project</a>
-		</div>
-	  </div>
+	<div class="project-card-simple-body">
+	  <p class="project-card-simple-kicker">Log Analysis • SIEM</p>
+	  <h3>Suspicious Authentication Activity</h3>
+	  <p>Investigating repeated login attempts and suspicious authentication patterns in Linux logs using Splunk.</p>
+	  <a class="project-link" href="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-Authentication-Activity/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
 	</div>
+  </article>
 
-    <!-- =========================
-         CYBER SKILLS GRID
-    ========================= -->
+  <article class="project-card-simple"
+	data-category="investigations"
+	data-title="Suspicious DNS Activity"
+	data-desc="Analyzing enterprise DNS logs to identify reverse lookups, zone transfer attempts, and internal naming exposure."
+	data-img="images/projects/dns-investigation.png"
+	data-link="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-DNS-Activity/README.md">
+	<div class="project-card-simple-image">
+	  <img src="images/projects/dns-investigation.png" alt="Suspicious DNS Activity screenshot" />
+	</div>
+	<div class="project-card-simple-body">
+	  <p class="project-card-simple-kicker">DNS Analysis • Threat Detection</p>
+	  <h3>Suspicious DNS Activity</h3>
+	  <p>Analyzing enterprise DNS logs to identify reverse lookups, zone transfer attempts, and internal naming exposure.</p>
+	  <a class="project-link" href="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-DNS-Activity/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
+	</div>
+  </article>
+
+  <article class="project-card-simple"
+	data-category="labs"
+	data-title="Network &amp; Web App Security Assessment"
+	data-desc="Performing multi-tool enumeration across web paths, ports, and exposed services to identify and validate unauthorized access."
+	data-img="images/projects/network-web-assessment.png"
+	data-link="https://github.com/shannonasmith/Home-Lab/blob/main/Network-and-Web-App-Security/README.md">
+	<div class="project-card-simple-image">
+	  <img src="images/projects/network-web-assessment.png" alt="Network and Web App Security Assessment screenshot" />
+	</div>
+	<div class="project-card-simple-body">
+	  <p class="project-card-simple-kicker">Enumeration • Exploitation</p>
+	  <h3>Network &amp; Web App Security Assessment</h3>
+	  <p>Performing multi-tool enumeration across web paths, ports, and exposed services to identify and validate unauthorized access.</p>
+	  <a class="project-link" href="https://github.com/shannonasmith/Home-Lab/blob/main/Network-and-Web-App-Security/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
+	</div>
+  </article>
+
+  <article class="project-card-simple"
+	data-category="research"
+	data-title="NotPetya"
+	data-desc="Destructive malware investigation covering propagation, operational impact, and response lessons."
+	data-img="images/projects/notpetya.png"
+	data-link="https://github.com/shannonasmith/Cyber-Writups-VT/blob/main/Not-Petya-Writeup/README.md">
+	<div class="project-card-simple-image">
+	  <img src="images/projects/notpetya.png" alt="NotPetya project screenshot" />
+	</div>
+	<div class="project-card-simple-body">
+	  <p class="project-card-simple-kicker">Threat Research</p>
+	  <h3>NotPetya</h3>
+	  <p>Destructive malware investigation covering propagation, operational impact, and response lessons.</p>
+	  <a class="project-link" href="https://github.com/shannonasmith/Cyber-Writups-VT/blob/main/Not-Petya-Writeup/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
+	</div>
+  </article>
+
+  <article class="project-card-simple"
+	data-category="ctf investigations"
+	data-title="Stolen Footprints"
+	data-desc="Reconstructing attacker activity from packet captures and tracing file theft through FTP traffic analysis."
+	data-img="images/projects/stolen-footprints.png"
+	data-link="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/stolen-footprints/README.md">
+	<div class="project-card-simple-image">
+	  <img src="images/projects/stolen-footprints.png" alt="Stolen Footprints project screenshot" />
+	</div>
+	<div class="project-card-simple-body">
+	  <p class="project-card-simple-kicker">Network Forensics</p>
+	  <h3>Stolen Footprints</h3>
+	  <p>Reconstructing attacker activity from packet captures and tracing file theft through FTP traffic analysis.</p>
+	  <a class="project-link" href="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/stolen-footprints/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
+	</div>
+  </article>
+
+  <article class="project-card-simple"
+	data-category="ctf labs"
+	data-title="Notepad Online"
+	data-desc="Testing authorization controls and request manipulation in a web-based note storage application."
+	data-img="images/projects/notepad-online.png"
+	data-link="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/notepad-online/README.md">
+	<div class="project-card-simple-image">
+	  <img src="images/projects/notepad-online.png" alt="Notepad Online project screenshot" />
+	</div>
+	<div class="project-card-simple-body">
+	  <p class="project-card-simple-kicker">Web Security</p>
+	  <h3>Notepad Online</h3>
+	  <p>Testing authorization controls and request manipulation in a web-based note storage application.</p>
+	  <a class="project-link" href="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/notepad-online/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
+	</div>
+  </article>
+
+  <article class="project-card-simple"
+	data-category="ctf labs"
+	data-title="What Does the Cow Say?"
+	data-desc="Investigating unsanitized input handling and demonstrating command injection behavior in a web application."
+	data-img="images/projects/what-does-the-cow-say.png"
+	data-link="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/what-does-the-cow-say/README.md">
+	<div class="project-card-simple-image">
+	  <img src="images/projects/what-does-the-cow-say.png" alt="What Does the Cow Say project screenshot" />
+	</div>
+	<div class="project-card-simple-body">
+	  <p class="project-card-simple-kicker">Web Exploitation</p>
+	  <h3>What Does the Cow Say?</h3>
+	  <p>Investigating unsanitized input handling and demonstrating command injection behavior in a web application.</p>
+	  <a class="project-link" href="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/what-does-the-cow-say/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
+	</div>
+  </article>
+
+  <article class="project-card-simple"
+	data-category="research"
+	data-title="Wizard Spider"
+	data-desc="Threat actor profiling and ransomware attack-chain analysis focused on TrickBot-linked operations."
+	data-img="images/projects/wizard-spider.png"
+	data-link="https://github.com/shannonasmith/Cyber-Writups-VT/blob/main/Wizard-Spider-Writeup/README.md">
+	<div class="project-card-simple-image">
+	  <img src="images/projects/wizard-spider.png" alt="Wizard Spider project screenshot" />
+	</div>
+	<div class="project-card-simple-body">
+	  <p class="project-card-simple-kicker">Threat Research</p>
+	  <h3>Wizard Spider</h3>
+	  <p>Threat actor profiling and ransomware attack-chain analysis focused on TrickBot-linked operations.</p>
+	  <a class="project-link" href="https://github.com/shannonasmith/Cyber-Writups-VT/blob/main/Wizard-Spider-Writeup/README.md" target="_blank" rel="noopener noreferrer">View Project</a>
+	</div>
+  </article>
+
+  <article class="project-card-simple"
+	data-category="research"
+	data-title="Uber Breach (Lapsus$)"
+	data-desc="Analysis of social engineering, MFA fatigue, access escalation, and attacker tradecraft."
+	data-img="images/projects/uber-lapsus.png"
+	data-link="https://github.com/shannonasmith/Cyber-Writups-VT/tree/main/Uber-Lapsus-Writeup#readme">
+	<div class="project-card-simple-image">
+	  <img src="images/projects/uber-lapsus.png" alt="Uber Breach project screenshot" />
+	</div>
+	<div class="project-card-simple-body">
+	  <p class="project-card-simple-kicker">Threat Research</p>
+	  <h3>Uber Breach (Lapsus$)</h3>
+	  <p>Analysis of social engineering, MFA fatigue, access escalation, and attacker tradecraft.</p>
+	  <a class="project-link" href="https://github.com/shannonasmith/Cyber-Writups-VT/tree/main/Uber-Lapsus-Writeup#readme" target="_blank" rel="noopener noreferrer">View Project</a>
+	</div>
+  </article>
+
+</div>
+  
+</section>
+	
+<!-- =========================
+	 PROJECT MODAL
+========================= -->
+<div class="project-modal" id="projectModal" aria-hidden="true">
+  <div class="project-modal-backdrop"></div>
+
+  <div class="project-modal-content" role="dialog" aria-modal="true">
+	<button class="project-modal-close" type="button">&times;</button>
+
+	<img id="projectModalImage" src="" alt="" />
+
+	<h3 id="projectModalTitle"></h3>
+	<p id="projectModalDesc"></p>
+
+	<div class="project-modal-actions">
+	  <a id="projectModalLink" target="_blank" class="btn-theme">View Project</a>
+	</div>
+  </div>
+</div>
+
+<!-- =========================
+	 CYBER SKILLS GRID
+========================= -->
 <section class="section skills-grid-section" aria-labelledby="skills-heading">
   <div class="section-heading compact-center">
     <p class="section-kicker">tools &amp; platforms</p>
@@ -369,202 +383,199 @@
   </div>
 </section>
 
-    <!-- =========================
-         CERT BADGES MARQUEE
-    ========================= -->
+<!-- =========================
+	 CERT BADGES MARQUEE
+========================= -->
+<section class="section cert-verify-section" aria-labelledby="certifications-heading">
+  <div class="section-heading compact-center">
+	<p class="section-kicker">credentials</p>
+	<h2 id="certifications-heading">Certifications</h2>
+	<p class="cert-verify-copy">Click any badge to open details, verify the credential, or view the certificate PDF.</p>
+  </div>
 
-    <section class="section cert-verify-section" aria-labelledby="certifications-heading">
-      <div class="section-heading compact-center">
-        <p class="section-kicker">credentials</p>
-        <h2 id="certifications-heading">Certifications</h2>
-        <p class="cert-verify-copy">Click any badge to open details, verify the credential, or view the certificate PDF.</p>
-      </div>
+  <div class="badges-marquee" aria-label="Certification marquee">
+	<div class="badges-track">
 
-      <div class="badges-marquee" aria-label="Certification marquee">
-        <div class="badges-track">
+	  <a class="badge-logo-item"
+		 href="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=iKXPGhvl4duXunxgN0NqTUEErjZ66J3w4/wD9Ex4yeg="
+		 data-title="Certified Ethical Hacker (CEH)"
+		 data-desc="EC-Council certification focused on offensive security, tools, and methodologies."
+		 data-img="images/badges/ceh.png"
+		 data-credly="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=iKXPGhvl4duXunxgN0NqTUEErjZ66J3w4/wD9Ex4yeg="
+		 data-pdf="certs/ceh.pdf">
+		<img src="images/badges/ceh.png" alt="CEH badge" />
+		<span>CEH</span>
+	  </a>
 
-          <a class="badge-logo-item"
-             href="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=iKXPGhvl4duXunxgN0NqTUEErjZ66J3w4/wD9Ex4yeg="
-             data-title="Certified Ethical Hacker (CEH)"
-             data-desc="EC-Council certification focused on offensive security, tools, and methodologies."
-             data-img="images/badges/ceh.png"
-             data-credly="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=iKXPGhvl4duXunxgN0NqTUEErjZ66J3w4/wD9Ex4yeg="
-             data-pdf="certs/ceh.pdf">
-            <img src="images/badges/ceh.png" alt="CEH badge" />
-            <span>CEH</span>
-          </a>
+	  <a class="badge-logo-item"
+		 href="https://www.credly.com/badges/9e937f9b-2c3e-42e5-8923-c940bc72e14c"
+		 data-title="CompTIA Security+"
+		 data-desc="CompTIA certification covering core security concepts, threats, risk management, and security operations."
+		 data-img="images/badges/securityplus.png"
+		 data-credly="https://www.credly.com/badges/9e937f9b-2c3e-42e5-8923-c940bc72e14c"
+		 data-pdf="certs/securityplus.pdf">
+		<img src="images/badges/securityplus.png" alt="Security+ badge" />
+		<span>Security+</span>
+	  </a>
 
-          <a class="badge-logo-item"
-             href="https://www.credly.com/badges/9e937f9b-2c3e-42e5-8923-c940bc72e14c"
-             data-title="CompTIA Security+"
-             data-desc="CompTIA certification covering core security concepts, threats, risk management, and security operations."
-             data-img="images/badges/securityplus.png"
-             data-credly="https://www.credly.com/badges/9e937f9b-2c3e-42e5-8923-c940bc72e14c"
-             data-pdf="certs/securityplus.pdf">
-            <img src="images/badges/securityplus.png" alt="Security+ badge" />
-            <span>Security+</span>
-          </a>
+	  <a class="badge-logo-item"
+		 href="https://www.credly.com/badges/a8c1e3c3-4a74-4488-b7b7-8409144da533"
+		 data-title="CompTIA Linux+"
+		 data-desc="CompTIA certification focused on Linux administration, security, scripting, and troubleshooting."
+		 data-img="images/badges/linuxplus.png"
+		 data-credly="https://www.credly.com/badges/a8c1e3c3-4a74-4488-b7b7-8409144da533"
+		 data-pdf="certs/linuxplus.pdf">
+		<img src="images/badges/linuxplus.png" alt="Linux+ badge" />
+		<span>Linux+</span>
+	  </a>
 
-          <a class="badge-logo-item"
-             href="https://www.credly.com/badges/a8c1e3c3-4a74-4488-b7b7-8409144da533"
-             data-title="CompTIA Linux+"
-             data-desc="CompTIA certification focused on Linux administration, security, scripting, and troubleshooting."
-             data-img="images/badges/linuxplus.png"
-             data-credly="https://www.credly.com/badges/a8c1e3c3-4a74-4488-b7b7-8409144da533"
-             data-pdf="certs/linuxplus.pdf">
-            <img src="images/badges/linuxplus.png" alt="Linux+ badge" />
-            <span>Linux+</span>
-          </a>
+	  <a class="badge-logo-item"
+		 href="https://www.credly.com/badges/1f2279f6-da65-4dcd-b535-63f38e117c7b"
+		 data-title="Splunk Core Power User"
+		 data-desc="Splunk certification covering knowledge objects, dashboards, field extraction, and reporting workflows."
+		 data-img="images/badges/splunk.png"
+		 data-credly="https://www.credly.com/badges/1f2279f6-da65-4dcd-b535-63f38e117c7b"
+		 data-pdf="certs/splunk-power-user.pdf">
+		<img src="images/badges/splunk.png" alt="Splunk CCPU badge" />
+		<span>Splunk CCPU</span>
+	  </a>
 
-          <a class="badge-logo-item"
-             href="https://www.credly.com/badges/1f2279f6-da65-4dcd-b535-63f38e117c7b"
-             data-title="Splunk Core Power User"
-             data-desc="Splunk certification covering knowledge objects, dashboards, field extraction, and reporting workflows."
-             data-img="images/badges/splunk.png"
-             data-credly="https://www.credly.com/badges/1f2279f6-da65-4dcd-b535-63f38e117c7b"
-             data-pdf="certs/splunk-power-user.pdf">
-            <img src="images/badges/splunk.png" alt="Splunk CCPU badge" />
-            <span>Splunk CCPU</span>
-          </a>
+	  <a class="badge-logo-item"
+		 href="https://www.credly.com/badges/19e1b501-3dcc-4cae-a33f-a8cda8ee8682"
+		 data-title="CompTIA A+"
+		 data-desc="CompTIA certification validating foundational IT support, hardware, software, and troubleshooting skills."
+		 data-img="images/badges/aplus.png"
+		 data-credly="https://www.credly.com/badges/19e1b501-3dcc-4cae-a33f-a8cda8ee8682"
+		 data-pdf="certs/aplus.pdf">
+		<img src="images/badges/aplus.png" alt="CompTIA A+ badge" />
+		<span>A+</span>
+	  </a>
 
-          <a class="badge-logo-item"
-             href="https://www.credly.com/badges/19e1b501-3dcc-4cae-a33f-a8cda8ee8682"
-             data-title="CompTIA A+"
-             data-desc="CompTIA certification validating foundational IT support, hardware, software, and troubleshooting skills."
-             data-img="images/badges/aplus.png"
-             data-credly="https://www.credly.com/badges/19e1b501-3dcc-4cae-a33f-a8cda8ee8682"
-             data-pdf="certs/aplus.pdf">
-            <img src="images/badges/aplus.png" alt="CompTIA A+ badge" />
-            <span>A+</span>
-          </a>
+	  <a class="badge-logo-item"
+		 href="https://www.credly.com/badges/8e181347-9642-470b-b374-c885ddd69780"
+		 data-title="GIAC Foundational Cybersecurity Technologies (GFACT)"
+		 data-desc="GIAC certification validating foundational cybersecurity knowledge across systems, networks, and security concepts."
+		 data-img="images/badges/gfact.png"
+		 data-credly="https://www.credly.com/badges/8e181347-9642-470b-b374-c885ddd69780"
+		 data-pdf="certs/gfact.pdf">
+		<img src="images/badges/gfact.png" alt="GFACT badge" />
+		<span>GFACT</span>
+	  </a>
 
-          <a class="badge-logo-item"
-             href="https://www.credly.com/badges/8e181347-9642-470b-b374-c885ddd69780"
-             data-title="GIAC Foundational Cybersecurity Technologies (GFACT)"
-             data-desc="GIAC certification validating foundational cybersecurity knowledge across systems, networks, and security concepts."
-             data-img="images/badges/gfact.png"
-             data-credly="https://www.credly.com/badges/8e181347-9642-470b-b374-c885ddd69780"
-             data-pdf="certs/gfact.pdf">
-            <img src="images/badges/gfact.png" alt="GFACT badge" />
-            <span>GFACT</span>
-          </a>
+	  <a class="badge-logo-item"
+		 href="https://credentials.uipath.com/74ce2097-a5bd-4487-8753-b823e01b427b#acc.MVvhnGiZ"
+		 data-title="UiPath Certified Professional Automation Developer Associate"
+		 data-desc="UiPath certification validating foundational automation development skills, including process identification, problem-solving, and building solutions using UiPath Studio, Robots, and Orchestrator."
+		 data-img="images/badges/uipath.png"
+		 data-credly="https://credentials.uipath.com/74ce2097-a5bd-4487-8753-b823e01b427b#acc.MVvhnGiZ"
+		 data-pdf="certs/uipath.jpg">
+		<img src="images/badges/uipath.png" alt="" />
+		<span>UiPath</span>
+	  </a>
 
-		  <a class="badge-logo-item"
-             href="https://credentials.uipath.com/74ce2097-a5bd-4487-8753-b823e01b427b#acc.MVvhnGiZ"
-             data-title="UiPath Certified Professional Automation Developer Associate"
-             data-desc="UiPath certification validating foundational automation development skills, including process identification, problem-solving, and building solutions using UiPath Studio, Robots, and Orchestrator."
-             data-img="images/badges/uipath.png"
-             data-credly="https://credentials.uipath.com/74ce2097-a5bd-4487-8753-b823e01b427b#acc.MVvhnGiZ"
-             data-pdf="certs/uipath.jpg">
-            <img src="images/badges/uipath.png" alt="" />
-            <span>UiPath</span>
-          </a>
+	  <a class="badge-logo-item badge-logo-item-clone"
+		 href="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=iKXPGhvl4duXunxgN0NqTUEErjZ66J3w4/wD9Ex4yeg="
+		 data-title="Certified Ethical Hacker (CEH)"
+		 data-desc="EC-Council certification focused on offensive security, tools, and methodologies."
+		 data-img="images/badges/ceh.png"
+		 data-credly="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=iKXPGhvl4duXunxgN0NqTUEErjZ66J3w4/wD9Ex4yeg="
+		 data-pdf="certs/ceh.pdf"
+		 aria-hidden="true"
+		 tabindex="-1">
+		<img src="images/badges/ceh.png" alt="" />
+		<span>CEH</span>
+	  </a>
 
-          <a class="badge-logo-item badge-logo-item-clone"
-             href="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=iKXPGhvl4duXunxgN0NqTUEErjZ66J3w4/wD9Ex4yeg="
-             data-title="Certified Ethical Hacker (CEH)"
-             data-desc="EC-Council certification focused on offensive security, tools, and methodologies."
-             data-img="images/badges/ceh.png"
-             data-credly="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=iKXPGhvl4duXunxgN0NqTUEErjZ66J3w4/wD9Ex4yeg="
-             data-pdf="certs/ceh.pdf"
-             aria-hidden="true"
-             tabindex="-1">
-            <img src="images/badges/ceh.png" alt="" />
-            <span>CEH</span>
-          </a>
+	  <a class="badge-logo-item badge-logo-item-clone"
+		 href="https://www.credly.com/badges/9e937f9b-2c3e-42e5-8923-c940bc72e14c"
+		 data-title="CompTIA Security+"
+		 data-desc="CompTIA certification covering core security concepts, threats, risk management, and security operations."
+		 data-img="images/badges/securityplus.png"
+		 data-credly="https://www.credly.com/badges/9e937f9b-2c3e-42e5-8923-c940bc72e14c"
+		 data-pdf="certs/securityplus.pdf"
+		 aria-hidden="true"
+		 tabindex="-1">
+		<img src="images/badges/securityplus.png" alt="" />
+		<span>Security+</span>
+	  </a>
 
-          <a class="badge-logo-item badge-logo-item-clone"
-             href="https://www.credly.com/badges/9e937f9b-2c3e-42e5-8923-c940bc72e14c"
-             data-title="CompTIA Security+"
-             data-desc="CompTIA certification covering core security concepts, threats, risk management, and security operations."
-             data-img="images/badges/securityplus.png"
-             data-credly="https://www.credly.com/badges/9e937f9b-2c3e-42e5-8923-c940bc72e14c"
-             data-pdf="certs/securityplus.pdf"
-             aria-hidden="true"
-             tabindex="-1">
-            <img src="images/badges/securityplus.png" alt="" />
-            <span>Security+</span>
-          </a>
+	  <a class="badge-logo-item badge-logo-item-clone"
+		 href="https://www.credly.com/badges/a8c1e3c3-4a74-4488-b7b7-8409144da533"
+		 data-title="CompTIA Linux+"
+		 data-desc="CompTIA certification focused on Linux administration, security, scripting, and troubleshooting."
+		 data-img="images/badges/linuxplus.png"
+		 data-credly="https://www.credly.com/badges/a8c1e3c3-4a74-4488-b7b7-8409144da533"
+		 data-pdf="certs/linuxplus.pdf"
+		 aria-hidden="true"
+		 tabindex="-1">
+		<img src="images/badges/linuxplus.png" alt="" />
+		<span>Linux+</span>
+	  </a>
 
-          <a class="badge-logo-item badge-logo-item-clone"
-             href="https://www.credly.com/badges/a8c1e3c3-4a74-4488-b7b7-8409144da533"
-             data-title="CompTIA Linux+"
-             data-desc="CompTIA certification focused on Linux administration, security, scripting, and troubleshooting."
-             data-img="images/badges/linuxplus.png"
-             data-credly="https://www.credly.com/badges/a8c1e3c3-4a74-4488-b7b7-8409144da533"
-             data-pdf="certs/linuxplus.pdf"
-             aria-hidden="true"
-             tabindex="-1">
-            <img src="images/badges/linuxplus.png" alt="" />
-            <span>Linux+</span>
-          </a>
+	  <a class="badge-logo-item badge-logo-item-clone"
+		 href="https://www.credly.com/badges/1f2279f6-da65-4dcd-b535-63f38e117c7b"
+		 data-title="Splunk Core Power User"
+		 data-desc="Splunk certification covering knowledge objects, dashboards, field extraction, and reporting workflows."
+		 data-img="images/badges/splunk.png"
+		 data-credly="https://www.credly.com/badges/1f2279f6-da65-4dcd-b535-63f38e117c7b"
+		 data-pdf="certs/splunk-power-user.pdf"
+		 aria-hidden="true"
+		 tabindex="-1">
+		<img src="images/badges/splunk.png" alt="" />
+		<span>Splunk CPPU</span>
+	  </a>
 
-          <a class="badge-logo-item badge-logo-item-clone"
-             href="https://www.credly.com/badges/1f2279f6-da65-4dcd-b535-63f38e117c7b"
-             data-title="Splunk Core Power User"
-             data-desc="Splunk certification covering knowledge objects, dashboards, field extraction, and reporting workflows."
-             data-img="images/badges/splunk.png"
-             data-credly="https://www.credly.com/badges/1f2279f6-da65-4dcd-b535-63f38e117c7b"
-             data-pdf="certs/splunk-power-user.pdf"
-             aria-hidden="true"
-             tabindex="-1">
-            <img src="images/badges/splunk.png" alt="" />
-            <span>Splunk CPPU</span>
-          </a>
+	  <a class="badge-logo-item badge-logo-item-clone"
+		 href="https://www.credly.com/badges/19e1b501-3dcc-4cae-a33f-a8cda8ee8682"
+		 data-title="CompTIA A+"
+		 data-desc="CompTIA certification validating foundational IT support, hardware, software, and troubleshooting skills."
+		 data-img="images/badges/aplus.png"
+		 data-credly="https://www.credly.com/badges/19e1b501-3dcc-4cae-a33f-a8cda8ee8682"
+		 data-pdf="certs/aplus.pdf"
+		 aria-hidden="true"
+		 tabindex="-1">
+		<img src="images/badges/aplus.png" alt="" />
+		<span>A+</span>
+	  </a>
 
-          <a class="badge-logo-item badge-logo-item-clone"
-             href="https://www.credly.com/badges/19e1b501-3dcc-4cae-a33f-a8cda8ee8682"
-             data-title="CompTIA A+"
-             data-desc="CompTIA certification validating foundational IT support, hardware, software, and troubleshooting skills."
-             data-img="images/badges/aplus.png"
-             data-credly="https://www.credly.com/badges/19e1b501-3dcc-4cae-a33f-a8cda8ee8682"
-             data-pdf="certs/aplus.pdf"
-             aria-hidden="true"
-             tabindex="-1">
-            <img src="images/badges/aplus.png" alt="" />
-            <span>A+</span>
-          </a>
+	  <a class="badge-logo-item badge-logo-item-clone"
+		 href="https://www.credly.com/badges/8e181347-9642-470b-b374-c885ddd69780"
+		 data-title="GIAC Foundational Cybersecurity Technologies (GFACT)"
+		 data-desc="GIAC certification validating foundational cybersecurity knowledge across systems, networks, and security concepts."
+		 data-img="images/badges/gfact.png"
+		 data-credly="https://www.credly.com/badges/8e181347-9642-470b-b374-c885ddd69780"
+		 data-pdf="certs/gfact.pdf"
+		 aria-hidden="true"
+		 tabindex="-1">
+		<img src="images/badges/gfact.png" alt="" />
+		<span>GFACT</span>
+	  </a>
 
-          <a class="badge-logo-item badge-logo-item-clone"
-             href="https://www.credly.com/badges/8e181347-9642-470b-b374-c885ddd69780"
-             data-title="GIAC Foundational Cybersecurity Technologies (GFACT)"
-             data-desc="GIAC certification validating foundational cybersecurity knowledge across systems, networks, and security concepts."
-             data-img="images/badges/gfact.png"
-             data-credly="https://www.credly.com/badges/8e181347-9642-470b-b374-c885ddd69780"
-             data-pdf="certs/gfact.pdf"
-             aria-hidden="true"
-             tabindex="-1">
-            <img src="images/badges/gfact.png" alt="" />
-            <span>GFACT</span>
-          </a>
+	  <a class="badge-logo-item badge-logo-item-clone"
+		 href="https://credentials.uipath.com/74ce2097-a5bd-4487-8753-b823e01b427b#acc.MVvhnGiZ"
+		 data-title="UiPath Certified Professional Automation Developer Associate"
+		 data-desc="UiPath certification validating foundational automation development skills, including process identification, problem-solving, and building solutions using UiPath Studio, Robots, and Orchestrator."
+		 data-img="images/badges/uipath.png"
+		 data-credly="https://credentials.uipath.com/74ce2097-a5bd-4487-8753-b823e01b427b#acc.MVvhnGiZ"
+		 data-pdf="certs/uipath.jpg"
+		 aria-hidden="true"
+		 tabindex="-1">
+		<img src="images/badges/uipath.png" alt="" />
+		<span>UiPath</span>
+	  </a>
+	</div>
+  </div>
 
-		  <a class="badge-logo-item badge-logo-item-clone"
-             href="https://credentials.uipath.com/74ce2097-a5bd-4487-8753-b823e01b427b#acc.MVvhnGiZ"
-             data-title="UiPath Certified Professional Automation Developer Associate"
-             data-desc="UiPath certification validating foundational automation development skills, including process identification, problem-solving, and building solutions using UiPath Studio, Robots, and Orchestrator."
-             data-img="images/badges/uipath.png"
-             data-credly="https://credentials.uipath.com/74ce2097-a5bd-4487-8753-b823e01b427b#acc.MVvhnGiZ"
-             data-pdf="certs/uipath.jpg"
-             aria-hidden="true"
-             tabindex="-1">
-            <img src="images/badges/uipath.png" alt="" />
-            <span>UiPath</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="cert-profile-link">
-        <a href="https://www.credly.com/users/shannon-smith-it-usn/badges#credly" target="_blank" rel="noopener noreferrer" class="btn-theme-outline">
-          View Full Credly Profile
-        </a>
-      </div>
-    </section>
+  <div class="cert-profile-link">
+	<a href="https://www.credly.com/users/shannon-smith-it-usn/badges#credly" target="_blank" rel="noopener noreferrer" class="btn-theme-outline">
+	  View Full Credly Profile
+	</a>
+  </div>
+</section>
 	
-
   <!-- =========================
        CERT MODAL
   ========================= -->
-
   <div class="cert-modal" id="certModal" aria-hidden="true">
     <div class="cert-modal-backdrop"></div>
 
@@ -582,13 +593,11 @@
     </div>
   </div>
   
-  <!-- =========================
+    <!-- =========================
 		 BOTTOM NAV BAR
 	========================= -->
-
 	<footer class="bottom-nav">
 	  <div class="bottom-nav-inner">
-
 		<div class="bottom-nav-left">
 		  <span>© 2026 Shannon Smith</span>
 		</div>
@@ -603,10 +612,8 @@
 		  <a href="art.html">Art</a>
 		  <a href="contact.html">Contact</a>
 		</div>
-
 	  </div>
 	</footer>
   
-  
-</body>
+  </body>
 </html>
