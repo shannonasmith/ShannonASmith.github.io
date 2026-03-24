@@ -1508,15 +1508,15 @@ body.menu-open .mobile-menu {
   }
 
   .intro-word {
-    font-size: clamp(1rem, 4.8vw, 1.18rem);
-    letter-spacing: 0.03em;
+    font-size: clamp(1.08rem, 5.2vw, 1.28rem);
   }
 
   .intro-sub {
-    font-size: 0.6rem;
-    line-height: 1.24;
+    font-size: 0.66rem;
+    line-height: 1.28;
   }
 }
+
 @media (max-width: 1050px) {
   .about-highlights-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
