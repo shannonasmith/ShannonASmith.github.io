@@ -76,20 +76,21 @@ h1, h2, h3 {
   align-items: center;
 }
 
-.nav-brand img,
 .nav-logo {
   width: 60px;
   height: 60px;
   opacity: 0.95;
   border-radius: 50%;
+
   object-fit: contain;
   image-rendering: auto;
+
   filter: drop-shadow(0 0 4px rgba(120, 90, 255, 0.25));
+
   transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-.nav-brand:hover img,
-.nav-logo:hover {
+.nav-brand:hover .nav-logo {
   transform: scale(1.06);
   filter: drop-shadow(0 0 10px rgba(140, 110, 255, 0.6));
 }
