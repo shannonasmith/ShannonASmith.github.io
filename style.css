@@ -76,21 +76,22 @@ h1, h2, h3 {
   align-items: center;
 }
 
-.nav-brand img {
+.nav-brand img,
+.nav-logo {
   width: 60px;
   height: 60px;
-  opacity: 0.9;
+  opacity: 0.95;
   border-radius: 50%;
-  object-fit: cover;
-  filter: grayscale(100%) contrast(1.05);
-  transition: transform 0.2s ease, filter 0.2s ease;
+  object-fit: contain;
+  image-rendering: auto;
+  filter: drop-shadow(0 0 4px rgba(120, 90, 255, 0.25));
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-/* subtle hover polish */
-.nav-brand:hover img {
-  transform: scale(1.05);
-  filter: grayscale(0%) contrast(1.1) hue-rotate(260deg);
-  box-shadow: 0 0 12px rgba(143, 89, 255, 0.35);
+.nav-brand:hover img,
+.nav-logo:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 10px rgba(140, 110, 255, 0.6));
 }
 
 /* =========================
