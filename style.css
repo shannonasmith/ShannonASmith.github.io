@@ -535,7 +535,7 @@ body[data-page="about"] .nav {
 }
 
 /* =========================
-   LANDING WORDS
+   HOME HERO / INTRO
 ========================= */
 .intro-copy {
   position: absolute;
@@ -544,28 +544,52 @@ body[data-page="about"] .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10vw;
+  padding: 0 9vw;
   pointer-events: none;
+}
+
+.intro-side {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-width: 320px;
+  text-decoration: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .intro-word {
   pointer-events: auto;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(2.1rem, 3.6vw, 3.35rem);
   font-weight: 500;
-  letter-spacing: 0.08em;
-  opacity: 0.92;
-  transition: transform 0.3s ease, color 0.25s ease, text-shadow 0.25s ease, opacity 0.25s ease;
+  letter-spacing: 0.06em;
+  line-height: 0.95;
+  opacity: 0.96;
+  transition:
+    transform 0.28s ease,
+    color 0.25s ease,
+    text-shadow 0.25s ease,
+    opacity 0.25s ease;
   cursor: pointer;
 }
 
+.intro-sub {
+  color: rgba(246, 244, 251, 0.78);
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  opacity: 0.96;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
 .intro-left {
-  transform: translateX(-60px);
+  transform: translateX(-48px);
 }
 
 .intro-right {
-  transform: translateX(60px);
+  transform: translateX(48px);
   text-align: right;
 }
 
@@ -574,11 +598,21 @@ body.page-ready.intro-start .intro-right {
   transform: translateX(0);
 }
 
-.intro-word:hover {
+.intro-copy .intro-side:hover .intro-word {
   color: var(--accent-2);
-  text-shadow: 0 0 18px var(--accent-glow);
-  opacity: 1;
-  transform: translateY(-2px);
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.18),
+    0 0 14px rgba(143, 89, 255, 0.45),
+    0 0 28px rgba(143, 89, 255, 0.3);
+}
+
+.intro-copy .intro-side:hover .intro-sub {
+  color: rgba(246, 244, 251, 0.94);
+}
+
+.intro-copy:hover .intro-side:not(:hover) {
+  opacity: 0.42;
+  transform: translateY(3px);
 }
 
 /* =========================
@@ -1335,30 +1369,30 @@ body.menu-open .mobile-menu {
   }
 
   .intro-copy {
-    inset: auto 0 2rem 0;
+    inset: auto 0 2.3rem 0;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 0.8rem;
-    padding: 0 0.85rem;
+    gap: 0.85rem;
+    padding: 0 0.95rem;
     pointer-events: auto;
   }
 
   .intro-side,
   .intro-left,
   .intro-right {
-    max-width: 44%;
+    max-width: 43%;
   }
 
   .intro-word {
-    font-size: clamp(1.1rem, 5.2vw, 1.4rem);
+    font-size: clamp(1.15rem, 5.2vw, 1.45rem);
     line-height: 1;
     letter-spacing: 0.04em;
   }
 
   .intro-sub {
-    font-size: 0.64rem;
-    line-height: 1.28;
+    font-size: 0.68rem;
+    line-height: 1.3;
   }
 
   .cyber-portrait {
@@ -1456,29 +1490,30 @@ body.menu-open .mobile-menu {
   .portrait,
   .cyber-layer .effect-image,
   .creative-layer .effect-image {
-    width: min(70vw, 280px);
-    max-height: 46vh;
+    width: min(68vw, 270px);
+    max-height: 48vh;
   }
 
   .intro-copy {
-    bottom: 1.6rem;
-    padding: 0 0.7rem;
+    bottom: 2rem;
+    padding: 0 0.72rem;
     gap: 0.6rem;
   }
 
   .intro-side,
   .intro-left,
   .intro-right {
-    max-width: 45%;
+    max-width: 44%;
   }
 
   .intro-word {
     font-size: clamp(1rem, 4.8vw, 1.18rem);
+    letter-spacing: 0.03em;
   }
 
   .intro-sub {
-    font-size: 0.58rem;
-    line-height: 1.22;
+    font-size: 0.6rem;
+    line-height: 1.24;
   }
 }
 @media (max-width: 1050px) {
