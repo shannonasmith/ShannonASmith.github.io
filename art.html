@@ -33,38 +33,55 @@
   <!-- =========================
        GLOBAL NAVIGATION
   ========================= -->
-
   <nav class="nav" aria-label="Primary navigation">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-brand" aria-label="Shannon Smith Home">
-        <img src="images/nav-logo.svg" alt="Shannon Smith logo" class="nav-logo" />
-      </a>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Shannon Smith Home">
+      <img src="images/nav-logo.svg" alt="Shannon Smith logo" class="nav-logo" />
+    </a>
 
-      <div class="nav-links">
-        <a href="about.html">About</a>
-        <a href="cyber.html">Cyber</a>
-        <a href="art.html">Art</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-      <div class="nav-social" aria-label="Contact links">
-        <a href="mailto:shannon.a.smith1223@gmail.com" class="nav-social-link" aria-label="Email">
-          <img src="images/icons/email.svg" alt="" />
-        </a>
-        <a href="https://www.linkedin.com/in/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
-          <img src="images/icons/linkedin.svg" alt="" />
-        </a>
-        <a href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub">
-          <img src="images/icons/github.svg" alt="" />
-        </a>
-      </div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="cyber.html">Cyber</a>
+      <a href="art.html">Art</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </nav>
+
+    <div class="nav-social" aria-label="Contact links">
+      <a href="mailto:shannon.a.smith1223@gmail.com" class="nav-social-link" aria-label="Email">
+        <img src="images/icons/email.svg" alt="" />
+      </a>
+      <a href="https://www.linkedin.com/in/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
+        <img src="images/icons/linkedin.svg" alt="" />
+      </a>
+      <a href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub">
+        <img src="images/icons/github.svg" alt="" />
+      </a>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="about.html">About</a>
+    <a href="cyber.html">Cyber</a>
+    <a href="art.html">Art</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
   <!-- =========================
        ART HERO
   ========================= -->
-
 	<div class="page-header art-page-header art-enter-up">
 	  <h2>Creative Works</h2>
 	  <p>
@@ -76,7 +93,6 @@
     <!-- =========================
          ART GALLERY
     ========================= -->
-
     <section class="section art-gallery-section" aria-labelledby="art-gallery-heading">
       <h2 id="art-gallery-heading" class="visually-hidden">Art Gallery</h2>
 	  
@@ -339,7 +355,6 @@
   <!-- =========================
        ART MODAL
   ========================= -->
-
   <div class="art-modal" id="artModal" aria-hidden="true">
     <div class="art-modal-backdrop"></div>
 
@@ -354,10 +369,9 @@
   </div>
   
   
-  <!-- =========================
+    <!-- =========================
 		 BOTTOM NAV BAR
 	========================= -->
-
 	<footer class="bottom-nav">
 	  <div class="bottom-nav-inner">
 
@@ -378,8 +392,6 @@
 
 	  </div>
 	</footer>
-  
-  
   
 </body>
 </html>
