@@ -1712,10 +1712,10 @@ body.menu-open .mobile-menu {
    HERO TITLE UPGRADE
 ========================= */
 .hero-title {
-  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
   font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
   margin-bottom: 0.8rem;
 }
 
