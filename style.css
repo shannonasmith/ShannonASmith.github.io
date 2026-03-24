@@ -66,6 +66,19 @@ h1, h2, h3 {
 }
 
 /* =========================
+   GLOBAL PAGE SAFETY
+========================= */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+/* =========================
    NAV LOGO IMAGE
 ========================= */
 .nav-brand {
@@ -144,8 +157,8 @@ body.page-leaving .intro-copy {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  z-index: 1000;
 
   background: rgba(18, 20, 34, 0.46);
   border-bottom: 1px solid rgba(143, 89, 255, 0.14);
@@ -1211,13 +1224,15 @@ body.page-ready.intro-start .creative-portrait {
 
   .nav-inner {
     position: relative;
-    width: calc(100% - 20px);
+    width: min(calc(100% - 20px), 1280px);
+    margin: 0 auto;
     min-height: 76px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     padding: 0.55rem 0;
+    box-sizing: border-box;
   }
 
   .nav-brand {
@@ -1409,9 +1424,10 @@ body.page-ready.intro-start .creative-portrait {
 
 @media (max-width: 520px) {
   .nav-inner {
-    width: calc(100% - 16px);
+    width: min(calc(100% - 16px), 1280px);
     min-height: 72px;
     padding: 0.45rem 0;
+    box-sizing: border-box;
   }
 
   .nav-logo {
