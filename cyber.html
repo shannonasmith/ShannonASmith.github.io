@@ -101,19 +101,16 @@
 	<button class="filter-pill" type="button" data-filter="investigations" aria-pressed="false">Investigations</button>
 	<button class="filter-pill" type="button" data-filter="labs" aria-pressed="false">Labs</button>
 	<button class="filter-pill" type="button" data-filter="research" aria-pressed="false">Threat Research</button>
-
-	<!-- NEW (added only, nothing replaced) -->
 	<button class="filter-pill" type="button" data-filter="soc" aria-pressed="false">SOC Engineering</button>
 	<button class="filter-pill" type="button" data-filter="automation" aria-pressed="false">Automation</button>
 	<button class="filter-pill" type="button" data-filter="ai" aria-pressed="false">AI Security</button>
   </div>
-
 </section>
 
 <div class="projects-grid simple-grid cyber-enter-up" id="projectsGrid">
 
   <article class="project-card-simple"
-    data-category="automation"
+    data-category="automation soc ai"
     data-title="Agentic SOC Investigation Engine"
     data-desc="End-to-end SOC pipeline that performs ATT&CK mapping, contextual enrichment, and stateful investigation to generate explainable, confidence-driven response recommendations."
     data-img="images/projects/agentic-soc-investigation-engine.png"
@@ -130,7 +127,7 @@
   </article>
 
   <article class="project-card-simple"
- 	data-category="automation"
+ 	data-category="automation soc ai"
   	data-title="AI-Assisted SOC + MITRE ATT&CK Mapping Engine"
   	data-desc="Production-style SOC pipeline that ingests Zeek and Splunk-style telemetry, normalizes events, and maps detections to MITRE ATT&CK using hybrid AI-assisted scoring and explainable output."
   	data-img="images/projects/ai-soc-mitre-mapper.png"
@@ -147,7 +144,7 @@
   </article>
 
   <article class="project-card-simple"
-    data-category="investigations"
+    data-category="investigations automation soc ai"
     data-title="AI-Assisted SOC Alert Analyzer"
     data-desc="SOC analyst-focused tool for triaging and investigating alerts using structured workflows, AI-assisted analysis, and explainable reasoning."
     data-img="images/projects/soc-alert-analyzer.png"
