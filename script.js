@@ -354,7 +354,7 @@ function initLandingIntro() {
 
   window.setTimeout(() => {
     introComplete = true;
-  }, 1100);
+  }, 2400);      // was 1100 previously with faster transition...
 
   hero.addEventListener("mousemove", (e) => {
     if (!introComplete || isTouching) return;
