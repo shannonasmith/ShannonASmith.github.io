@@ -549,7 +549,7 @@ body[data-page="about"] .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 6vw;
+  padding: 0 11vw;
   pointer-events: none;
 }
 
@@ -1192,7 +1192,7 @@ body.page-ready.intro-start .creative-portrait {
 ========================= */
 @media (max-width: 1200px) {
   .intro-copy {
-    padding: 0 8vw;
+    padding: 0 10vw;
   }
 
   .portrait,
