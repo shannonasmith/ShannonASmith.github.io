@@ -1,5 +1,7 @@
 # Shannon Smith — Cybersecurity Portfolio
 
+
+
 🌐 **Live Site:**  
 https://shannonasmith.github.io/
 
@@ -11,15 +13,13 @@ This repository contains the source code for my personal cybersecurity portfolio
 
 The goal of this site is to document **hands-on security investigations, technical projects, and academic work** while presenting them in a clear, structured format.
 
-My background combines **software development, cybersecurity investigations, and systems thinking**, and this portfolio reflects that blend of disciplines.
-
 ---
 
 ## About Me
 
 I'm a cybersecurity professional and U.S. Navy veteran with a background in software development and systems thinking. I recently completed a **Master of Information Technology at Virginia Tech**, with additional graduate certificates in **Software Development** and **Cybersecurity Policy**.
 
-My path into cybersecurity has been driven by curiosity and hands-on exploration. I’ve been building practical experience through **security labs, Capture-the-Flag challenges, home lab experimentation, and technical investigations**. These exercises allow me to practice real security skills such as **log analysis, artifact investigation, system analysis, and understanding attacker behavior**.
+My path into cybersecurity has been driven by curiosity and hands-on exploration. I've been building practical experience through **security labs, Capture-the-Flag challenges, home lab experimentation, and technical investigations**. These exercises allow me to practice real security skills such as **log analysis, artifact investigation, system analysis, and understanding attacker behavior**.
 
 Before transitioning fully into cybersecurity, I developed a strong technical foundation through software development projects involving **Java, Kotlin, web applications, and object-oriented design**. That background continues to support my approach to security by strengthening my **debugging, automation, and systems analysis skills**.
 
@@ -111,22 +111,31 @@ https://www.credly.com/users/shannon-smith-it-usn
 
 Current certifications include:
 
-- GIAC Foundational Cybersecurity Technologies (GFACT)  
-- Certified Ethical Hacker (CEH)  
+- CompTIA A+  
 - CompTIA Security+  
 - CompTIA Linux+  
+- GIAC Security Essentials (GSEC)  
+- GIAC Foundational Cybersecurity Technologies (GFACT)  
+- Certified Ethical Hacker (CEH)  
 - Splunk Core Certified Power User  
 
-Additional certifications and training are currently in progress.
+Currently working toward the **GIAC Certified Incident Handler (GCIH)** and **CCNA**.
 
 ---
 
 ## Education & Certifications Timeline
 
-### 2024-2026
+### Ongoing
+
+**Current Study**  
+SANS SEC504 (GCIH) • CCNA  
+
+Continuing to build network, enterprise security, and practical lab skills through study and projects.
+
+### 2024–2026
 
 **Cybersecurity Certifications**  
-GFACT • CEH • Security+ • Linux+ • Splunk CCPU  
+GFACT • CEH • Security+ • Linux+ • GSEC • Splunk CCPU  
 
 Built a stronger hands-on foundation in security operations, Linux administration, log analysis, and ethical hacking.
 
@@ -136,13 +145,6 @@ Built a stronger hands-on foundation in security operations, Linux administratio
 Virginia Tech  
 
 Graduate study with additional focus in software development and cybersecurity policy.
-
-### Ongoing
-
-**Current Study**  
-SANS SEC401 (GSEC) • SANS SEC504 (GCIH) • CCNA  
-
-Continuing to build network, enterprise security, and practical lab skills through study and projects.
 
 ---
 
