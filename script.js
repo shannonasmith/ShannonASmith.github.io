@@ -294,7 +294,7 @@ function initLandingIntro() {
   const SPLIT_MAX = 64;
   const EASE = 0.065;
   const FADE_MIN = 0;          // labels now fade all the way to invisible
-  const IMAGE_SHIFT_MAX = 14;  // px the portrait leans away from the cursor side
+  const IMAGE_SHIFT_MAX = 26;  // px the portrait leans away from the cursor side
 
   let targetSplit = 50;
   let currentSplit = 50;
