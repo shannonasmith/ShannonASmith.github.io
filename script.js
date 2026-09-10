@@ -177,102 +177,10 @@ function initMobileMenu() {
 
 /* =========================
    LANDING PAGE INTRO
-========================= */
-
-/* OLD intro...
-
-function initLandingIntro() {
-  if (!hero || body.dataset.page !== "home") return;
-
-  root.style.setProperty("--split", "50%");
-
-  requestAnimationFrame(() => {
-    body.classList.add("intro-start");
-  });
-
-  const isMobile = window.matchMedia("(max-width: 700px)").matches;
-  if (isMobile) return;
-
-  let targetSplit = 50;
-  let currentSplit = 50;
-  let rafId = null;
-  let isTouching = false;
-  let introComplete = false;
-
-  function animateSplit() {
-    currentSplit += (targetSplit - currentSplit) * 0.09;
-    root.style.setProperty("--split", `${currentSplit}%`);
-
-    if (Math.abs(targetSplit - currentSplit) > 0.05) {
-      rafId = requestAnimationFrame(animateSplit);
-    } else {
-      currentSplit = targetSplit;
-      root.style.setProperty("--split", `${currentSplit}%`);
-      rafId = null;
-    }
-  }
-
-  function startSplitAnimation() {
-    if (!rafId) {
-      rafId = requestAnimationFrame(animateSplit);
-    }
-  }
-
-  function getInvertedSplit(x, width, min = 18, max = 82) {
-    const percent = 100 - (x / width) * 100;
-    return Math.max(min, Math.min(max, percent));
-  }
-
-  window.setTimeout(() => {
-    introComplete = true;
-  }, 1100);
-
-  hero.addEventListener("mousemove", (e) => {
-    if (!introComplete || isTouching) return;
-
-    const rect = hero.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-
-    targetSplit = getInvertedSplit(x, rect.width, 18, 82);
-    startSplitAnimation();
-  });
-
-  hero.addEventListener("mouseleave", () => {
-    if (!introComplete) return;
-    targetSplit = 50;
-    startSplitAnimation();
-  });
-
-  hero.addEventListener("touchstart", () => {
-    if (!introComplete) return;
-    isTouching = true;
-  });
-
-  hero.addEventListener("touchmove", (e) => {
-    if (!introComplete) return;
-
-    const rect = hero.getBoundingClientRect();
-    const touch = e.touches[0];
-    const x = touch.clientX - rect.left;
-
-    targetSplit = getInvertedSplit(x, rect.width, 15, 85);
-    startSplitAnimation();
-  });
-
-  hero.addEventListener("touchend", () => {
-    if (!introComplete) return;
-    isTouching = false;
-    targetSplit = 50;
-    startSplitAnimation();
-  });
-}
-*/
-
-
-/*  NEW intro */
-
-/* =========================
-   LANDING PAGE INTRO
+   Drives the cyber/art split-reveal wipe (via the --split CSS custom
+   property), the label crossfade, and the counter-lean on the portrait
+   stack -- all three are eased off the same currentSplit value each
+   animation frame, so they stay in sync with each other.
 ========================= */
 function initLandingIntro() {
   if (!hero || body.dataset.page !== "home") return;
@@ -292,8 +200,8 @@ function initLandingIntro() {
 
   const SPLIT_MIN = 36;
   const SPLIT_MAX = 64;
-  const EASE = 0.035;          // try 0.065 for noticeably faster
-  const FADE_MIN = 0;          // labels now fade all the way to invisible
+  const EASE = 0.035;          // lower = slower catch-up to the cursor
+  const FADE_MIN = 0;          // labels fade all the way to invisible
   const IMAGE_SHIFT_MAX = 26;  // px the portrait leans away from the cursor side
 
   let targetSplit = 50;
@@ -352,9 +260,12 @@ function initLandingIntro() {
     return Math.max(min, Math.min(max, percent));
   }
 
+  // Must stay roughly in sync with the portrait fly-in transition duration
+  // set in style.css (.cyber-portrait / .creative-portrait) -- mouse
+  // tracking shouldn't unlock until that entrance animation has finished.
   window.setTimeout(() => {
     introComplete = true;
-  }, 2400);      // was 1100 previously with faster transition...
+  }, 2400);
 
   hero.addEventListener("mousemove", (e) => {
     if (!introComplete || isTouching) return;
@@ -395,10 +306,6 @@ function initLandingIntro() {
     startSplitAnimation();
   });
 }
-
-
-
-
 
 /* =========================
    NAV HIDE / SHOW ON SCROLL
