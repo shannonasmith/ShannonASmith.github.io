@@ -12,10 +12,9 @@
 
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
-
 </head>
-	
 <body id="top" data-page="home">
+
   <!-- =========================
        LANDING PAGE BACKGROUND
   ========================= -->
@@ -31,55 +30,58 @@
        GLOBAL NAVIGATION
   ========================= -->
   <nav class="nav" aria-label="Primary navigation">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-brand" aria-label="Shannon Smith Home">
-      <img src="images/nav-logo.svg" alt="Shannon Smith logo" class="nav-logo" />
-    </a>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Shannon Smith Home">
+        <img src="images/nav-logo.svg" alt="Shannon Smith logo" class="nav-logo" />
+      </a>
 
-    <button
-      class="nav-toggle"
-      type="button"
-      aria-label="Open menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <div class="nav-links">
+      <div class="nav-links">
+        <a href="cyber.html">Cyber</a>
+        <a href="art.html">Art</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-social" aria-label="Contact links">
+        <a href="mailto:shannon.a.smith1223@gmail.com" class="nav-social-link" aria-label="Email">
+          <img src="images/icons/email.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
+          <img src="images/icons/linkedin.svg" alt="" />
+        </a>
+        <a href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub">
+          <img src="images/icons/github.svg" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
       <a href="cyber.html">Cyber</a>
       <a href="art.html">Art</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-
-    <div class="nav-social" aria-label="Contact links">
-      <a href="mailto:shannon.a.smith1223@gmail.com" class="nav-social-link" aria-label="Email">
-        <img src="images/icons/email.svg" alt="" />
-      </a>
-      <a href="https://www.linkedin.com/in/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
-        <img src="images/icons/linkedin.svg" alt="" />
-      </a>
-      <a href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub">
-        <img src="images/icons/github.svg" alt="" />
-      </a>
-    </div>
-  </div>
-
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="cyber.html">Cyber</a>
-    <a href="art.html">Art</a>
-	<a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
+  </nav>
 
   <!-- =========================
        LANDING HERO
   ========================= -->
   <main class="hero" id="hero">
+
+    <!-- Cyber / Art split-reveal portrait (see initLandingIntro() in
+         script.js for the mouse-driven wipe, fade, and lean effects) -->
     <div class="portrait-stack">
       <div class="effect-layer cyber-layer intro-ready">
         <img src="images/face-cyber.png" alt="Cyber portrait" class="portrait effect-image cyber-portrait" />
@@ -92,22 +94,23 @@
       </div>
     </div>
 
-	<section class="intro-copy" aria-label="Portfolio paths">
-	  <a href="cyber.html" class="intro-side intro-left">
-		<span class="intro-word">cyber</span>
-		<span class="intro-sub">
-		  Security investigations, labs, <br />
-		  and technical writeups.
-		</span>
-	  </a>
+    <!-- Cyber / Art entry-point links -->
+    <section class="intro-copy" aria-label="Portfolio paths">
+      <a href="cyber.html" class="intro-side intro-left">
+        <span class="intro-word">cyber</span>
+        <span class="intro-sub">
+          Security investigations, labs, <br />
+          and technical writeups.
+        </span>
+      </a>
 
-	  <a href="art.html" class="intro-side intro-right">
-		<span class="intro-word">art</span>
-		<span class="intro-sub">
-		  Creative work, line art, <br />
-		  and visual exploration.
-		</span>
-	  </a>
+      <a href="art.html" class="intro-side intro-right">
+        <span class="intro-word">art</span>
+        <span class="intro-sub">
+          Creative work, line art, <br />
+          and visual exploration.
+        </span>
+      </a>
     </section>
   </main>
 
