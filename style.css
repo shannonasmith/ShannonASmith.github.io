@@ -549,7 +549,7 @@ body[data-page="about"] .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 11vw;
+  padding: 0 16vw;
   pointer-events: none;
 }
 
