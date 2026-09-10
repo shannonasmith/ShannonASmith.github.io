@@ -900,6 +900,7 @@ body.page-ready.intro-start .creative-portrait {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  object-position: top;
   border-radius: 18px;
   border: 1px solid var(--card-border);
   background: #050505;
