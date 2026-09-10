@@ -18,7 +18,6 @@
   <!-- =========================
        GLOBAL PAGE BACKGROUND
   ========================= -->
-
   <div class="page-bg" aria-hidden="true">
     <div class="stars stars-1"></div>
     <div class="stars stars-2"></div>
@@ -27,55 +26,55 @@
     <div class="shooting-star shooting-star-3"></div>
   </div>
 
-    <!-- =========================
+  <!-- =========================
        GLOBAL NAVIGATION
   ========================= -->
   <nav class="nav" aria-label="Primary navigation">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-brand" aria-label="Shannon Smith Home">
-      <img src="images/nav-logo.svg" alt="Shannon Smith logo" class="nav-logo" />
-    </a>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Shannon Smith Home">
+        <img src="images/nav-logo.svg" alt="Shannon Smith logo" class="nav-logo" />
+      </a>
 
-    <button
-      class="nav-toggle"
-      type="button"
-      aria-label="Open menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <div class="nav-links">
+      <div class="nav-links">
+        <a href="cyber.html">Cyber</a>
+        <a href="art.html">Art</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-social" aria-label="Contact links">
+        <a href="mailto:shannon.a.smith1223@gmail.com" class="nav-social-link" aria-label="Email">
+          <img src="images/icons/email.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
+          <img src="images/icons/linkedin.svg" alt="" />
+        </a>
+        <a href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub">
+          <img src="images/icons/github.svg" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
       <a href="cyber.html">Cyber</a>
       <a href="art.html">Art</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
+  </nav>
 
-    <div class="nav-social" aria-label="Contact links">
-      <a href="mailto:shannon.a.smith1223@gmail.com" class="nav-social-link" aria-label="Email">
-        <img src="images/icons/email.svg" alt="" />
-      </a>
-      <a href="https://www.linkedin.com/in/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="LinkedIn">
-        <img src="images/icons/linkedin.svg" alt="" />
-      </a>
-      <a href="https://github.com/shannonasmith" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="GitHub">
-        <img src="images/icons/github.svg" alt="" />
-      </a>
-    </div>
-  </div>
-
-  <div class="mobile-menu" id="mobile-menu">
-	<a href="cyber.html">Cyber</a>
-    <a href="art.html">Art</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
-  
   <main class="about-page-shell">
 
     <!-- =========================
@@ -83,27 +82,30 @@
     ========================= -->
     <section class="section about-rebuilt-profile" aria-labelledby="about-name">
       <div class="about-rebuilt-top">
+
+        <!-- Portrait -->
         <div class="about-rebuilt-image-col about-enter-left">
           <div class="about-rebuilt-frame">
             <img src="images/about-profile.png" alt="Portrait of Shannon Smith" class="about-rebuilt-image" />
           </div>
         </div>
 
+        <!-- Name, summary, quick-facts list, resume CTA -->
         <div class="about-rebuilt-copy-col about-enter-right">
           <p class="about-eyebrow">Cybersecurity Professional</p>
           <h2 id="about-name" class="about-name">Shannon Smith</h2>
 
           <p class="about-lead">
-            U.S. Navy veteran and Virginia Tech graduate who builds working SOC detection tooling — including a 
-			three-phase SOC pipeline spanning alert triage, MITRE ATT&CK mapping, and a self-directing investigation 
-			agent.
+            U.S. Navy veteran and Virginia Tech graduate who builds working SOC detection tooling — including a
+            three-phase SOC pipeline spanning alert triage, MITRE ATT&CK mapping, and a self-directing investigation
+            agent.
           </p>
 
           <p class="about-body">
-            Selected into the competitive WiCyS / SANS Security Training Scholarship, with hands-on experience in log analysis, 
-			network traffic analysis, and threat detection across Windows and Linux environments using Splunk, Wireshark, Zeek, 
-			and Nmap. GFACT and GSEC complete, GCIH in progress — working toward a Security Operations, Detection Engineering, 
-			or SOC Analyst role.
+            Selected into the competitive WiCyS / SANS Security Training Scholarship, with hands-on experience in log analysis,
+            network traffic analysis, and threat detection across Windows and Linux environments using Splunk, Wireshark, Zeek,
+            and Nmap. GFACT and GSEC complete, GCIH in progress — working toward a Security Operations, Detection Engineering,
+            or SOC Analyst role.
           </p>
 
           <ul class="about-rebuilt-list">
@@ -114,11 +116,11 @@
           </ul>
 
           <div class="about-rebuilt-actions">
-		    <a href="files/Shannon_Smith_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-theme-strong">
+            <a href="files/Shannon_Smith_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-theme-strong">
               Download Resume
             </a>
           </div>
-		  
+
         </div>
       </div>
     </section>
@@ -132,21 +134,23 @@
         <!-- =========================
              LEFT COLUMN
         ========================= -->
-		<div class="about-col">
+        <div class="about-col">
+
+          <!-- Training -->
           <div class="about-section-label">Training</div>
 
           <div class="about-timeline">
-		  <article class="about-timeline-item">
-		  	<div class="about-timeline-dot"></div>
-            <div class="about-timeline-main">
-            <div class="about-date-chip">2025–Present</div>
-              <div class="about-timeline-box">
-                <h2>WiCyS / SANS Security Training Scholarship</h2>
+            <article class="about-timeline-item">
+              <div class="about-timeline-dot"></div>
+              <div class="about-timeline-main">
+                <div class="about-date-chip">2025–Present</div>
+                <div class="about-timeline-box">
+                  <h2>WiCyS / SANS Security Training Scholarship</h2>
                   <p class="about-mini-accent">SEC275 (GFACT) • SEC401 (GSEC) • SEC504 (GCIH)</p>
                   <p>
-                    Selected competitively for a national scholarship pairing WiCyS with SANS GIAC training — advancing through system 
-					security, enterprise defense, and incident-handling coursework, with hands-on labs in forensics, web vulnerabilities, 
-					and privilege escalation. Currently completing SEC504 (GCIH), targeting November 2026.
+                    Selected competitively for a national scholarship pairing WiCyS with SANS GIAC training — advancing through system
+                    security, enterprise defense, and incident-handling coursework, with hands-on labs in forensics, web vulnerabilities,
+                    and privilege escalation. Currently completing SEC504 (GCIH), targeting November 2026.
                   </p>
                 </div>
               </div>
@@ -160,10 +164,10 @@
                   <h2>Intellectual Point</h2>
                   <p class="about-mini-accent">Security Training • Certification Preparation</p>
                   <p>
-                    Completed 540 hours of hands-on training in SOC operations and network defense — including Splunk 
-					alert monitoring, vulnerability assessment, and simulated incident investigation with Kali Linux and 
-					Burp Suite — supporting certification study for Security+, Linux+, Splunk Core Power User, CEH, and 
-					UiPath Certified RPA Associate.
+                    Completed 540 hours of hands-on training in SOC operations and network defense — including Splunk
+                    alert monitoring, vulnerability assessment, and simulated incident investigation with Kali Linux and
+                    Burp Suite — supporting certification study for Security+, Linux+, Splunk Core Power User, CEH, and
+                    UiPath Certified RPA Associate.
                   </p>
                 </div>
               </div>
@@ -177,15 +181,16 @@
                   <h2>NPower</h2>
                   <p class="about-mini-accent">IT Support • Networking • Cybersecurity Foundations</p>
                   <p>
-                    Hands-on training installing, configuring, and troubleshooting Windows, Linux, and macOS systems, with core 
-					networking fundamentals in TCP/IP, ports, and protocols. Included CompTIA ITF+ and A+ coursework alongside 
-					Google IT Support training.
+                    Hands-on training installing, configuring, and troubleshooting Windows, Linux, and macOS systems, with core
+                    networking fundamentals in TCP/IP, ports, and protocols. Included CompTIA ITF+ and A+ coursework alongside
+                    Google IT Support training.
                   </p>
                 </div>
               </div>
             </article>
           </div>
 
+          <!-- Education -->
           <div class="about-section-label about-section-gap">Education</div>
 
           <div class="about-timeline">
@@ -197,9 +202,9 @@
                   <h2>Master of Information Technology</h2>
                   <p class="about-mini-accent">Virginia Tech</p>
                   <p>
-                    Graduate coursework spanning full-stack software engineering — Java, web and mobile application development, 
-					database design — alongside cybersecurity policy and program design, including graduate certificates in Software 
-					Development and Cybersecurity Policy.
+                    Graduate coursework spanning full-stack software engineering — Java, web and mobile application development,
+                    database design — alongside cybersecurity policy and program design, including graduate certificates in Software
+                    Development and Cybersecurity Policy.
                   </p>
                 </div>
               </div>
@@ -210,11 +215,12 @@
         <!-- =========================
              RIGHT COLUMN
         ========================= -->
-		<div class="about-col">
+        <div class="about-col">
+
+          <!-- Certifications -->
           <div class="about-section-label">Certifications</div>
 
           <div class="about-timeline">
-			  
             <article class="about-timeline-item">
               <div class="about-timeline-dot"></div>
               <div class="about-timeline-main">
@@ -223,9 +229,9 @@
                   <h2>Completed Certifications</h2>
                   <p class="about-mini-accent">GSEC • GFACT • UiPath RPA • Splunk CCPU • CEH • Linux+ • Sec+ • A+ </p>
                   <p>
-                    Eight certifications spanning GIAC/SANS security fundamentals (GSEC, GFACT), offensive security (CEH), 
-					systems administration (Linux+, A+), SIEM analysis (Splunk Core Power User), DoD 8570/8140-aligned security 
-					(Security+), and process automation (UiPath RPA) — a foundation across security operations, systems, and automation.
+                    Eight certifications spanning GIAC/SANS security fundamentals (GSEC, GFACT), offensive security (CEH),
+                    systems administration (Linux+, A+), SIEM analysis (Splunk Core Power User), DoD 8570/8140-aligned security
+                    (Security+), and process automation (UiPath RPA) — a foundation across security operations, systems, and automation.
                   </p>
                   <a href="https://www.credly.com/users/shannon-smith-it-usn/badges#credly"
                      target="_blank"
@@ -236,9 +242,10 @@
                 </div>
               </div>
             </article>
-		  </div>
-			
-		  <div class="about-section-label about-section-gap">Experience</div>
+          </div>
+
+          <!-- Experience -->
+          <div class="about-section-label about-section-gap">Experience</div>
 
           <div class="about-timeline">
             <article class="about-timeline-item">
@@ -249,9 +256,9 @@
                   <h2>Cybersecurity Portfolio Development</h2>
                   <p class="about-mini-accent">CTFs • Technical Writeups • Home Lab</p>
                   <p>
-                    Designed and built a three-phase SOC detection pipeline — alert triage, MITRE ATT&CK mapping, and a 
-					self-directing investigation agent — alongside documented investigations into authentication and DNS 
-					anomalies, and threat actor write-ups covering NotPetya, Wizard Spider, and the Uber/Lapsus$ breach.
+                    Designed and built a three-phase SOC detection pipeline — alert triage, MITRE ATT&CK mapping, and a
+                    self-directing investigation agent — alongside documented investigations into authentication and DNS
+                    anomalies, and threat actor write-ups covering NotPetya, Wizard Spider, and the Uber/Lapsus$ breach.
                   </p>
                 </div>
               </div>
@@ -266,8 +273,8 @@
                   <p class="about-mini-accent">Kotlin • Java • Web Development</p>
                   <p>
                     Graduate coursework spanning Java application development, Android development in Kotlin, and full-stack
-					web application design — technical foundations that now support the automation and tooling behind current 
-					security projects.
+                    web application design — technical foundations that now support the automation and tooling behind current
+                    security projects.
                   </p>
                 </div>
               </div>
@@ -281,9 +288,9 @@
                   <h2>U.S. Navy Leadership &amp; Operations</h2>
                   <p class="about-mini-accent">Operations • Teamwork • Discipline</p>
                   <p>
-                    Led and supervised 20+ personnel across technical operations and maintenance for mission-critical equipment, 
-				    directing incident response under operational pressure and building training programs that achieved a 100% team 
-					qualification rate. Developed resilience, accountability, and mission-focused execution that continue
+                    Led and supervised 20+ personnel across technical operations and maintenance for mission-critical equipment,
+                    directing incident response under operational pressure and building training programs that achieved a 100% team
+                    qualification rate. Developed resilience, accountability, and mission-focused execution that continue
                     to shape how I approach technical work.
                   </p>
                 </div>
@@ -294,31 +301,31 @@
 
       </div>
     </section>
-	
-	<!-- =========================
-		 BOTTOM NAV BAR
-	========================= -->
-	<footer class="bottom-nav">
-	  <div class="bottom-nav-inner">
 
-		<div class="bottom-nav-left">
-		  <span>© 2026 Shannon Smith</span>
-		</div>
+    <!-- =========================
+         BOTTOM NAV BAR
+    ========================= -->
+    <footer class="bottom-nav">
+      <div class="bottom-nav-inner">
 
-		<div class="bottom-nav-center">
-		  <a href="#top" class="bottom-nav-up" aria-label="Back to top">↑</a>
-		</div>
+        <div class="bottom-nav-left">
+          <span>© 2026 Shannon Smith</span>
+        </div>
 
-		<div class="bottom-nav-right">
-	      <a href="cyber.html">Cyber</a>
-	      <a href="art.html">Art</a>
-	      <a href="about.html" class="active">About</a>
-	      <a href="contact.html">Contact</a>
-		</div>
+        <div class="bottom-nav-center">
+          <a href="#top" class="bottom-nav-up" aria-label="Back to top">↑</a>
+        </div>
 
-	  </div>
-	</footer>
-	
+        <div class="bottom-nav-right">
+          <a href="cyber.html">Cyber</a>
+          <a href="art.html">Art</a>
+          <a href="about.html" class="active">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+      </div>
+    </footer>
+
   </main>
 </body>
 </html>
