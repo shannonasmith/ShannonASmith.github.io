@@ -292,7 +292,7 @@ function initLandingIntro() {
 
   const SPLIT_MIN = 36;
   const SPLIT_MAX = 64;
-  const EASE = 0.065;
+  const EASE = 0.035;          // try 0.065 for noticeably faster
   const FADE_MIN = 0;          // labels now fade all the way to invisible
   const IMAGE_SHIFT_MAX = 26;  // px the portrait leans away from the cursor side
 
