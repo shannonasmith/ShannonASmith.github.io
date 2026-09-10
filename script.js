@@ -178,6 +178,7 @@ function initMobileMenu() {
 /* =========================
    LANDING PAGE INTRO
 ========================= */
+/* old intro...
 function initLandingIntro() {
   if (!hero || body.dataset.page !== "home") return;
 
@@ -253,6 +254,127 @@ function initLandingIntro() {
     const x = touch.clientX - rect.left;
 
     targetSplit = getInvertedSplit(x, rect.width, 15, 85);
+    startSplitAnimation();
+  });
+
+  hero.addEventListener("touchend", () => {
+    if (!introComplete) return;
+    isTouching = false;
+    targetSplit = 50;
+    startSplitAnimation();
+  });
+}
+*/
+
+
+/*  NEW intro */
+
+function initLandingIntro() {
+  if (!hero || body.dataset.page !== "home") return;
+
+  root.style.setProperty("--split", "50%");
+
+  requestAnimationFrame(() => {
+    body.classList.add("intro-start");
+  });
+
+  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+  if (isMobile) return;
+
+  // References to the label wrappers (the whole <a class="intro-side ...">
+  // block, so the word + subtext fade together)
+  const introLeftEl = hero.querySelector(".intro-left");
+  const introRightEl = hero.querySelector(".intro-right");
+
+  // --- TUNED FOR SUBTLETY ---
+  const SPLIT_MIN = 36;      // was 18 -- how far it can swing toward full "art"
+  const SPLIT_MAX = 64;      // was 82 -- how far it can swing toward full "cyber"
+  const EASE = 0.065;        // was 0.09 -- slightly slower catch-up
+  const FADE_MIN = 0.4;      // lowest opacity the opposite label fades to
+
+  let targetSplit = 50;
+  let currentSplit = 50;
+  let rafId = null;
+  let isTouching = false;
+  let introComplete = false;
+
+  function applyLabelFade(splitValue) {
+    // normalize around the actual center of our new range, -1 to 1
+    const mid = (SPLIT_MIN + SPLIT_MAX) / 2;
+    const half = (SPLIT_MAX - SPLIT_MIN) / 2;
+    const norm = Math.max(-1, Math.min(1, (splitValue - mid) / half));
+
+    // norm > 0 => split is toward "full cyber" (mouse moved left) => fade ART (right)
+    // norm < 0 => split is toward "full art" (mouse moved right)  => fade CYBER (left)
+    if (introRightEl) {
+      const fade = 1 - Math.max(0, norm) * (1 - FADE_MIN);
+      introRightEl.style.opacity = fade.toFixed(2);
+    }
+    if (introLeftEl) {
+      const fade = 1 - Math.max(0, -norm) * (1 - FADE_MIN);
+      introLeftEl.style.opacity = fade.toFixed(2);
+    }
+  }
+
+  function animateSplit() {
+    currentSplit += (targetSplit - currentSplit) * EASE;
+    root.style.setProperty("--split", `${currentSplit}%`);
+    applyLabelFade(currentSplit);
+
+    if (Math.abs(targetSplit - currentSplit) > 0.05) {
+      rafId = requestAnimationFrame(animateSplit);
+    } else {
+      currentSplit = targetSplit;
+      root.style.setProperty("--split", `${currentSplit}%`);
+      applyLabelFade(currentSplit);
+      rafId = null;
+    }
+  }
+
+  function startSplitAnimation() {
+    if (!rafId) {
+      rafId = requestAnimationFrame(animateSplit);
+    }
+  }
+
+  function getInvertedSplit(x, width, min = SPLIT_MIN, max = SPLIT_MAX) {
+    const percent = 100 - (x / width) * 100;
+    return Math.max(min, Math.min(max, percent));
+  }
+
+  window.setTimeout(() => {
+    introComplete = true;
+  }, 1100);
+
+  hero.addEventListener("mousemove", (e) => {
+    if (!introComplete || isTouching) return;
+
+    const rect = hero.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+
+    targetSplit = getInvertedSplit(x, rect.width);
+    startSplitAnimation();
+  });
+
+  hero.addEventListener("mouseleave", () => {
+    if (!introComplete) return;
+    targetSplit = 50;
+    startSplitAnimation();
+  });
+
+  hero.addEventListener("touchstart", () => {
+    if (!introComplete) return;
+    isTouching = true;
+  });
+
+  hero.addEventListener("touchmove", (e) => {
+    if (!introComplete) return;
+
+    const rect = hero.getBoundingClientRect();
+    const touch = e.touches[0];
+    const x = touch.clientX - rect.left;
+
+    targetSplit = getInvertedSplit(x, rect.width, SPLIT_MIN - 3, SPLIT_MAX + 3);
     startSplitAnimation();
   });
 
