@@ -1,6 +1,6 @@
 # Shannon Smith — Cybersecurity Portfolio
 
-
+![Portfolio preview](https://github.com/shannonasmith/ShannonASmith.github.io/blob/main/images/portfolio.png?raw=true)
 
 🌐 **Live Site:**  
 https://shannonasmith.github.io/
