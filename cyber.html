@@ -150,7 +150,8 @@
         <article class="project-card-simple"
           data-category="investigations automation soc ai"
           data-title="AI-Assisted SOC Alert Analyzer"
-          data-desc="SOC analyst-focused tool for triaging and investigating alerts using structured workflows, AI-assisted analysis, and explainable reasoning."
+          data-desc="SOC analyst-focused pipeline that triages incoming alerts, cross-references indicators against known IOC data, and generates plain-language explanations to speed 
+          up investigation and reduce false-positive fatigue."
           data-img="images/projects/soc-alert-analyzer.png"
           data-link="https://github.com/shannonasmith/AI-Assisted-SOC-Alert-Analyzer">
           <div class="project-card-simple-image">
@@ -166,7 +167,8 @@
         <article class="project-card-simple"
           data-category="investigations"
           data-title="Suspicious Authentication Activity"
-          data-desc="Investigating repeated login attempts and suspicious authentication patterns in Linux logs using Splunk."
+          data-desc="Investigated repeated failed logins and brute-force patterns in Linux auth logs using Splunk — building search queries to isolate the offending 
+          source IPs and confirm whether any attempts succeeded."
           data-img="images/projects/splunk-auth.png"
           data-link="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-Authentication-Activity/README.md">
           <div class="project-card-simple-image">
@@ -182,7 +184,7 @@
         <article class="project-card-simple"
           data-category="investigations"
           data-title="Suspicious DNS Activity"
-          data-desc="Analyzing enterprise DNS logs to identify reverse lookups, zone transfer attempts, and internal naming exposure."
+          data-desc="Analyzed enterprise DNS logs in Splunk to surface reverse lookups, zone-transfer attempts, and internal hostname exposure that could aid attacker reconnaissance."
           data-img="images/projects/dns-investigation.png"
           data-link="https://github.com/shannonasmith/Home-Lab/blob/main/Suspicious-DNS-Activity/README.md">
           <div class="project-card-simple-image">
@@ -198,7 +200,7 @@
         <article class="project-card-simple"
           data-category="labs"
           data-title="Network &amp; Web App Security Assessment"
-          data-desc="Performing multi-tool enumeration across web paths, ports, and exposed services to identify and validate unauthorized access."
+          data-desc="Ran a multi-tool assessment — Nmap for port and service enumeration, Burp Suite for web-path discovery — to identify exposed services and validate which ones allowed unauthorized access."
           data-img="images/projects/network-web-assessment.png"
           data-link="https://github.com/shannonasmith/Home-Lab/blob/main/Network-and-Web-App-Security/README.md">
           <div class="project-card-simple-image">
@@ -214,7 +216,8 @@
         <article class="project-card-simple"
           data-category="research"
           data-title="NotPetya"
-          data-desc="Destructive malware investigation covering propagation, operational impact, and response lessons."
+          data-desc="Case study tracing NotPetya's propagation via the EternalBlue exploit and credential-harvesting lateral movement, its use as a destructive wiper disguised as 
+          ransomware, and the operational lessons drawn from the 2017 outbreak."
           data-img="images/projects/notpetya.png"
           data-link="https://github.com/shannonasmith/Cyber-Writups-VT/blob/main/Not-Petya-Writeup/README.md">
           <div class="project-card-simple-image">
@@ -230,7 +233,7 @@
         <article class="project-card-simple"
           data-category="ctf investigations"
           data-title="Stolen Footprints"
-          data-desc="Reconstructing attacker activity from packet captures and tracing file theft through FTP traffic analysis."
+          data-desc="Reconstructed attacker activity from a packet capture in Wireshark, tracing an FTP session to identify what files were exfiltrated and how."
           data-img="images/projects/stolen-footprints.png"
           data-link="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/stolen-footprints/README.md">
           <div class="project-card-simple-image">
@@ -246,7 +249,7 @@
         <article class="project-card-simple"
           data-category="ctf labs"
           data-title="Notepad Online"
-          data-desc="Testing authorization controls and request manipulation in a web-based note storage application."
+          data-desc="Tested a web-based note app for broken access controls — manipulating request parameters to determine whether one user's notes were reachable through another user's session (IDOR)."
           data-img="images/projects/notepad-online.png"
           data-link="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/notepad-online/README.md">
           <div class="project-card-simple-image">
@@ -262,7 +265,7 @@
         <article class="project-card-simple"
           data-category="ctf labs"
           data-title="What Does the Cow Say?"
-          data-desc="Investigating unsanitized input handling and demonstrating command injection behavior in a web application."
+          data-desc="Identified and exploited unsanitized user input in a web app's command interface, demonstrating full command injection and the input-validation failure that caused it."
           data-img="images/projects/what-does-the-cow-say.png"
           data-link="https://github.com/shannonasmith/WiCyS-TryHackMe-CTF/blob/main/what-does-the-cow-say/README.md">
           <div class="project-card-simple-image">
@@ -278,7 +281,7 @@
         <article class="project-card-simple"
           data-category="research"
           data-title="Wizard Spider"
-          data-desc="Threat actor profiling and ransomware attack-chain analysis focused on TrickBot-linked operations."
+          data-desc="Case study profiling Wizard Spider (TrickBot operators) — their initial-access and lateral-movement tradecraft, and the ransomware deployment chain linking TrickBot to Ryuk/Conti operations."
           data-img="images/projects/wizard-spider.png"
           data-link="https://github.com/shannonasmith/Cyber-Writups-VT/blob/main/Wizard-Spider-Writeup/README.md">
           <div class="project-card-simple-image">
@@ -294,7 +297,7 @@
         <article class="project-card-simple"
           data-category="research"
           data-title="Uber Breach (Lapsus$)"
-          data-desc="Analysis of social engineering, MFA fatigue, access escalation, and attacker tradecraft."
+          data-desc="Breaking down the 2022 Uber breach: an MFA-fatigue social-engineering attack, the access escalation that followed, and Lapsus$'s broader tradecraft pattern."
           data-img="images/projects/uber-lapsus.png"
           data-link="https://github.com/shannonasmith/Cyber-Writups-VT/tree/main/Uber-Lapsus-Writeup#readme">
           <div class="project-card-simple-image">
