@@ -1117,6 +1117,18 @@ body.page-ready.intro-start .creative-portrait {
   text-align: center;
 }
 
+.art-commission-cta h3 {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 600;
+  color: #f5f2ff;
+  margin-bottom: 0.6rem;
+}
+
+.art-commission-cta .section-intro {
+  margin-bottom: 1.4rem;
+}
+
+
 /* =========================
    CERT MODAL
 ========================= */
