@@ -794,6 +794,7 @@ body.page-ready.intro-start .creative-portrait {
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
+  margin-bottom: 1.4rem;
 }
 
 /* =========================
@@ -2180,7 +2181,7 @@ body.page-ready .about-enter-right {
 
 .art-filter-pills {
   justify-content: center;
-/*  margin-bottom: 1.4rem; */
+  margin-bottom: 1.4rem;
 }
 
 .art-grid {
