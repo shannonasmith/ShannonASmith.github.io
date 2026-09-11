@@ -915,13 +915,6 @@ body.page-ready.intro-start .creative-portrait {
   margin-bottom: 0.8rem;
 }
 
-.project-card-simple p:last-of-type {
-  color: var(--text-muted);
-  font-size: 0.98rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
 .project-link {
   display: inline-block;
   color: var(--accent-2);
@@ -2595,12 +2588,6 @@ button:focus-visible,
   margin-bottom: 0.55rem;
 }
 
-.project-card-simple p:last-of-type {
-  font-size: 0.93rem;
-  line-height: 1.5;
-  margin-bottom: 0.8rem;
-}
-
 /* --- ART CARDS --- */
 .art-grid {
   gap: 1.25rem;
@@ -2648,10 +2635,6 @@ button:focus-visible,
 
   .project-card-simple h3 {
     font-size: 1.08rem;
-  }
-
-  .project-card-simple p:last-of-type {
-    font-size: 0.91rem;
   }
 
   .art-card-image img {
