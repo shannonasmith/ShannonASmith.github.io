@@ -1112,6 +1112,11 @@ body.page-ready.intro-start .creative-portrait {
   text-align: center;
 }
 
+.art-commission-cta {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
 /* =========================
    CERT MODAL
 ========================= */
