@@ -2634,8 +2634,14 @@ button:focus-visible,
 }
 
 .art-card-image img {
-  height: 300px;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
   border-radius: 14px;
+  border: 1px solid rgba(103, 89, 255, 0.12);
+  background: #08080d;
 }
 
 .art-card-body {
@@ -2649,17 +2655,11 @@ button:focus-visible,
 }
 
 .art-card h3 {
-  font-size: 0.96rem;
-  line-height: 1.18;
+  font-size: clamp(1.12rem, 1.45vw, 1.45rem);
+  line-height: 1.15;
 }
 
 /* --- RESPONSIVE TUNING --- */
-@media (max-width: 1050px) {
-  .art-card-image img {
-    height: 270px;
-  }
-}
-
 @media (max-width: 700px) {
   .project-card-simple-body {
     padding: 0.95rem 0.95rem 1rem;
@@ -2667,10 +2667,6 @@ button:focus-visible,
 
   .project-card-simple h3 {
     font-size: 1.08rem;
-  }
-
-  .art-card-image img {
-    height: 240px;
   }
 
   .art-card-body {
