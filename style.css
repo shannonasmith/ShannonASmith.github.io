@@ -2419,6 +2419,59 @@ body.page-ready .art-enter-up {
   cursor: pointer;
 }
 
+.art-modal-nav {
+  position: absolute;
+  top: 200px;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(20, 20, 32, 0.55);
+  color: var(--text-main);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.art-modal-nav:hover {
+  background: rgba(143, 89, 255, 0.35);
+}
+
+.art-modal-nav:active {
+  transform: translateY(-50%) scale(0.92);
+}
+
+.art-modal-prev {
+  left: 0.6rem;
+}
+
+.art-modal-next {
+  right: 0.6rem;
+}
+
+@media (max-width: 700px) {
+  .art-modal-nav {
+    top: 140px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.05rem;
+  }
+
+  .art-modal-prev {
+    left: 0.35rem;
+  }
+
+  .art-modal-next {
+    right: 0.35rem;
+  }
+}
+
 /* =========================
    ART IMAGE PROTECTION
 ========================= */
