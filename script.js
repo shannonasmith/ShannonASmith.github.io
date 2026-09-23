@@ -509,8 +509,20 @@ function initArtModal() {
   const modalMedium = document.getElementById("artModalMedium");
   const closeBtn = modal.querySelector(".art-modal-close");
   const backdrop = modal.querySelector(".art-modal-backdrop");
+  const prevBtn = modal.querySelector(".art-modal-prev");
+  const nextBtn = modal.querySelector(".art-modal-next");
 
-  function openModal(card) {
+  let currentIndex = -1;
+
+  // Only the cards currently shown under the active filter pill
+  function getVisibleCards() {
+    return Array.from(document.querySelectorAll(".art-card")).filter(
+      (card) => card.style.display !== "none"
+    );
+  }
+
+  function renderCard(card) {
+    if (!card) return;
     if (modalImg) {
       modalImg.src = card.dataset.img || "";
       modalImg.alt = card.dataset.title || "Artwork";
@@ -518,10 +530,24 @@ function initArtModal() {
     if (modalTitle) modalTitle.textContent = card.dataset.title || "";
     if (modalDesc) modalDesc.textContent = card.dataset.desc || "";
     if (modalMedium) modalMedium.textContent = card.dataset.medium || "";
+  }
+
+  function openModal(card) {
+    const visibleCards = getVisibleCards();
+    currentIndex = visibleCards.indexOf(card);
+    renderCard(card);
 
     modal.classList.add("active");
     modal.setAttribute("aria-hidden", "false");
     lockBodyScroll();
+  }
+
+  function showByOffset(offset) {
+    const visibleCards = getVisibleCards();
+    if (!visibleCards.length) return;
+
+    currentIndex = (currentIndex + offset + visibleCards.length) % visibleCards.length;
+    renderCard(visibleCards[currentIndex]);
   }
 
   function closeModal() {
@@ -534,6 +560,26 @@ function initArtModal() {
     card.addEventListener("click", () => {
       openModal(card);
     });
+  });
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showByOffset(-1);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showByOffset(1);
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (!modal.classList.contains("active")) return;
+    if (e.key === "ArrowLeft") showByOffset(-1);
+    if (e.key === "ArrowRight") showByOffset(1);
   });
 
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
