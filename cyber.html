@@ -318,15 +318,19 @@
     ========================= -->
     <div class="project-modal" id="projectModal" aria-hidden="true">
       <div class="project-modal-backdrop"></div>
-
+    
       <div class="project-modal-content" role="dialog" aria-modal="true">
         <button class="project-modal-close" type="button">&times;</button>
-
-        <img id="projectModalImage" src="" alt="" />
-
+    
+        <div class="project-modal-image-wrap">
+          <button class="project-modal-nav project-modal-prev" type="button" aria-label="Previous project">&#10094;</button>
+          <img id="projectModalImage" src="" alt="" />
+          <button class="project-modal-nav project-modal-next" type="button" aria-label="Next project">&#10095;</button>
+        </div>
+    
         <h3 id="projectModalTitle"></h3>
         <p id="projectModalDesc"></p>
-
+    
         <div class="project-modal-actions">
           <a id="projectModalLink" target="_blank" class="btn-theme">View Project</a>
         </div>
