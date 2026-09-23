@@ -925,6 +925,10 @@ body.page-ready.intro-start .creative-portrait {
 }
 */
 
+.project-link {
+  display: none;
+}
+
 .project-link:hover {
   color: #fff;
   transform: translateX(2px);
