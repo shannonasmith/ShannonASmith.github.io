@@ -915,6 +915,7 @@ body.page-ready.intro-start .creative-portrait {
   margin-bottom: 0.8rem;
 }
 
+/* Hidden from card grid — only the modal's "View Project" button should show
 .project-link {
   display: inline-block;
   color: var(--accent-2);
@@ -922,6 +923,7 @@ body.page-ready.intro-start .creative-portrait {
   text-decoration: none;
   transition: transform 0.2s ease, color 0.2s ease;
 }
+*/
 
 .project-link:hover {
   color: #fff;
