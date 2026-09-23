@@ -117,9 +117,10 @@ Current certifications include:
 - GIAC Security Essentials (GSEC)  
 - GIAC Foundational Cybersecurity Technologies (GFACT)  
 - Certified Ethical Hacker (CEH)  
-- Splunk Core Certified Power User  
+- Splunk Core Certified Power User
+- UiPath Certified Professional Automation Developer Associate
 
-Currently working toward the **GIAC Certified Incident Handler (GCIH)** and **CCNA**.
+Currently working toward the **GIAC Certified Incident Handler (GCIH)**.
 
 ---
 
@@ -128,14 +129,14 @@ Currently working toward the **GIAC Certified Incident Handler (GCIH)** and **CC
 ### Ongoing
 
 **Current Study**  
-SANS SEC504 (GCIH) • CCNA  
+SANS SEC504 (GCIH)   
 
 Continuing to build network, enterprise security, and practical lab skills through study and projects.
 
 ### 2024–2026
 
 **Cybersecurity Certifications**  
-GFACT • CEH • Security+ • Linux+ • GSEC • Splunk CCPU  
+GSEC • GFACT • CEH • Security+ • Linux+ • Splunk CCPU • UiPath UiADAv1 
 
 Built a stronger hands-on foundation in security operations, Linux administration, log analysis, and ethical hacking.
 
