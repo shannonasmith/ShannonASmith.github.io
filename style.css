@@ -2750,6 +2750,35 @@ body.page-ready .art-enter-up {
   }
 }
 
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero {
+    min-height: 100svh;
+    padding-top: 64px;
+  }
+
+  .portrait,
+  .cyber-layer .effect-image,
+  .creative-layer .effect-image {
+    width: auto;
+    max-height: 62vh;
+    max-height: 62svh;
+  }
+
+  .intro-copy {
+    inset: auto 0 1rem 0;
+    padding: 0 0.75rem;
+  }
+
+  .intro-word {
+    font-size: clamp(1.05rem, 4.5vw, 1.3rem);
+  }
+
+  .intro-sub {
+    font-size: 0.62rem;
+    line-height: 1.25;
+  }
+}
+
 /* =========================
    CLEANUP PATCHES
 ========================= */
