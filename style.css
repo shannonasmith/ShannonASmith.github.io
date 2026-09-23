@@ -545,12 +545,15 @@ body[data-page="about"] .nav {
 ========================= */
 .intro-copy {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 30;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16vw;
+  width: min(1280px, calc(100% - 48px));
   pointer-events: none;
 }
 
@@ -1256,10 +1259,6 @@ body.page-ready.intro-start .creative-portrait {
    RESPONSIVE
 ========================= */
 @media (max-width: 1200px) {
-  .intro-copy {
-    padding: 0 10vw;
-  }
-
   .portrait,
   .cyber-layer .effect-image,
   .creative-layer .effect-image {
@@ -1280,10 +1279,6 @@ body.page-ready.intro-start .creative-portrait {
 
   .nav-links {
     gap: 1.25rem;
-  }
-
-  .intro-copy {
-    padding: 0 6vw;
   }
 
   .intro-word {
