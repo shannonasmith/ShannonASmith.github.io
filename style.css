@@ -2717,8 +2717,9 @@ body.page-ready .art-enter-up {
 
   .project-modal-actions .btn-theme {
     min-width: 0;
-    padding: 0.55rem 1.1rem;
-    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.82rem;
+    border-radius: 999px;
   }
 }
 
