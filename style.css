@@ -1518,6 +1518,7 @@ body.menu-open .mobile-menu {
   }
 }
 
+/*  Commented out for different format of landscape nav menu. 
 @media (max-height: 480px) and (orientation: landscape) {
   .nav-toggle {
     display: inline-flex;
@@ -1597,6 +1598,14 @@ body.menu-open .mobile-menu {
     padding: 1rem;
   }
 
+  .simple-grid,
+  .art-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1rem;
+  }
+*/
+
+@media (max-height: 480px) and (orientation: landscape) {
   .simple-grid,
   .art-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
