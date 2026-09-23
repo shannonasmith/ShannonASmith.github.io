@@ -439,7 +439,7 @@ function initProjectModal() {
     renderCard(visibleCards[currentIndex]);
   }
 
-    function closeModal() {
+  function closeModal() {
     if (modal.contains(document.activeElement)) {
       document.activeElement.blur();
     }
@@ -522,7 +522,7 @@ function initCertModal() {
     lockBodyScroll();
   }
 
-    function closeModal() {
+  function closeModal() {
     if (modal.contains(document.activeElement)) {
       document.activeElement.blur();
     }
