@@ -2085,7 +2085,7 @@ body.page-ready .about-enter-right {
   white-space: nowrap;
 }
 
-.project-modal-content p {
+#projectModalDesc {
   color: var(--text-muted);
   margin: 0 auto;
   line-height: 1.6;
@@ -2716,7 +2716,7 @@ body.page-ready .art-enter-up {
     -webkit-box-orient: vertical;
   }
 
-  .project-modal-content p {
+  #projectModalDesc {
     height: 4.4rem;
     font-size: 0.88rem;
     line-height: 1.5;
