@@ -3428,6 +3428,17 @@ body.page-ready.intro-start .creative-portrait {
   }
 }
 
+body[data-page="contact"] {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body[data-page="contact"] main {
+  flex: 1 0 auto;
+}
+
 /* =========================
    CONTACT PAGE TRANSITION TUNING
 ========================= */
