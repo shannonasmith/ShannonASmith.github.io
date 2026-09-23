@@ -439,7 +439,10 @@ function initProjectModal() {
     renderCard(visibleCards[currentIndex]);
   }
 
-  function closeModal() {
+    function closeModal() {
+    if (modal.contains(document.activeElement)) {
+      document.activeElement.blur();
+    }
     modal.classList.remove("active");
     modal.setAttribute("aria-hidden", "true");
     unlockBodyScroll();
@@ -519,8 +522,11 @@ function initCertModal() {
     lockBodyScroll();
   }
 
-  function closeModal() {
-    modal.classList.remove("active", "is-open");
+    function closeModal() {
+    if (modal.contains(document.activeElement)) {
+      document.activeElement.blur();
+    }
+    modal.classList.remove("active");
     modal.setAttribute("aria-hidden", "true");
     unlockBodyScroll();
   }
@@ -596,7 +602,10 @@ function initArtModal() {
   }
 
   function closeModal() {
-    modal.classList.remove("active");
+    if (modal.contains(document.activeElement)) {
+      document.activeElement.blur();
+    }
+    modal.classList.remove("active", "is-open");
     modal.setAttribute("aria-hidden", "true");
     unlockBodyScroll();
   }
