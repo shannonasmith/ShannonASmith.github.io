@@ -208,16 +208,17 @@ body.page-leaving .nav {
 
 .nav-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 2.2rem;
+  padding-right: 1rem;
 }
 
 .nav-links a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.86);
   font-weight: 500;
-  font-size: 1.08rem;
+  font-size: 1.2rem;
   letter-spacing: 0.01em;
   transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -679,9 +680,9 @@ body.page-ready.intro-start .creative-portrait {
 
 .section {
   position: relative;
-  max-width: var(--max-width);
+  width: min(1280px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 44px 20px;
+  padding: 44px 0;
 }
 
 .section-heading {
