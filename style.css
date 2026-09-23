@@ -2403,7 +2403,7 @@ body.page-ready .art-enter-up {
   z-index: 2;
   width: min(88vw, 820px);
   min-height: 560px;
-  margin: 6vh auto 0;
+  margin: 6vh auto;
   padding: 1.25rem;
   border-radius: 24px;
   text-align: center;
