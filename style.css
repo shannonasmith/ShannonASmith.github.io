@@ -1180,7 +1180,10 @@ body.page-ready.intro-start .creative-portrait {
   position: relative;
   z-index: 2;
   width: min(92vw, 560px);
-  margin: 12vh auto 0;
+  max-height: 88vh;
+  max-height: 88dvh;
+  overflow-y: auto;
+  margin: 6vh auto;
   padding: 1.75rem 1.5rem;
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(14, 16, 30, 0.98) 0%, rgba(8, 9, 18, 0.98) 100%);
@@ -1195,12 +1198,28 @@ body.page-ready.intro-start .creative-portrait {
   position: absolute;
   top: 0.8rem;
   right: 0.95rem;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
   border: none;
+  border-radius: 50%;
   background: transparent;
   color: var(--text-main);
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cert-modal-close:hover {
+  background: rgba(143, 89, 255, 0.35);
+}
+
+.cert-modal-close:active {
+  transform: scale(0.92);
 }
 
 .cert-modal-content img {
