@@ -2111,7 +2111,7 @@ body.page-ready .about-enter-right {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .project-modal-nav {
@@ -2475,7 +2475,7 @@ body.page-ready .art-enter-up {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .art-modal-image {
