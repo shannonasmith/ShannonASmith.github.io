@@ -2012,7 +2012,9 @@ body.page-ready .about-enter-right {
 .project-modal-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(4, 4, 8, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .project-modal-content {
@@ -2024,10 +2026,12 @@ body.page-ready .about-enter-right {
   overflow-y: auto;
   margin: 6vh auto;
   padding: 1.5rem;
-  border-radius: 16px;
-  background: rgba(20, 22, 36, 0.95);
-  border: 1px solid rgba(143, 89, 255, 0.25);
-  backdrop-filter: blur(16px);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(14, 16, 30, 0.98) 0%, rgba(8, 9, 18, 0.98) 100%);
+  border: 1px solid rgba(143, 89, 255, 0.18);
+  box-shadow:
+    0 0 30px rgba(143, 89, 255, 0.1),
+    0 24px 60px rgba(0, 0, 0, 0.42);
   text-align: center;
 }
 
@@ -2081,6 +2085,7 @@ body.page-ready .about-enter-right {
 }
 
 .project-modal-image-wrap {
+  position: relative;
   flex: 1 1 auto;
   min-height: 160px;
   max-height: 340px;
@@ -2446,16 +2451,25 @@ body.page-ready .art-enter-up {
     0 24px 60px rgba(0, 0, 0, 0.42);
 }
 
-.art-modal-image {
-  width: 100%;
+.art-modal-image-wrap {
+  position: relative;
   flex: 1 1 auto;
   min-height: 160px;
   max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.art-modal-image {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   object-position: center;
   border-radius: 16px;
   background: #08080d;
-  margin-bottom: 1rem;
 }
 
 .art-modal-medium {
@@ -2590,8 +2604,8 @@ body.page-ready .art-enter-up {
     margin-top: 10vh;
   }
 
-  .art-modal-image {
-    max-height: 280px;
+  .art-modal-image-wrap {
+    max-height: 260px;
   }
 }
 
