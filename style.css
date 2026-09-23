@@ -2058,6 +2058,46 @@ body.page-ready .about-enter-right {
   cursor: pointer;
 }
 
+.project-modal-image-wrap {
+  position: relative;
+}
+
+.project-modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(20, 20, 32, 0.55);
+  color: var(--text-main);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.project-modal-nav:hover {
+  background: rgba(143, 89, 255, 0.35);
+}
+
+.project-modal-nav:active {
+  transform: translateY(-50%) scale(0.92);
+}
+
+.project-modal-prev {
+  left: 0.5rem;
+}
+
+.project-modal-next {
+  right: 0.5rem;
+}
+
 /* =========================
    BOTTOM NAV BAR
 ========================= */
