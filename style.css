@@ -2132,7 +2132,7 @@ body.page-ready .about-enter-right {
   min-height: 0;
   overflow: hidden;
   display: grid;
-  grid-template-rows: minmax(0, 1fr) auto auto auto;
+  grid-template-rows: minmax(0, 1fr) auto auto auto auto;
   row-gap: 0.5rem;
 }
 
@@ -2740,7 +2740,7 @@ body.page-ready .art-enter-up {
   }
 
   .art-modal-content p:last-child,
-  .project-modal-content p {
+  #projectModalDesc {
     height: 3rem;
   }
 
