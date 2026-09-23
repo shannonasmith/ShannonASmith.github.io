@@ -2589,6 +2589,42 @@ body.page-ready .art-enter-up {
 }
 
 /* =========================
+   THEMED SCROLLBARS FOR MODALS
+========================= */
+.art-modal-scroll,
+.project-modal-scroll,
+.cert-modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(143, 89, 255, 0.45) transparent;
+  padding-right: 6px;
+}
+
+.art-modal-scroll::-webkit-scrollbar,
+.project-modal-scroll::-webkit-scrollbar,
+.cert-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.art-modal-scroll::-webkit-scrollbar-track,
+.project-modal-scroll::-webkit-scrollbar-track,
+.cert-modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.art-modal-scroll::-webkit-scrollbar-thumb,
+.project-modal-scroll::-webkit-scrollbar-thumb,
+.cert-modal-content::-webkit-scrollbar-thumb {
+  background-color: rgba(143, 89, 255, 0.45);
+  border-radius: 999px;
+}
+
+.art-modal-scroll::-webkit-scrollbar-thumb:hover,
+.project-modal-scroll::-webkit-scrollbar-thumb:hover,
+.cert-modal-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(143, 89, 255, 0.7);
+}
+
+/* =========================
    ART IMAGE PROTECTION
 ========================= */
 .artwork-image,
