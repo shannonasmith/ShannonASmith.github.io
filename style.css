@@ -2002,6 +2002,7 @@ body.page-ready .about-enter-right {
   inset: 0;
   z-index: 8000;   /* was 2000 */
   display: none;
+  overflow-y: auto;
 }
 
 .project-modal.active {
@@ -2382,6 +2383,7 @@ body.page-ready .art-enter-up {
   inset: 0;
   z-index: 8000;   /* was 2000 */
   display: none;
+  overflow-y: auto;
 }
 
 .art-modal.active {
