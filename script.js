@@ -394,6 +394,7 @@ function initProjectModal() {
   if (!modal) return;
 
   const modalImg = document.getElementById("projectModalImage");
+  const modalKicker = document.getElementById("projectModalKicker");
   const modalTitle = document.getElementById("projectModalTitle");
   const modalDesc = document.getElementById("projectModalDesc");
   const modalLink = document.getElementById("projectModalLink");
@@ -415,6 +416,10 @@ function initProjectModal() {
     if (modalImg) {
       modalImg.src = card.dataset.img || "";
       modalImg.alt = card.dataset.title || "Project image";
+    }
+    if (modalKicker) {
+      const kickerEl = card.querySelector(".project-card-simple-kicker");
+      modalKicker.textContent = kickerEl ? kickerEl.textContent : "";
     }
     if (modalTitle) modalTitle.textContent = card.dataset.title || "";
     if (modalDesc) modalDesc.textContent = card.dataset.desc || "";
