@@ -2710,6 +2710,12 @@ body.page-ready .art-enter-up {
     font-size: 0.88rem;
     line-height: 1.5;
   }
+
+  .project-modal-actions .btn-theme {
+    min-width: 0;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-height: 480px) and (orientation: landscape) {
