@@ -2057,25 +2057,33 @@ body.page-ready .about-enter-right {
 
 .project-modal-content img {
   width: 100%;
-  max-height: 340px;
+  height: 100%;
+  min-height: 0;
   object-fit: contain;
   border-radius: 10px;
-  margin-bottom: 1rem;
 }
 
 .project-modal-content h3 {
-  margin-bottom: 0.5rem;
+  margin: 0;
   font-size: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .project-modal-content p {
   color: var(--text-muted);
-  margin-bottom: 1rem;
+  margin: 0 auto;
+  line-height: 1.6;
+  height: 5.6rem;
+  overflow-y: auto;
+  padding-right: 6px;
 }
 
 .project-modal-actions {
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .project-modal-close {
@@ -2108,10 +2116,10 @@ body.page-ready .about-enter-right {
 .project-modal-scroll {
   flex: 1 1 auto;
   min-height: 0;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto auto auto;
+  row-gap: 0.5rem;
 }
 
 .project-modal-nav {
@@ -2472,24 +2480,24 @@ body.page-ready .art-enter-up {
 .art-modal-scroll {
   flex: 1 1 auto;
   min-height: 0;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto auto auto;
+  row-gap: 0.35rem;
 }
 
 .art-modal-image {
   width: 100%;
-  max-height: 400px;
+  height: 100%;
+  min-height: 0;
   object-fit: contain;
   object-position: center;
   border-radius: 16px;
   background: #08080d;
-  margin-bottom: 1rem;
 }
 
 .art-modal-medium {
-  margin-bottom: 0.4rem;
+  margin: 0;
   color: var(--accent-2);
   font-size: 0.86rem;
   font-weight: 500;
@@ -2497,16 +2505,23 @@ body.page-ready .art-enter-up {
 }
 
 .art-modal-content h3 {
-  margin-bottom: 0.55rem;
+  margin: 0;
   font-size: 1.3rem;
   font-weight: 500;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .art-modal-content p:last-child {
   max-width: 640px;
   margin: 0 auto;
   color: var(--text-muted);
-  line-height: 1.7;
+  line-height: 1.6;
+  height: 6.2rem;
+  overflow-y: auto;
+  padding-right: 6px;
 }
 
 .art-modal-close {
@@ -2591,35 +2606,34 @@ body.page-ready .art-enter-up {
 /* =========================
    THEMED SCROLLBARS FOR MODALS
 ========================= */
-.art-modal-scroll,
-.project-modal-scroll,
+.art-modal-content p:last-child,
+.project-modal-content p,
 .cert-modal-content {
   scrollbar-width: thin;
   scrollbar-color: rgba(143, 89, 255, 0.45) transparent;
-  padding-right: 6px;
 }
 
-.art-modal-scroll::-webkit-scrollbar,
-.project-modal-scroll::-webkit-scrollbar,
+.art-modal-content p:last-child::-webkit-scrollbar,
+.project-modal-content p::-webkit-scrollbar,
 .cert-modal-content::-webkit-scrollbar {
   width: 6px;
 }
 
-.art-modal-scroll::-webkit-scrollbar-track,
-.project-modal-scroll::-webkit-scrollbar-track,
+.art-modal-content p:last-child::-webkit-scrollbar-track,
+.project-modal-content p::-webkit-scrollbar-track,
 .cert-modal-content::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.art-modal-scroll::-webkit-scrollbar-thumb,
-.project-modal-scroll::-webkit-scrollbar-thumb,
+.art-modal-content p:last-child::-webkit-scrollbar-thumb,
+.project-modal-content p::-webkit-scrollbar-thumb,
 .cert-modal-content::-webkit-scrollbar-thumb {
   background-color: rgba(143, 89, 255, 0.45);
   border-radius: 999px;
 }
 
-.art-modal-scroll::-webkit-scrollbar-thumb:hover,
-.project-modal-scroll::-webkit-scrollbar-thumb:hover,
+.art-modal-content p:last-child::-webkit-scrollbar-thumb:hover,
+.project-modal-content p::-webkit-scrollbar-thumb:hover,
 .cert-modal-content::-webkit-scrollbar-thumb:hover {
   background-color: rgba(143, 89, 255, 0.7);
 }
@@ -2655,12 +2669,12 @@ body.page-ready .art-enter-up {
     margin-top: 10vh;
   }
 
- .art-modal-image {
-    max-height: 260px;
+   .art-modal-content {
+    padding-bottom: 4rem;
   }
 
-  .art-modal-content {
-    padding-bottom: 4rem;
+  .art-modal-content p:last-child {
+    height: 5rem;
   }
 }
 
