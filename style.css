@@ -2021,11 +2021,12 @@ body.page-ready .about-enter-right {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  width: min(88vw, 820px);
   height: 78vh;
-  overflow-y: auto;
+  height: 78dvh;
+  overflow: hidden;
   margin: 6vh auto;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 4.5rem;
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(14, 16, 30, 0.98) 0%, rgba(8, 9, 18, 0.98) 100%);
   border: 1px solid rgba(143, 89, 255, 0.18);
@@ -2436,9 +2437,10 @@ body.page-ready .art-enter-up {
   z-index: 2;
   width: min(88vw, 820px);
   height: 78vh;
-  overflow-y: auto;
+  height: 78dvh;
+  overflow: hidden;
   margin: 6vh auto;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 4.5rem;
   border-radius: 24px;
   text-align: center;
   display: flex;
