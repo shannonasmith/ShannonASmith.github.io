@@ -1368,13 +1368,6 @@ body.menu-open .mobile-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translate(-50%, 0);
-}
-
-body.menu-open .mobile-menu {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
   transform: translateY(0);
 }
 
@@ -1524,7 +1517,6 @@ body.menu-open .mobile-menu {
   }
 }
 
-@media (max-width: 700px) and (orientation: landscape) {
 @media (max-height: 480px) and (orientation: landscape) {
   .nav-toggle {
     display: inline-flex;
