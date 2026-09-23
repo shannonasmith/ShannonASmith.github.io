@@ -89,13 +89,6 @@
 
     <!-- =========================
          PROJECT CARDS GRID + FILTERS
-         (NOTE: previously this was split across two mismatched <section>
-         wrappers -- one literally named "projects-grid-section" that only
-         held the filter buttons, while the actual card grid lived in the
-         outer wrapper. Flattened into one correctly-nested section, and
-         added the visually-hidden heading that the pre-existing
-         aria-labelledby="projects-heading" was already pointing at but
-         which never actually existed.)
     ========================= -->
     <section class="section projects-grid-section" aria-labelledby="projects-heading">
       <h2 id="projects-heading" class="visually-hidden">Projects</h2>
@@ -318,22 +311,22 @@
     ========================= -->
     <div class="project-modal" id="projectModal" aria-hidden="true">
       <div class="project-modal-backdrop"></div>
-    
+
       <div class="project-modal-content" role="dialog" aria-modal="true">
         <button class="project-modal-close" type="button">&times;</button>
-    
-        <div class="project-modal-image-wrap">
-          <button class="project-modal-nav project-modal-prev" type="button" aria-label="Previous project">&#10094;</button>
+
+        <div class="project-modal-scroll">
           <img id="projectModalImage" src="" alt="" />
-          <button class="project-modal-nav project-modal-next" type="button" aria-label="Next project">&#10095;</button>
+          <h3 id="projectModalTitle"></h3>
+          <p id="projectModalDesc"></p>
+
+          <div class="project-modal-actions">
+            <a id="projectModalLink" target="_blank" class="btn-theme">View Project</a>
+          </div>
         </div>
-    
-        <h3 id="projectModalTitle"></h3>
-        <p id="projectModalDesc"></p>
-    
-        <div class="project-modal-actions">
-          <a id="projectModalLink" target="_blank" class="btn-theme">View Project</a>
-        </div>
+
+        <button class="project-modal-nav project-modal-prev" type="button" aria-label="Previous project">&#10094;</button>
+        <button class="project-modal-nav project-modal-next" type="button" aria-label="Next project">&#10095;</button>
       </div>
     </div>
 
