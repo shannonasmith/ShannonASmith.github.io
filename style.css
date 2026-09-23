@@ -2669,12 +2669,19 @@ body.page-ready .art-enter-up {
     margin-top: 10vh;
   }
 
-   .art-modal-content {
+  .art-modal-content {
+    height: 62vh;
+    height: 62dvh;
     padding-bottom: 4rem;
   }
 
   .art-modal-content p:last-child {
     height: 5rem;
+  }
+
+  .project-modal-content {
+    height: 62vh;
+    height: 62dvh;
   }
 }
 
