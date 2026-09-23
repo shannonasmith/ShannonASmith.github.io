@@ -1525,28 +1525,7 @@ body.menu-open .mobile-menu {
 }
 
 @media (max-width: 700px) and (orientation: landscape) {
-  .nav-inner {
-    position: relative;
-    width: min(calc(100% - 20px), 1280px);
-    margin: 0 auto;
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.4rem 0;
-    box-sizing: border-box;
-  }
-
-  .nav-brand {
-    justify-content: flex-start;
-  }
-
-  .nav-logo {
-    width: 42px;
-    height: 42px;
-  }
-
+@media (max-height: 480px) and (orientation: landscape) {
   .nav-toggle {
     display: inline-flex;
   }
@@ -1557,27 +1536,30 @@ body.menu-open .mobile-menu {
   }
 
   .mobile-menu {
-    position: absolute;
-    top: calc(100% + 6px);
-    left: 50%;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
     z-index: 6000;
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
-    width: min(320px, calc(100% - 20px));
+    gap: 0;
+    width: 100%;
     margin: 0;
-    padding: 0.5rem;
-    border-radius: 16px;
+    padding: 0;
+    border-radius: 0;
+    max-height: 88vh;
+    max-height: 88dvh;
+    overflow-y: auto;
     background:
-      linear-gradient(180deg, rgba(8, 10, 22, 0.985) 0%, rgba(10, 10, 20, 0.975) 100%);
-    border: 1px solid rgba(143, 89, 255, 0.18);
-    box-shadow:
-      0 12px 40px rgba(0, 0, 0, 0.45),
-      0 0 22px rgba(143, 89, 255, 0.14);
+      linear-gradient(180deg, rgba(6, 7, 16, 0.99) 0%, rgba(8, 9, 18, 0.99) 100%);
+    border: none;
+    border-top: 1px solid rgba(143, 89, 255, 0.18);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: translate(-50%, -8px);
+    transform: translateY(-8px);
     transition:
       opacity 0.22s ease,
       transform 0.22s ease,
@@ -1588,42 +1570,43 @@ body.menu-open .mobile-menu {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translate(-50%, 0);
+    transform: translateY(0);
   }
 
   .mobile-menu a {
-    color: rgba(255, 255, 255, 0.88);
+    color: rgba(255, 255, 255, 0.92);
     text-decoration: none;
-    font-size: 0.92rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    padding: 0.55rem 0.7rem;
-    border-radius: 10px;
-    border-bottom: none;
-    text-align: left;
-    transition: color 0.22s ease, background 0.22s ease;
+    letter-spacing: 0.02em;
+    text-align: center;
+    padding: 0.85rem 1.5rem;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(143, 89, 255, 0.14);
+    transition:
+      color 0.22s ease,
+      background 0.22s ease,
+      transform 0.22s ease;
   }
 
   .mobile-menu a:hover,
   .mobile-menu a:focus-visible {
     color: var(--accent-2);
     background: rgba(143, 89, 255, 0.08);
+    transform: translateX(2px);
     outline: none;
   }
 
   .mobile-menu-social {
     display: flex;
     justify-content: center;
-    gap: 0.8rem;
-    padding: 0.6rem 0.4rem 0.2rem;
-  }
-
-  .page-header {
-    padding-top: 84px;
+    gap: 1.1rem;
+    padding: 1rem;
   }
 
   .simple-grid,
   .art-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 1rem;
   }
 
