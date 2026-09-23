@@ -2768,6 +2768,13 @@ body.page-ready .art-enter-up {
   .project-modal-content img {
     min-height: 90px;
   }
+
+  .project-modal-actions .btn-theme {
+    min-width: 0;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.82rem;
+    border-radius: 999px;
+  }
 }
 
 @media (max-height: 480px) and (orientation: landscape) {
