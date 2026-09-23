@@ -2756,16 +2756,20 @@ body.page-ready .art-enter-up {
     padding-top: 64px;
   }
 
+  .portrait-stack {
+    inset: 68px 0 0 0;
+  }
+
   .portrait,
   .cyber-layer .effect-image,
   .creative-layer .effect-image {
     width: auto;
-    max-height: 62vh;
-    max-height: 62svh;
+    max-height: 56vh;
+    max-height: 56svh;
   }
 
   .intro-copy {
-    inset: auto 0 1rem 0;
+    inset: 68px 0 1rem 0;
     padding: 0 0.75rem;
   }
 
