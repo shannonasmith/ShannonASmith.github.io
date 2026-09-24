@@ -110,6 +110,51 @@ body {
 }
 
 /* =========================
+   NAV LOGO EASTER EGG
+========================= */
+.nav-brand {
+  position: relative;
+}
+
+.nav-logo-easter-egg {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 14px);
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 8%;
+  background: #08080d;
+  border: 2px solid rgba(143, 89, 255, 0.55);
+  box-shadow:
+    0 0 20px rgba(143, 89, 255, 0.4),
+    0 0 40px rgba(143, 89, 255, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.7) rotate(-8deg);
+  transition:
+    opacity 0.28s ease,
+    transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
+    visibility 0.28s ease;
+  z-index: 10;
+}
+
+.nav-brand:hover .nav-logo-easter-egg,
+.nav-brand:focus-visible .nav-logo-easter-egg {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1) rotate(0deg);
+}
+
+@media (max-width: 700px) {
+  .nav-logo-easter-egg {
+    display: none;
+  }
+}
+
+/* =========================
    PAGE TRANSITIONS
 ========================= */
 .nav {
