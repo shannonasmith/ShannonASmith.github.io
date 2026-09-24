@@ -3480,7 +3480,7 @@ body[data-page="about"] .bottom-nav {
   margin: 0 auto 1.75rem;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center 8%;
   border: 3px solid rgba(143, 89, 255, 0.55);
   box-shadow:
     0 0 40px rgba(143, 89, 255, 0.4),
