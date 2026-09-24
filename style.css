@@ -3274,7 +3274,7 @@ body.page-ready.intro-start .creative-portrait {
 }
 
 .contact-panel {
-  max-width: 980px;
+  width: 100%;
   margin: 0 auto;
   padding: 1.6rem;
   border-radius: 24px;
@@ -3458,6 +3458,44 @@ body[data-page="about"] main.about-page-shell {
 
 body[data-page="about"] .bottom-nav {
   margin-top: auto;
+}
+
+
+/* =========================
+   CONTACT ACCENT PORTRAIT
+========================= */
+.contact-accent-portrait {
+  position: absolute;
+  top: -18px;
+  right: 6%;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid rgba(143, 89, 255, 0.5);
+  box-shadow:
+    0 0 24px rgba(143, 89, 255, 0.35),
+    0 0 48px rgba(143, 89, 255, 0.15);
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0.45s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+body.page-ready .contact-accent-portrait {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .contact-accent-portrait {
+    display: none;
+  }
 }
 
 /* =========================
