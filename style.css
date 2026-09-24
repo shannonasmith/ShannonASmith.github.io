@@ -3271,6 +3271,10 @@ body.page-ready.intro-start .creative-portrait {
 
 .contact-section {
   padding-top: 12px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-panel {
@@ -3448,6 +3452,11 @@ body[data-page="contact"] main,
 body[data-page="cyber"] main,
 body[data-page="art"] main {
   flex: 1 0 auto;
+}
+
+body[data-page="contact"] main {
+  display: flex;
+  flex-direction: column;
 }
 
 body[data-page="about"] main.about-page-shell {
