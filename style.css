@@ -3316,10 +3316,6 @@ body.page-ready.intro-start .creative-portrait {
 
 .contact-section {
   padding-top: 12px;
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .contact-panel {
@@ -3502,6 +3498,7 @@ body[data-page="art"] main {
 body[data-page="contact"] main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 body[data-page="about"] main.about-page-shell {
@@ -3513,7 +3510,6 @@ body[data-page="about"] main.about-page-shell {
 body[data-page="about"] .bottom-nav {
   margin-top: auto;
 }
-
 
 /* =========================
    CONTACT ACCENT PORTRAIT
