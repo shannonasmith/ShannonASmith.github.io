@@ -3434,15 +3434,30 @@ body.page-ready.intro-start .creative-portrait {
   }
 }
 
-body[data-page="contact"] {
+body[data-page="contact"],
+body[data-page="cyber"],
+body[data-page="art"],
+body[data-page="about"] {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   min-height: 100dvh;
 }
 
-body[data-page="contact"] main {
+body[data-page="contact"] main,
+body[data-page="cyber"] main,
+body[data-page="art"] main {
   flex: 1 0 auto;
+}
+
+body[data-page="about"] main.about-page-shell {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body[data-page="about"] .bottom-nav {
+  margin-top: auto;
 }
 
 /* =========================
