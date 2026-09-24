@@ -3465,36 +3465,42 @@ body[data-page="about"] .bottom-nav {
    CONTACT ACCENT PORTRAIT
 ========================= */
 .contact-accent-portrait {
-  position: absolute;
-  top: -18px;
-  right: 6%;
-  width: 130px;
-  height: 130px;
+  display: block;
+  width: clamp(140px, 20vw, 240px);
+  height: clamp(140px, 20vw, 240px);
+  margin: 0 auto 1.75rem;
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
-  border: 2px solid rgba(143, 89, 255, 0.5);
+  border: 3px solid rgba(143, 89, 255, 0.55);
   box-shadow:
-    0 0 24px rgba(143, 89, 255, 0.35),
-    0 0 48px rgba(143, 89, 255, 0.15);
+    0 0 40px rgba(143, 89, 255, 0.4),
+    0 0 90px rgba(143, 89, 255, 0.18);
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(18px) scale(0.94);
   transition:
     opacity 0.9s ease,
     transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: 0.45s;
-  pointer-events: none;
-  z-index: 2;
+  transition-delay: 0.3s;
+  animation: contactGlowPulse 4s ease-in-out infinite;
+  animation-delay: 1.2s;
 }
 
 body.page-ready .contact-accent-portrait {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
-@media (max-width: 900px) {
-  .contact-accent-portrait {
-    display: none;
+@keyframes contactGlowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 40px rgba(143, 89, 255, 0.4),
+      0 0 90px rgba(143, 89, 255, 0.18);
+  }
+  50% {
+    box-shadow:
+      0 0 55px rgba(143, 89, 255, 0.55),
+      0 0 120px rgba(143, 89, 255, 0.28);
   }
 }
 
