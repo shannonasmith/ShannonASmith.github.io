@@ -1361,6 +1361,7 @@ body.page-ready.intro-start .creative-portrait {
 
   .nav-brand {
     justify-content: flex-start;
+    padding-left: 6px;
   }
 
   .nav-logo {
@@ -1649,6 +1650,11 @@ body.menu-open .mobile-menu {
 */
 
 @media (max-height: 480px) and (orientation: landscape) {
+  .nav-logo {
+    width: 60px;
+    height: 60px;
+  }
+
   .simple-grid,
   .art-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
