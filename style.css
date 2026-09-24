@@ -1424,6 +1424,9 @@ body.menu-open .mobile-menu {
 
   .intro-copy {
     inset: auto 0 2.3rem 0;
+    left: 0;
+    transform: none;
+    width: auto;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -2912,6 +2915,9 @@ body.page-ready .art-enter-up {
 
   .intro-copy {
     inset: 68px 0 1rem 0;
+    left: 0;
+    transform: none;
+    width: auto;
     padding: 0 8vw;
   }
 
