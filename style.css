@@ -98,15 +98,8 @@ body {
   filter: drop-shadow(0 0 4px rgba(120, 90, 255, 0.25));
   transition:
     transform 0.25s ease,
-    filter 0.25s ease;
-}
-
-.nav-brand:hover .nav-logo,
-.nav-brand:focus-visible .nav-logo {
-  transform: scale(1.05);
-  filter:
-    drop-shadow(0 0 6px rgba(143, 89, 255, 0.6))
-    drop-shadow(0 0 14px rgba(143, 89, 255, 0.35));
+    filter 0.25s ease,
+    opacity 0.25s ease;
 }
 
 /* =========================
@@ -119,9 +112,10 @@ body {
 .nav-logo-easter-egg {
   position: absolute;
   top: 50%;
-  left: calc(100% + 14px);
-  width: 76px;
-  height: 76px;
+  left: 0;
+  transform: translateY(-50%) scale(0.85) rotate(-8deg);
+  width: clamp(40px, 5vw, 60px);
+  height: clamp(40px, 5vw, 60px);
   border-radius: 50%;
   object-fit: cover;
   object-position: center 8%;
@@ -133,7 +127,6 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(-50%) scale(0.7) rotate(-8deg);
   transition:
     opacity 0.28s ease,
     transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
@@ -146,6 +139,12 @@ body {
   opacity: 1;
   visibility: visible;
   transform: translateY(-50%) scale(1) rotate(0deg);
+}
+
+.nav-brand:hover .nav-logo,
+.nav-brand:focus-visible .nav-logo {
+  opacity: 0;
+  transform: scale(0.85) rotate(8deg);
 }
 
 @media (max-width: 700px) {
@@ -3529,22 +3528,26 @@ body[data-page="about"] .bottom-nav {
   object-fit: cover;
   object-position: center 8%;
   border: 3px solid rgba(143, 89, 255, 0.55);
-  box-shadow:
-    0 0 40px rgba(143, 89, 255, 0.4),
-    0 0 90px rgba(143, 89, 255, 0.18);
+  box-shadow: none;
   opacity: 0;
   transform: translateY(18px) scale(0.94);
   transition:
-    opacity 0.9s ease,
-    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: 0.3s;
-  animation: contactGlowPulse 4s ease-in-out infinite;
-  animation-delay: 1.2s;
+    opacity 0.9s ease 0.3s,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.3s,
+    box-shadow 0.4s ease;
 }
 
 body.page-ready .contact-accent-portrait {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+.contact-accent-portrait:hover,
+.contact-section:has(.contact-tile:hover) .contact-accent-portrait {
+  box-shadow:
+    0 0 40px rgba(143, 89, 255, 0.4),
+    0 0 90px rgba(143, 89, 255, 0.18);
+  animation: contactGlowPulse 4s ease-in-out infinite;
 }
 
 @keyframes contactGlowPulse {
