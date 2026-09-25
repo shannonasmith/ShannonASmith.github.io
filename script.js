@@ -415,7 +415,8 @@ function initProjectModal() {
     if (!card) return;
     if (modalImg) {
       modalImg.src = card.dataset.img || "";
-      modalImg.alt = card.dataset.title || "Project image";
+      modalImg.alt = card.dataset.title || "Artwork";
+      };
     }
     if (modalKicker) {
       const kickerEl = card.querySelector(".project-card-simple-kicker");
