@@ -2288,6 +2288,11 @@ body.page-ready .about-enter-right {
 }
 
 .project-modal-actions {
+  position: absolute;
+  left: 50%;
+  bottom: 1.1rem;
+  transform: translateX(-50%);
+  z-index: 3;
   display: flex;
   justify-content: center;
   margin: 0;
