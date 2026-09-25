@@ -3312,7 +3312,8 @@ body.page-ready.intro-start .creative-portrait {
 .contact-page-header p {
   max-width: 760px;
   margin: 0 auto;
-  color: var(--text-muted);
+  /*  color: var(--text-muted); */  /* swapping white text for purple */
+  color: var(--accent-2);
   font-size: 1.05rem;
   line-height: 1.65;
   font-weight: 500;
