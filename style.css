@@ -2813,7 +2813,7 @@ body.page-ready .art-enter-up {
 
   .art-modal-content p:last-child {
     height: 4.4rem;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     line-height: 1.5;
   }
 
@@ -2835,7 +2835,7 @@ body.page-ready .art-enter-up {
 
   #projectModalDesc {
     height: 4.4rem;
-    font-size: 0.82rem;
+    font-size: 0.75rem;
     line-height: 1.5;
   }
 
@@ -3102,7 +3102,7 @@ button:focus-visible,
 
 .art-card-kicker {
   margin-bottom: 0.28rem;
-  font-size: 0.76rem;
+  font-size: 0.75rem;
   letter-spacing: 0.035em;
 }
 
