@@ -39,11 +39,11 @@ function setActiveNav() {
     const href = link.getAttribute("href") || "";
 
     const isActive =
-      (currentPage === "home" && href === "index.html") ||
-      (currentPage === "about" && href === "about.html") ||
-      (currentPage === "cyber" && href === "cyber.html") ||
-      (currentPage === "art" && href === "art.html") ||
-      (currentPage === "contact" && href === "contact.html");
+      (currentPage === "home" && (href === "/" || href === "index.html")) ||
+      (currentPage === "about" && (href === "about" || href === "about.html")) ||
+      (currentPage === "cyber" && (href === "cyber" || href === "cyber.html")) ||
+      (currentPage === "art" && (href === "art" || href === "art.html")) ||
+      (currentPage === "contact" && (href === "contact" || href === "contact.html"));
 
     link.classList.toggle("active", isActive);
     link.setAttribute("aria-current", isActive ? "page" : "false");
