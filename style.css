@@ -719,7 +719,8 @@ body.page-ready.intro-start .creative-portrait {
 }
 
 .page-header p {
-  color: var(--text-muted);
+/*  color: var(--text-muted); */  /* swapping white text for purple */
+  color: var(--accent-2);
   font-size: 1.08rem;
   font-weight: 500;
   line-height: 1.6;
