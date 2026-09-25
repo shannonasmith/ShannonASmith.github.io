@@ -2165,7 +2165,7 @@ body.page-ready .about-enter-right {
 .project-modal-content img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   border-radius: var(--radius);
   background: #08080d;
@@ -2615,7 +2615,7 @@ body.page-ready .art-enter-up {
 .art-modal-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   border-radius: var(--radius);
   background: #08080d;
