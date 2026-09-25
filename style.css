@@ -2325,7 +2325,7 @@ body.page-ready .about-enter-right {
   min-height: 0;
   overflow: hidden;
   display: grid;
-  grid-template-rows: minmax(0, 1fr) auto auto auto auto;
+  grid-template-rows: minmax(0, 1fr) auto auto auto;
   row-gap: 0.5rem;
 }
 
