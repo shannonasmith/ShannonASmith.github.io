@@ -416,12 +416,6 @@ function initProjectModal() {
     if (modalImg) {
       modalImg.src = card.dataset.img || "";
       modalImg.alt = card.dataset.title || "Project image";
-      modalImg.classList.remove("is-portrait");
-      modalImg.onload = () => {
-        if (modalImg.naturalHeight > modalImg.naturalWidth) {
-          modalImg.classList.add("is-portrait");
-        }
-      };
     }
     if (modalKicker) {
       const kickerEl = card.querySelector(".project-card-simple-kicker");
@@ -588,11 +582,6 @@ function initArtModal() {
     if (modalImg) {
       modalImg.src = card.dataset.img || "";
       modalImg.alt = card.dataset.title || "Artwork";
-      modalImg.classList.remove("is-portrait");
-      modalImg.onload = () => {
-        if (modalImg.naturalHeight > modalImg.naturalWidth) {
-          modalImg.classList.add("is-portrait");
-        }
       };
     }
     if (modalTitle) modalTitle.textContent = card.dataset.title || "";
