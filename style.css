@@ -2254,7 +2254,7 @@ body.page-ready .about-enter-right {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 10px;
+  border-radius: var(--radius);
   background: #08080d;
 }
 
@@ -2703,7 +2703,7 @@ body.page-ready .art-enter-up {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 16px;
+  border-radius: var(--radius);
   background: #08080d;
 }
 
