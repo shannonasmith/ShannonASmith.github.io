@@ -2258,6 +2258,10 @@ body.page-ready .about-enter-right {
   background: #08080d;
 }
 
+.project-modal-content img.is-portrait {
+  object-fit: contain;
+}
+
 .project-modal-kicker {
   margin: 0;
   color: var(--accent-2);
@@ -2701,6 +2705,10 @@ body.page-ready .art-enter-up {
   object-position: center;
   border-radius: 16px;
   background: #08080d;
+}
+
+.art-modal-image.is-portrait {
+  object-fit: contain;
 }
 
 .art-modal-medium {
