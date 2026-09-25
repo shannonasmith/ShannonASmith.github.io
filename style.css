@@ -2246,7 +2246,8 @@ body.page-ready .about-enter-right {
 
 .project-modal-content img {
   width: 100%;
-  height: 100%;
+  height: 42vh;
+  height: 42dvh;
   min-height: 0;
   align-self: stretch;
   object-fit: contain;
@@ -2687,7 +2688,8 @@ body.page-ready .art-enter-up {
 
 .art-modal-image {
   width: 100%;
-  height: 100%;
+  height: 42vh;
+  height: 42dvh;
   min-height: 0;
   align-self: stretch;
   object-fit: contain;
