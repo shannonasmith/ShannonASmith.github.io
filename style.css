@@ -2244,8 +2244,9 @@ body.page-ready .about-enter-right {
 
 .project-modal-content img {
   width: 100%;
-  height: 42vh;
-  height: 42dvh;
+  height: 100%;
+  min-height: 0;
+  align-self: stretch;
   object-fit: contain;
   border-radius: 10px;
   background: #08080d;
@@ -2684,8 +2685,9 @@ body.page-ready .art-enter-up {
 
 .art-modal-image {
   width: 100%;
-  height: 42vh;
-  height: 42dvh;
+  height: 100%;
+  min-height: 0;
+  align-self: stretch;
   object-fit: contain;
   object-position: center;
   border-radius: 16px;
@@ -2930,11 +2932,6 @@ body.page-ready .art-enter-up {
   .art-modal-content p:last-child,
   #projectModalDesc {
     height: 3rem;
-  }
-
-  .art-modal-image,
-  .project-modal-content img {
-    min-height: 90px;
   }
 
   .project-modal-actions .btn-theme {
