@@ -3,6 +3,7 @@
 ![Portfolio preview](images/portfolio.png)
 
 🌐 **Live site:** [shannonasmith.github.io](https://shannonasmith.github.io/)
+![Portfolio walkthrough](images/portfolio.gif)
 
 Source code for my personal portfolio: a site built around the two sides of how I work, **cybersecurity and art**.
 
