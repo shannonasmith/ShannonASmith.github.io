@@ -6,6 +6,7 @@
 ![Portfolio walkthrough](images/portfolio.gif)
 
 My personal portfolio, where my analytical side (cybersecurity) and creative side (art) share the same space.
+
 ---
 
 ## The Concept
