@@ -531,7 +531,7 @@ function initCertModal() {
     if (modal.contains(document.activeElement)) {
       document.activeElement.blur();
     }
-    modal.classList.remove("active");
+    modal.classList.remove("active", "is-open");
     modal.setAttribute("aria-hidden", "true");
     unlockBodyScroll();
   }
