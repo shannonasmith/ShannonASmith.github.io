@@ -1,9 +1,13 @@
 # shannonasmith.github.io
 
 ![Portfolio preview](images/portfolio.png)
+![Portfolio walkthrough](images/portfolio.gif)
+
+<div align="center">
+  <img src="images/portfolio.gif" width="900">
+</div>
 
 🌐 **Live site:** [shannonasmith.github.io](https://shannonasmith.github.io/)
-![Portfolio walkthrough](images/portfolio.gif)
 
 My personal portfolio, where my analytical side (cybersecurity) and creative side (art) share the same space.
 
